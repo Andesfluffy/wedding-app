@@ -68,9 +68,9 @@ export function CountdownSection() {
           The countdown is on
         </h2>
         <p className="mt-4 max-w-md text-base leading-7 text-ink/70">
-          Lagos nights move fast. Kindly RSVP so we can reserve your seat,
-          prepare your aso-ebi, and keep the palm wine flowing until the last
-          song.
+          November 29 is racing toward us. RSVP to secure your seat, share your
+          celebration needs, and help us keep every joyful detail running like
+          clockwork.
         </p>
       </div>
       <div className="grid grid-cols-2 gap-4 sm:gap-6">

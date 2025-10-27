@@ -54,14 +54,14 @@ export function RsvpSection() {
 
       setStatus("success");
       setFeedback(
-        "Thank you! We have received your RSVP and will send final Lagos weekend details in October."
+        "Thank you! We have received your RSVP and will send final wedding day details in October."
       );
       setForm(initialState);
     } catch (error) {
       console.error(error);
       setStatus("error");
       setFeedback(
-        "We were not able to send your RSVP right now. Please try again or email team@ifeweddings.com."
+        "We were not able to send your RSVP right now. Please try again or email hello@radiantvows.ng."
       );
     }
   };
@@ -82,7 +82,7 @@ export function RsvpSection() {
           <p className="mt-4 text-base leading-7 text-ink/70">
             Kindly share your plans so we can set your place, prepare fabrics,
             and coordinate valet support. Prefer email? Reach out to{" "}
-            team@ifeweddings.com and we will take care of you.
+            hello@radiantvows.ng and we will take care of you.
           </p>
           {status !== "idle" && (
             <motion.div
