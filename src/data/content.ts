@@ -10,9 +10,9 @@ export const weddingDetails = {
   location: "Magodo Phase II, Lagos, Nigeria",
   rsvpDeadline: "Kindly RSVP by October 5, 2025",
   intro:
-    "We are counting down to a heart-warming celebration bursting with colour, laughter, and the friends who feel like family.",
+    "We are counting down to a heart-warming celebration bathed in luminous whites, molten golds, and silvered greys—alive with laughter and the friends who feel like family.",
   description:
-    "Join us for heartfelt vows at the Kingdom Hall and a Saturday reception that slides straight into a high-energy dance floor.",
+    "Join us for heartfelt vows at the Kingdom Hall and a Saturday reception that shimmers into a high-energy dance floor glowing well past sunset.",
 };
 
 export const navigation = [
