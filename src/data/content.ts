@@ -19,9 +19,93 @@ export const navigation = [
   { label: "Home", href: "#top" },
   { label: "Our Story", href: "#story" },
   { label: "Wedding Day", href: "#schedule" },
-  { label: "Travel", href: "#travel" },
+  { label: "Program", href: "#program" },
   { label: "Gallery", href: "#gallery" },
   { label: "RSVP", href: "#rsvp" },
+];
+
+export const kingdomHallProgram = [
+  {
+    time: "11:00 AM",
+    title: "Kingdom melodies & welcome",
+    description:
+      "Soft orchestral Kingdom songs ease you into your seat while ushers guide everyone to family sections and reserved rows.",
+  },
+  {
+    time: "11:30 AM",
+    title: "Opening prayer & remarks",
+    description:
+      "Elders offer a warm welcome, share reminders about photography etiquette, and set the tone for a reverent yet joyful ceremony.",
+  },
+  {
+    time: "12:00 PM",
+    title: "Marriage discourse",
+    description:
+      "A 30-minute Bible-based talk celebrates love, friendship, and the commitment Theo and Joan are making before Jehovah.",
+  },
+  {
+    time: "12:35 PM",
+    title: "Vows, rings & signing",
+    description:
+      "Witness heartfelt vows, the exchange of rings, and the signing of the marriage register surrounded by close family.",
+  },
+  {
+    time: "12:50 PM",
+    title: "Closing prayer & recessional",
+    description:
+      "We conclude with a prayer, then stroll outside to greet the couple as photographers capture candid congratulations.",
+  },
+];
+
+export const receptionProgram = [
+  {
+    time: "2:00 PM",
+    title: "Grand arrivals",
+    description:
+      "Couple, parents, and wedding party make their entrance to live drums and curated Afro-soul playlists.",
+  },
+  {
+    time: "2:30 PM",
+    title: "First course & toasts",
+    description:
+      "Settle in for small bites and sparkling cocktails while loved ones share short, heartfelt toasts.",
+  },
+  {
+    time: "3:15 PM",
+    title: "Cultural performances",
+    description:
+      "Talking drummers, traditional dancers, and a surprise medley spotlight both families' joyful heritage.",
+  },
+  {
+    time: "4:00 PM",
+    title: "Dinner service",
+    description:
+      "Buffet stations open with chef-attended favourites, from smoky jollof to continental indulgences.",
+  },
+  {
+    time: "5:00 PM",
+    title: "Cake, games & open dance",
+    description:
+      "We slice the cake, play couple-centric games, then hand the night over to the DJ for an endless dance floor.",
+  },
+];
+
+export const photographyMoments = [
+  {
+    title: "After the vows",
+    description:
+      "Family portraits begin immediately outside the Kingdom Hall—parents, siblings, bridal party, then extended relatives.",
+  },
+  {
+    title: "Golden-hour portraits",
+    description:
+      "Theo & Joan sneak away at 3:45 PM for sunset shots around the pavilion gardens while guests enjoy dinner service.",
+  },
+  {
+    title: "Dance floor candids",
+    description:
+      "From 5:30 PM the photography team moves between lounge pods and the dance floor for high-energy, joy-filled candids.",
+  },
 ];
 
 export const storyMoments = [

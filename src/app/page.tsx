@@ -7,7 +7,7 @@ import { RegistrySection } from "@/components/registry";
 import { RsvpSection } from "@/components/rsvp-form";
 import { SiteFooter } from "@/components/footer";
 import { StoryTimeline } from "@/components/story-timeline";
-import { TravelSection } from "@/components/travel";
+import { ProgramSection } from "@/components/programs";
 import { WeekendEvents } from "@/components/weekend-events";
 import { WeddingPartySection } from "@/components/wedding-party";
 
@@ -20,7 +20,7 @@ export default function Home() {
         <CountdownSection />
         <StoryTimeline />
         <WeekendEvents />
-        <TravelSection />
+        <ProgramSection />
         <WeddingPartySection />
         <GallerySection />
         <RegistrySection />
