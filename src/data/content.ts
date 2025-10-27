@@ -1,6 +1,6 @@
 export const weddingDetails = {
   couple: {
-    firstPartner: "Theophilus",
+    firstPartner: "Theo",
     secondPartner: "Joan",
   },
   date: "November 29, 2025",
@@ -8,9 +8,9 @@ export const weddingDetails = {
   time: "12:00 PM",
   venue: "Kingdom Hall of Jehovah's Witnesses",
   location: "Magodo Phase II, Lagos, Nigeria",
-  rsvpDeadline: "Kindly RSVP by August 31, 2025",
+  rsvpDeadline: "Kindly RSVP by October 5, 2025",
   intro:
-    "We are counting down to a Lagos celebration bursting with colour, laughter, and the friends who feel like family.",
+    "We are counting down to a heart-warming celebration bursting with colour, laughter, and the friends who feel like family.",
   description:
     "Join us for heartfelt vows at the Kingdom Hall and a Saturday reception that slides straight into a high-energy dance floor.",
 };
@@ -55,22 +55,22 @@ export const weekendEvents = [
   {
     day: "Saturday",
     date: "November 29",
-    title: "Ceremony & vows",
+    title: "Registry & vows",
     time: "12:00 PM",
     location: "Kingdom Hall of Jehovah's Witnesses, Magodo Phase II",
-    attire: "Polished jewel tones with joyful accents",
+    attire: "Decent , Formal attrie with colourful accents",
     description:
-      "Arrive early to settle in with family and friends. Expect heartfelt vows, colourful décor, and a ceremony that feels warm, personal, and full of smiles.",
+      "Arrive early to settle in with family and friends. Expect heartfelt vows, an encouraging and instructional talk, and a ceremony that feels warm, personal, and full of smiles.",
   },
   {
     day: "Saturday",
     date: "November 29",
     title: "Reception & after-party",
     time: "2:00 PM - 6:30 PM",
-    location: "Kingdom Hall Reception Pavilion, Magodo Phase II",
+    location: "Hall Reception Pavilion, Magodo Phase II",
     attire: "Same-day celebration best with radiant colours",
     description:
-      "After the ceremony we stay on-site for playful cocktails, Nigerian bites, and a live band that glides from love songs to dance-floor anthems until sunset.",
+      "After the ceremony we move to ... for playful cocktails, delicious bites, and a colourful event that glides from love songs to dance-floor anthems until sunset.",
   },
 ];
 
@@ -79,7 +79,7 @@ export const travelEssentials = {
     {
       name: "Murtala Muhammed International (LOS)",
       details:
-        "For out-of-town guests, the airport is about 30 minutes from Magodo when traffic is light. Build in extra time for customs and Saturday travel flair.",
+        "For out-of-town guests, the airport is about 55 minutes from ... when traffic is light. Build in extra time for customs and Saturday travel flair.",
     },
     {
       name: "For Lagos fam",
@@ -87,26 +87,8 @@ export const travelEssentials = {
         "Leave before 11:00 AM so you can settle in, grab selfies, and catch our pre-ceremony first-look moments.",
     },
   ],
-  accommodations: [
-    {
-      name: "Radisson Blu Lagos Ikeja",
-      description:
-        "Business-class comfort 15 minutes from the Kingdom Hall with airport shuttles, skyline views, and hearty breakfasts.",
-      link: "https://www.radissonhotels.com/en-us/hotels/radisson-blu-lagos-ikeja",
-    },
-    {
-      name: "Sheraton Lagos Hotel",
-      description:
-        "A trusted favourite with spacious rooms, a lively pool terrace, and quick access to Magodo and Ikeja GRA.",
-      link: "https://www.marriott.com/en-us/hotels/loswi-sheraton-lagos-hotel/overview/",
-    },
-    {
-      name: "Presken Hotel @ Awolowo Way",
-      description:
-        "A vibrant boutique stay with colourful interiors, speedy room service, and cheerful staff.",
-      link: "https://www.preskenhotels.com/",
-    },
-  ],
+  stayNote:
+    "Magodo Phase II, Ikeja GRA, and Maryland offer plenty of hotels and serviced apartments within 20 minutes of the venue. Share your budget and vibe in the RSVP form if you would like our planner to shortlist stays for you.",
   dressCode: {
     title: "Palette & attire",
     body: "Our colour story beams in emerald, champagne gold, and ruby accents. Think dapper suits, elegant dresses, gele or fila, and shoes ready for Afrobeats spins.",
@@ -126,7 +108,7 @@ export const weddingParty = [
   },
   {
     role: "Best Man",
-    name: "Ayobami",
+    name: "Damola",
     description:
       "Theophilus' brother, resident hype man, and the strategist keeping every timeline on point.",
   },
