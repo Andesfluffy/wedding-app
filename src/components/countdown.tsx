@@ -55,10 +55,10 @@ export function CountdownSection() {
   return (
     <section
       aria-labelledby="countdown-heading"
-      className="relative mx-auto mt-10 grid max-w-5xl gap-8 rounded-[3rem] border border-white/50 bg-gradient-to-br from-white/85 via-white/70 to-cream/80 px-6 py-14 text-center shadow-xl shadow-olive/10 backdrop-blur sm:grid-cols-2 sm:text-left md:px-16"
+      className="relative mx-auto mt-10 grid max-w-5xl gap-8 rounded-[3rem] border border-gold/30 bg-gradient-to-br from-champagne/95 via-white/80 to-gold/20 px-6 py-14 text-center shadow-xl shadow-gold/30 backdrop-blur sm:grid-cols-2 sm:text-left md:px-16"
     >
       <div>
-        <p className="font-display text-xs uppercase tracking-[0.6em] text-olive/70">
+        <p className="font-display text-xs uppercase tracking-[0.6em] text-gold/80">
           Save the date
         </p>
         <h2
@@ -82,12 +82,12 @@ export function CountdownSection() {
         ].map((item) => (
           <div
             key={item.label}
-            className="flex flex-col items-center justify-center rounded-3xl bg-fog/70 px-6 py-8 text-center shadow-inner shadow-olive/10"
+            className="flex flex-col items-center justify-center rounded-3xl bg-champagne/75 px-6 py-8 text-center shadow-inner shadow-gold/20"
           >
             <span className="font-display text-4xl text-ink">
               {item.value}
             </span>
-            <span className="mt-2 text-xs uppercase tracking-[0.3em] text-ink/60">
+            <span className="mt-2 text-xs uppercase tracking-[0.3em] text-gold/70">
               {item.label}
             </span>
           </div>

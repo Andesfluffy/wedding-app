@@ -58,13 +58,13 @@ export function Navigation() {
           "pointer-events-auto mx-auto flex max-w-6xl items-center justify-between rounded-full border px-6 py-4 backdrop-blur",
           "shadow-sm transition duration-300",
           isScrolled
-            ? "border-olive/20 bg-white/95 shadow-olive/30"
-            : "border-white/60 bg-white/80 shadow-olive/20"
+            ? "border-gold/30 bg-champagne/95 shadow-gold/40"
+            : "border-gold/20 bg-white/85 shadow-gold/30"
         )}
       >
         <Link
           href="#top"
-          className="font-display text-lg uppercase tracking-[0.4em] text-olive"
+          className="font-display text-lg uppercase tracking-[0.4em] text-gold"
         >
           Theo & Joan
         </Link>
@@ -81,13 +81,13 @@ export function Navigation() {
         </nav>
         <Link
           href="#rsvp"
-          className="hidden rounded-full bg-gold px-5 py-2 text-sm font-semibold text-ink shadow-sm shadow-gold/40 transition hover:bg-gold/90 md:inline-flex"
+          className="hidden rounded-full bg-gradient-to-r from-gold via-champagne to-gold px-5 py-2 text-sm font-semibold text-ink shadow-sm shadow-gold/50 transition hover:shadow-gold/70 md:inline-flex"
         >
           RSVP
         </Link>
         <button
           type="button"
-          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 bg-white text-xs font-medium text-ink/70 shadow-sm md:hidden"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gold/30 bg-white text-xs font-medium text-ink/70 shadow-sm md:hidden"
           onClick={() => setMenuOpen(true)}
           aria-expanded={isMenuOpen}
           aria-controls="wedding-nav-menu"
@@ -111,15 +111,15 @@ export function Navigation() {
             aria-modal="true"
             aria-label="Wedding navigation"
             tabIndex={-1}
-            className="w-full max-w-sm rounded-3xl border border-ink/10 bg-white/95 p-6 shadow-2xl shadow-olive/20"
+            className="w-full max-w-sm rounded-3xl border border-gold/25 bg-champagne/95 p-6 shadow-2xl shadow-gold/40"
           >
             <div className="flex items-center justify-between">
-              <span className="font-display text-lg uppercase tracking-[0.3em] text-olive">
+              <span className="font-display text-lg uppercase tracking-[0.3em] text-gold">
                 Theophilus &amp; Joan
               </span>
               <button
                 type="button"
-                className="rounded-full border border-ink/10 px-3 py-1 text-xs uppercase tracking-widest text-ink/60"
+                className="rounded-full border border-gold/30 px-3 py-1 text-xs uppercase tracking-widest text-ink/60"
                 onClick={() => setMenuOpen(false)}
               >
                 Close
@@ -130,7 +130,7 @@ export function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-2xl border border-transparent px-3 py-2 text-ink/80 transition hover:border-olive/30 hover:bg-olive/5"
+                  className="rounded-2xl border border-transparent px-3 py-2 text-ink/80 transition hover:border-gold/35 hover:bg-gold/5"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
