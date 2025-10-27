@@ -69,17 +69,17 @@ export function RsvpSection() {
   return (
     <section
       id="rsvp"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-white/50 bg-gradient-to-br from-white/90 via-white/75 to-cream/80 px-6 py-20 shadow-2xl shadow-olive/10 backdrop-blur md:px-16"
+      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_50px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur md:px-16"
     >
       <div className="grid gap-16 lg:grid-cols-[1.1fr,0.9fr]">
         <div>
-          <p className="font-display text-xs uppercase tracking-[0.6em] text-olive/70">
+          <p className="font-display text-xs uppercase tracking-[0.6em] text-gold/80">
             RSVP
           </p>
-          <h2 className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl">
+          <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">
             We cannot wait to celebrate with you
           </h2>
-          <p className="mt-4 text-base leading-7 text-ink/70">
+          <p className="mt-4 text-base leading-7 text-ivory/70">
             Kindly share your plans so we can set your place, personalise
             treats, and coordinate valet support. Prefer email? Reach out to{" "}
             hello@radiantvows.ng and we will take care of you.
@@ -90,8 +90,8 @@ export function RsvpSection() {
               animate={{ opacity: 1, y: 0 }}
               className={`mt-6 rounded-3xl border px-4 py-3 text-sm leading-6 ${
                 status === "success"
-                  ? "border-olive/20 bg-cream/80 text-olive/90"
-                  : "border-ink/10 bg-cream/60 text-ink/70"
+                  ? "border-gold/35 bg-night/70 text-gilded"
+                  : "border-bronze/30 bg-night/60 text-ivory/70"
               }`}
             >
               {feedback}
@@ -100,13 +100,13 @@ export function RsvpSection() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 rounded-[2.5rem] border border-olive/15 bg-white/80 px-6 py-8 shadow-xl shadow-olive/10"
+          className="space-y-6 rounded-[2.5rem] border border-gold/30 bg-night/80 px-6 py-8 shadow-[0_35px_110px_-60px_rgba(249,210,122,0.45)]"
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <label
                 htmlFor="fullName"
-                className="text-xs uppercase tracking-[0.3em] text-olive/70"
+                className="text-xs uppercase tracking-[0.3em] text-gold/70"
               >
                 Full name
               </label>
@@ -119,13 +119,13 @@ export function RsvpSection() {
                   setForm((prev) => ({ ...prev, fullName: event.target.value }))
                 }
                 required
-                className="mt-2 w-full rounded-2xl border border-olive/20 bg-white/80 px-4 py-3 text-sm text-ink shadow-inner shadow-olive/10 outline-none transition focus:border-olive focus:ring-2 focus:ring-olive/20"
+                className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="text-xs uppercase tracking-[0.3em] text-olive/70"
+                className="text-xs uppercase tracking-[0.3em] text-gold/70"
               >
                 Email
               </label>
@@ -138,12 +138,12 @@ export function RsvpSection() {
                   setForm((prev) => ({ ...prev, email: event.target.value }))
                 }
                 required
-                className="mt-2 w-full rounded-2xl border border-olive/20 bg-white/80 px-4 py-3 text-sm text-ink shadow-inner shadow-olive/10 outline-none transition focus:border-olive focus:ring-2 focus:ring-olive/20"
+                className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
             </div>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-olive/70">
+            <p className="text-xs uppercase tracking-[0.3em] text-gold/70">
               Will you join us?
             </p>
             <div className="mt-3 grid gap-3 sm:grid-cols-2">
@@ -153,10 +153,10 @@ export function RsvpSection() {
               ].map((option) => (
                 <label
                   key={option.value}
-                  className={`flex items-center justify-between rounded-2xl border px-4 py-3 text-sm shadow-inner shadow-olive/10 transition ${
+                  className={`flex items-center justify-between rounded-2xl border px-4 py-3 text-sm shadow-[inset_0_15px_30px_rgba(249,210,122,0.08)] transition ${
                     form.attendance === option.value
-                      ? "border-olive/40 bg-white"
-                      : "border-olive/20 bg-white/80"
+                      ? "border-gold/45 bg-night/85 text-gilded"
+                      : "border-gold/25 bg-night/70 text-ivory"
                   }`}
                 >
                   <span>{option.label}</span>
@@ -171,7 +171,7 @@ export function RsvpSection() {
                         attendance: event.target.value as "yes" | "no",
                       }))
                     }
-                    className="h-4 w-4 border-olive accent-olive"
+                    className="h-4 w-4 border-gold accent-gold"
                   />
                 </label>
               ))}
@@ -181,7 +181,7 @@ export function RsvpSection() {
             <div>
               <label
                 htmlFor="guests"
-                className="text-xs uppercase tracking-[0.3em] text-olive/70"
+                className="text-xs uppercase tracking-[0.3em] text-gold/70"
               >
                 Number of guests (including you)
               </label>
@@ -198,10 +198,10 @@ export function RsvpSection() {
                     guests: event.target.value,
                   }))
                 }
-                className="mt-2 w-full rounded-2xl border border-olive/20 bg-white/80 px-4 py-3 text-sm text-ink shadow-inner shadow-olive/10 outline-none transition focus:border-olive focus:ring-2 focus:ring-olive/20"
+                className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
             </div>
-            <label className="flex items-center gap-3 rounded-2xl border border-olive/20 bg-white/80 px-4 py-3 text-sm shadow-inner shadow-olive/10">
+            <label className="flex items-center gap-3 rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)]">
               <input
                 type="checkbox"
                 checked={form.shuttle}
@@ -211,7 +211,7 @@ export function RsvpSection() {
                     shuttle: event.target.checked,
                   }))
                 }
-                className="h-4 w-4 border-olive accent-olive"
+                className="h-4 w-4 border-gold accent-gold"
               />
               Please reserve valet or ride support for me
             </label>
@@ -219,7 +219,7 @@ export function RsvpSection() {
           <div>
             <label
               htmlFor="message"
-              className="text-xs uppercase tracking-[0.3em] text-olive/70"
+              className="text-xs uppercase tracking-[0.3em] text-gold/70"
             >
               Notes, allergies, or song requests
             </label>
@@ -234,13 +234,13 @@ export function RsvpSection() {
                 }))
               }
               rows={4}
-              className="mt-2 w-full rounded-2xl border border-olive/20 bg-white/80 px-4 py-3 text-sm text-ink shadow-inner shadow-olive/10 outline-none transition focus:border-olive focus:ring-2 focus:ring-olive/20"
+              className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
             />
           </div>
           <button
             type="submit"
             disabled={status === "loading"}
-            className="inline-flex w-full items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg shadow-ink/20 transition hover:bg-ink/90 disabled:cursor-not-allowed disabled:opacity-70"
+            className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-night shadow-[0_18px_60px_rgba(246,196,92,0.45)] transition hover:shadow-[0_20px_70px_rgba(249,210,122,0.6)] disabled:cursor-not-allowed disabled:opacity-70"
           >
             {status === "loading" ? "Sending..." : "Send RSVP"}
           </button>

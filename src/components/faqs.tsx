@@ -9,15 +9,15 @@ export function FaqSection() {
   const [active, setActive] = useState<number | null>(0);
 
   return (
-    <section className="relative mx-auto mt-24 max-w-4xl rounded-[3rem] border border-ink/5 bg-gradient-to-br from-cream/85 via-white/75 to-fog/70 px-6 py-20 shadow-xl shadow-olive/10 backdrop-blur md:px-10">
+    <section className="relative mx-auto mt-24 max-w-4xl rounded-[3rem] border border-gold/30 bg-gradient-to-br from-night/90 via-onyx/86 to-char/88 px-6 py-20 shadow-[0_40px_120px_-55px_rgba(249,210,122,0.5)] backdrop-blur md:px-10">
       <div className="text-center">
-        <p className="font-display text-xs uppercase tracking-[0.6em] text-olive/70">
+        <p className="font-display text-xs uppercase tracking-[0.6em] text-gold/80">
           FAQ
         </p>
-        <h2 className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl">
+        <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">
           Questions, answered
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-ink/70">
+        <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-ivory/70">
           Still curious? Send a note to Radiant Vows Events and the team will
           guide you through attire, parking, or anything else on your mind.
         </p>
@@ -30,8 +30,8 @@ export function FaqSection() {
             <article
               key={item.question}
               className={cn(
-                "rounded-3xl border border-olive/15 bg-white/80 p-5 shadow-lg shadow-olive/10 transition",
-                isActive ? "ring-2 ring-olive/30" : ""
+                "rounded-3xl border border-gold/25 bg-night/75 p-5 text-ivory shadow-[0_25px_80px_-60px_rgba(249,210,122,0.45)] transition",
+                isActive ? "ring-2 ring-gold/30" : ""
               )}
             >
               <button
@@ -39,10 +39,10 @@ export function FaqSection() {
                 className="flex w-full items-center justify-between gap-4 text-left"
                 onClick={() => setActive(isActive ? null : index)}
               >
-                <span className="font-display text-lg text-ink">
+                <span className="font-display text-lg text-gilded">
                   {item.question}
                 </span>
-                <span className="text-2xl text-olive/60">
+                <span className="text-2xl text-gold/70">
                   {isActive ? "-" : "+"}
                 </span>
               </button>
@@ -54,7 +54,7 @@ export function FaqSection() {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="mt-4 overflow-hidden text-sm leading-7 text-ink/70"
+                    className="mt-4 overflow-hidden text-sm leading-7 text-ivory/75"
                   >
                     {item.answer}
                   </motion.p>

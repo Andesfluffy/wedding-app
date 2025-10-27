@@ -7,16 +7,23 @@
 @theme inline {
   --font-sans: var(--font-body);
   --font-display: var(--font-heading);
-  --color-cream: #fff5e6;
-  --color-champagne: #f7e7ce;
-  --color-fog: #f5efe2;
-  --color-sand: #e7d4b2;
-  --color-ink: #2b1d12;
-  --color-olive: #a67b43;
-  --color-blush: #f3d6a1;
-  --color-gold: #d4af37;
-  --color-platinum: #f2eadf;
+  --color-cream: #110a07;
+  --color-champagne: #bb8223;
+  --color-fog: #1b120c;
+  --color-sand: #22150d;
+  --color-ink: #f4e7d3;
+  --color-olive: #f0bf58;
+  --color-blush: #e0a651;
+  --color-gold: #f6c45c;
+  --color-platinum: #1a100b;
   --color-white: #ffffff;
+  --color-night: #050404;
+  --color-onyx: #0c0806;
+  --color-char: #1d110b;
+  --color-ember: #c4842b;
+  --color-gilded: #f9d27a;
+  --color-ivory: #f6ead5;
+  --color-bronze: #8a5520;
 }
 
 * {
@@ -31,19 +38,19 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 14% 22%, rgba(212, 175, 55, 0.35), transparent 40%),
-    radial-gradient(circle at 78% 18%, rgba(243, 214, 161, 0.45), transparent 46%),
-    radial-gradient(circle at 56% 76%, rgba(166, 123, 67, 0.32), transparent 52%),
-    radial-gradient(circle at 88% 72%, rgba(255, 255, 255, 0.38), transparent 58%),
-    linear-gradient(135deg, rgba(255, 245, 230, 0.95), rgba(247, 231, 206, 0.88)),
-    var(--color-cream);
-  color: var(--color-ink);
+    radial-gradient(circle at 12% 18%, rgba(246, 196, 92, 0.28), transparent 45%),
+    radial-gradient(circle at 82% 12%, rgba(200, 132, 42, 0.35), transparent 50%),
+    radial-gradient(circle at 65% 78%, rgba(111, 70, 29, 0.28), transparent 52%),
+    linear-gradient(135deg, rgba(10, 6, 5, 0.95), rgba(5, 4, 4, 0.9));
+  background-color: var(--color-night);
+  color: var(--color-ivory);
   font-family: var(--font-sans);
   letter-spacing: 0.01em;
 }
 
 ::selection {
-  background: rgba(212, 175, 55, 0.55);
+  background: rgba(246, 196, 92, 0.6);
+  color: var(--color-night);
 }
 
 a {

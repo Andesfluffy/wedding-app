@@ -55,7 +55,7 @@ export function CountdownSection() {
   return (
     <section
       aria-labelledby="countdown-heading"
-      className="relative mx-auto mt-10 grid max-w-5xl gap-8 rounded-[3rem] border border-gold/30 bg-gradient-to-br from-champagne/95 via-white/80 to-gold/20 px-6 py-14 text-center shadow-xl shadow-gold/30 backdrop-blur sm:grid-cols-2 sm:text-left md:px-16"
+      className="relative mx-auto mt-10 grid max-w-5xl gap-8 rounded-[3rem] border border-gold/35 bg-gradient-to-br from-night/90 via-onyx/85 to-char/90 px-6 py-14 text-center shadow-[0_40px_120px_-60px_rgba(249,210,122,0.55)] backdrop-blur sm:grid-cols-2 sm:text-left md:px-16"
     >
       <div>
         <p className="font-display text-xs uppercase tracking-[0.6em] text-gold/80">
@@ -63,11 +63,11 @@ export function CountdownSection() {
         </p>
         <h2
           id="countdown-heading"
-          className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl"
+          className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl"
         >
           The countdown is on
         </h2>
-        <p className="mt-4 max-w-md text-base leading-7 text-ink/70">
+        <p className="mt-4 max-w-md text-base leading-7 text-ivory/70">
           November 29 is racing toward us. RSVP to secure your seat, share your
           celebration needs, and help us keep every joyful detail running like
           clockwork.
@@ -82,12 +82,12 @@ export function CountdownSection() {
         ].map((item) => (
           <div
             key={item.label}
-            className="flex flex-col items-center justify-center rounded-3xl bg-champagne/75 px-6 py-8 text-center shadow-inner shadow-gold/20"
+            className="flex flex-col items-center justify-center rounded-3xl border border-gold/25 bg-night/80 px-6 py-8 text-center shadow-[inset_0_20px_45px_rgba(249,210,122,0.12)]"
           >
-            <span className="font-display text-4xl text-ink">
+            <span className="font-display text-4xl text-gilded drop-shadow-[0_0_15px_rgba(249,210,122,0.45)]">
               {item.value}
             </span>
-            <span className="mt-2 text-xs uppercase tracking-[0.3em] text-gold/70">
+            <span className="mt-2 text-xs uppercase tracking-[0.3em] text-ivory/70">
               {item.label}
             </span>
           </div>
