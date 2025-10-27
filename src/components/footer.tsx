@@ -5,10 +5,10 @@ import { contact, navigation } from "@/data/content";
 
 export function SiteFooter() {
   return (
-    <footer className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-olive/15 bg-olive/90 px-6 py-16 text-white shadow-2xl shadow-olive/20 md:px-14">
+    <footer className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/35 bg-gradient-to-br from-olive/95 via-gold/90 to-ink/90 px-6 py-16 text-white shadow-2xl shadow-gold/30 md:px-14">
       <div className="grid gap-10 md:grid-cols-[1.3fr,0.7fr] md:gap-16">
         <div>
-          <p className="font-display text-sm uppercase tracking-[0.6em] text-white/60">
+          <p className="font-display text-sm uppercase tracking-[0.6em] text-white/70">
             Theophilus &amp; Joan
           </p>
           <h2 className="mt-4 font-display text-4xl tracking-tight">
@@ -53,7 +53,7 @@ export function SiteFooter() {
               ))}
             </nav>
           </div>
-          <div className="rounded-3xl border border-white/20 bg-white/10 px-5 py-4 text-xs uppercase tracking-[0.3em] text-white/80">
+          <div className="rounded-3xl border border-white/30 bg-white/15 px-5 py-4 text-xs uppercase tracking-[0.3em] text-white/85">
             Made with love, talking drums &amp; endless gratitude • © {new Date().getFullYear()}
           </div>
         </div>
