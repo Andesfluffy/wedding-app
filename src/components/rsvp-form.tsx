@@ -54,14 +54,14 @@ export function RsvpSection() {
 
       setStatus("success");
       setFeedback(
-        "Thank you! We have received your RSVP and will follow up in March with every detail."
+        "Thank you! We have received your RSVP and will send final Lagos weekend details in October."
       );
       setForm(initialState);
     } catch (error) {
       console.error(error);
       setStatus("error");
       setFeedback(
-        "We were not able to send your RSVP right now. Please try again or email hello@marisbloom.com."
+        "We were not able to send your RSVP right now. Please try again or email team@ifeweddings.com."
       );
     }
   };
@@ -80,9 +80,9 @@ export function RsvpSection() {
             We cannot wait to celebrate with you
           </h2>
           <p className="mt-4 text-base leading-7 text-ink/70">
-            Kindly share your plans so we can reserve your seat at the table and
-            note any special requests. If you prefer, you may also email our
-            planner directly at hello@marisbloom.com.
+            Kindly share your plans so we can set your place, prepare fabrics,
+            and coordinate valet support. Prefer email? Reach out to{" "}
+            team@ifeweddings.com and we will take care of you.
           </p>
           {status !== "idle" && (
             <motion.div
@@ -213,7 +213,7 @@ export function RsvpSection() {
                 }
                 className="h-4 w-4 border-olive accent-olive"
               />
-              I would like a seat on the shuttle
+              Please reserve valet or ride support for me
             </label>
           </div>
           <div>

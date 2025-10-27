@@ -34,7 +34,7 @@ export function AudioPlayer() {
     } catch (err) {
       console.error(err);
       setError(
-        "We could not start the music automatically. You can tap play on the floating button once the page finishes loading."
+        "We could not start the music automatically. Tap play once the page loads or open the Spotify link."
       );
     }
     setOverlayOpen(false);
@@ -52,7 +52,7 @@ export function AudioPlayer() {
         setError(null);
       } catch (err) {
         console.error(err);
-        setError("Tap again to try playing the soundtrack.");
+        setError("Tap again to try playing the soundtrack or open the Spotify link.");
       }
     } else {
       audio.pause();
@@ -82,6 +82,16 @@ export function AudioPlayer() {
               <Play size={16} strokeWidth={1.5} />
               Begin soundtrack
             </button>
+            {audioTrack.link && (
+              <a
+                href={audioTrack.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-flex items-center justify-center rounded-full border border-white/60 px-5 py-2 text-xs uppercase tracking-[0.3em] text-white/80 transition hover:bg-white/10"
+              >
+                Listen on Spotify
+              </a>
+            )}
             {error && (
               <p className="mt-4 text-xs text-rose-100/80">{error}</p>
             )}

@@ -15,17 +15,17 @@ export function WeekendEvents() {
             Celebration weekend
           </p>
           <h2 className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl">
-            Three days on the coast
+            Three vibrant days in Lagos
           </h2>
           <p className="mt-4 text-base leading-7 text-ink/70">
-            Each gathering is designed to slow time, savor seasonal flavors, and
-            create space for connection. Please arrive in Santa Ynez by Friday
-            afternoon if you plan to join us for every moment.
+            We curated each gathering to honour our tribes, our city, and the
+            sounds that raised us. Come ready for colour, culture, and dancing
+            that carries into the night.
           </p>
         </div>
         <div className="rounded-3xl border border-olive/20 bg-cream/70 px-6 py-4 text-xs uppercase tracking-[0.3em] text-olive/80 shadow-inner shadow-olive/10">
-          Shuttle pickups are listed in your welcome email. Dietary requests can
-          be shared through the RSVP form.
+          Beat Lagos traffic by leaving early. Share dietary notes or parking
+          needs in the RSVP form so we can plan ahead.
         </div>
       </div>
       <div className="mt-14 grid gap-8 md:grid-cols-3">

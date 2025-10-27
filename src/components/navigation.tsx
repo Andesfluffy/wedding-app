@@ -27,22 +27,22 @@ export function Navigation() {
           "pointer-events-auto mx-auto flex max-w-6xl items-center justify-between rounded-full border px-6 py-4 backdrop-blur",
           "shadow-sm transition duration-300",
           isScrolled
-            ? "border-olive/20 bg-white/95 shadow-olive/20"
-            : "border-white/60 bg-white/80 shadow-olive/10"
+            ? "border-olive/20 bg-white/95 shadow-olive/30"
+            : "border-white/60 bg-white/80 shadow-olive/20"
         )}
       >
         <Link
           href="#top"
           className="font-display text-lg uppercase tracking-[0.4em] text-olive"
         >
-          A & M
+          T & J
         </Link>
         <nav className="hidden gap-6 text-sm font-medium text-ink/80 md:flex">
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="transition-colors hover:text-olive"
+              className="transition-colors hover:text-gold"
             >
               {item.label}
             </Link>
@@ -50,7 +50,7 @@ export function Navigation() {
         </nav>
         <Link
           href="#rsvp"
-          className="hidden rounded-full bg-olive px-5 py-2 text-sm font-semibold text-white shadow-sm shadow-olive/40 transition hover:bg-olive/90 md:inline-flex"
+          className="hidden rounded-full bg-gold px-5 py-2 text-sm font-semibold text-ink shadow-sm shadow-gold/40 transition hover:bg-gold/90 md:inline-flex"
         >
           RSVP
         </Link>
@@ -73,7 +73,7 @@ export function Navigation() {
       >
         <div className="flex items-center justify-between">
           <span className="font-display text-lg uppercase tracking-[0.3em] text-olive">
-            Aurora &amp; Milan
+            Theo &amp; Joan
           </span>
           <button
             type="button"
