@@ -68,9 +68,9 @@ export function CountdownSection() {
           The countdown is on
         </h2>
         <p className="mt-4 max-w-md text-base leading-7 text-ink/70">
-          We are planning an intimate weekend and would love to confirm your
-          spot soon. RSVP to let us know you will be there when the string
-          lights glow.
+          Lagos nights move fast. Kindly RSVP so we can reserve your seat,
+          prepare your aso-ebi, and keep the palm wine flowing until the last
+          song.
         </p>
       </div>
       <div className="grid grid-cols-2 gap-4 sm:gap-6">

@@ -1,18 +1,18 @@
 export const weddingDetails = {
   couple: {
-    firstPartner: "Aurora Lane",
-    secondPartner: "Milan Reyes",
+    firstPartner: "Theo Adebayo",
+    secondPartner: "Joan Okafor",
   },
-  date: "May 24, 2026",
-  weekday: "Saturday",
-  time: "4:30 PM",
-  venue: "Marin Coast Estate",
-  location: "Santa Ynez, California",
-  rsvpDeadline: "Kindly reply by March 30, 2026",
+  date: "November 30, 2025",
+  weekday: "Sunday",
+  time: "3:00 PM",
+  venue: "Harbour Point Event Centre",
+  location: "Victoria Island, Lagos, Nigeria",
+  rsvpDeadline: "Please RSVP by September 30, 2025",
   intro:
-    "We are overjoyed to invite you to a weekend on the California coast as we promise forever with our closest family and friends.",
+    "We are overjoyed to gather in our city for a Lagos celebration filled with palm wine toasts, talking drums, and the people who shaped our story.",
   description:
-    "Nestled between the vines and the sea, our celebration blends slow mornings, golden hour vows, and a candlelit dinner beneath the stars.",
+    "Expect rich colours, joyful praise, and a fusion of Yoruba and Igbo traditions as we seal our vows beside the Atlantic skyline.",
 };
 
 export const navigation = [
@@ -26,225 +26,226 @@ export const navigation = [
 
 export const storyMoments = [
   {
-    year: "2016",
-    title: "A rooftop hello",
+    year: "2015",
+    title: "A gallery spark",
     description:
-      "Aurora spotted Milan sketching the city skyline during a summer rooftop concert. One shared sketchbook later, the music became their backdrop and the conversation never really ended.",
+      "Theo and Joan first crossed paths at Art X Lagos where they reached for the same bronze sculpture. They spent the rest of the evening trading stories about hometowns and highlife records.",
   },
   {
-    year: "2018",
-    title: "Postcards and passports",
+    year: "2017",
+    title: "Love on Third Mainland",
     description:
-      "They traded Brooklyn winters for their first trip abroad together, getting blissfully lost down Lisbon alleyways and hiking the ridgelines of Madeira at sunrise.",
+      "Weekend drives over the Third Mainland Bridge became their ritual escape—stopping for suya on Awolowo Road and dreaming up the creative agency they now run together.",
   },
   {
     year: "2021",
-    title: "The question among the redwoods",
+    title: "A sunrise proposal in Tarkwa Bay",
     description:
-      "Milan proposed under a redwood canopy in Mendocino with a handwritten vow tucked inside Aurora's grandmother's locket.",
+      "Theo proposed on a quiet stretch of Tarkwa Bay Beach with a talking drummer serenade and a ring tucked into a calabash painted by Joan's mother.",
   },
   {
-    year: "2025",
-    title: "Toward forever",
+    year: "2024",
+    title: "Rooted in Lagos",
     description:
-      "From shared studios to quiet coffee rituals, every day since has woven their lives together. Now they cannot wait to celebrate the next chapter with you.",
+      "Building a home in Ikoyi, they host Sunday stews, late-night brainstorms, and family praise sessions. Now they're ready to honour every tribe that raised them.",
   },
 ];
 
 export const weekendEvents = [
   {
     day: "Friday",
-    date: "May 23",
-    title: "Welcome Fete",
-    time: "6:00 PM - 9:00 PM",
-    location: "The Conservatory Terrace, El Encanto",
-    attire: "Garden cocktail",
+    date: "November 28",
+    title: "Welcome Lagos Night",
+    time: "7:00 PM - 10:00 PM",
+    location: "NOK by Alára, Victoria Island",
+    attire: "Vibrant cocktail with Ankara accents",
     description:
-      "An alfresco evening with sparkling wine, wood fired bites, and live bossa nova to toast the weekend ahead.",
+      "Kick off the festivities with palm wine cocktails, jollof canapés, and an Afrobeats set under the neon palms of NOK's courtyard.",
   },
   {
     day: "Saturday",
-    date: "May 24",
-    title: "Ceremony and celebration",
-    time: "4:30 PM - Late",
-    location: "Marin Coast Estate",
-    attire: "Coastal formal",
+    date: "November 29",
+    title: "Traditional Engagement (Ìgbéyàwó & Igba Nkwu)",
+    time: "3:00 PM - 8:00 PM",
+    location: "The Monarch Event Centre, Lekki",
+    attire: "Aṣọ̀-ebi in emerald, coral, and royal purple",
     description:
-      "Processional on the bluff, dinner in the olive grove, and dancing under the mirrored sailcloth tent.",
+      "Join both families for kola nut blessings, talking drums, and a fusion of Yoruba and Igbo rites. Expect gele tying corners, rich stews, and cultural dances all night.",
   },
   {
     day: "Sunday",
-    date: "May 25",
-    title: "Seaside farewell",
-    time: "10:30 AM - 1:00 PM",
-    location: "Lantern Bay Lawn",
-    attire: "Relaxed whites and linens",
+    date: "November 30",
+    title: "White Wedding & After Party",
+    time: "2:30 PM - Late",
+    location: "Harbour Point Event Centre, Victoria Island",
+    attire: "Lagos chic—beaded ensembles and midnight gold accents",
     description:
-      "Drop by for cold pressed juices, brunch boards, and a barefoot stroll along the tide pools before heading home.",
+      "Exchange of vows overlooking the marina, a gospel choir recessional, multi-course Nigerian fusion dinner, and a midnight owambe with live band and DJ.",
   },
 ];
 
 export const travelEssentials = {
   airports: [
     {
-      name: "Santa Barbara (SBA)",
+      name: "Murtala Muhammed International (LOS)",
       details:
-        "25 minutes from the venue; direct flights from Denver, Phoenix, Seattle, and San Francisco.",
+        "For out-of-town guests, the airport is about 45 minutes from Victoria Island. Plan extra time for customs and peak hour traffic.",
     },
     {
-      name: "Los Angeles (LAX)",
+      name: "Lagos Living",
       details:
-        "A scenic two hour coastal drive; rental cars and luxury shuttles coordinated upon request.",
+        "Most of our loved ones call Lagos home—thank you for showing up close by! Aim to arrive at the venue at least an hour early to settle in before each event.",
     },
   ],
   accommodations: [
     {
-      name: "El Encanto",
+      name: "The Wheatbaker",
       description:
-        "Reserved block of suites overlooking the Pacific. Mention the Lane Reyes wedding for preferred rates through April 10.",
-      link: "https://www.belmond.com/hotels/north-america/usa/ca/santa-barbara/belmond-el-encanto/",
+        "Boutique luxury in Ikoyi with curated Nigerian art and a serene spa for pre-wedding pampering.",
+      link: "https://www.thewheatbakerlagos.com/",
     },
     {
-      name: "The Vinery Inn",
+      name: "Radisson Blu Anchorage",
       description:
-        "Boutique vineyard cottages with breakfast baskets and complimentary bikes.",
-      link: "https://example.com/vinery-inn",
+        "Waterfront rooms on Ozumba Mbadiwe with lagoon views and a quick drive to every venue.",
+      link: "https://www.radissonhotels.com/en-us/hotels/radisson-blu-lagos-anchorage",
     },
     {
-      name: "Casita Azul",
+      name: "Lagos Continental Hotel",
       description:
-        "Design forward Airbnb casitas curated by our planner for groups of four to six guests.",
-      link: "https://example.com/casita-azul",
+        "Skyline suites for family flying in and a rooftop pool perfect for morning swims.",
+      link: "https://www.ihg.com/intercontinental/hotels/us/en/lagos/losha/hoteldetail",
     },
   ],
   dressCode: {
-    title: "Palette and attire",
-    body: "We adore muted coastal tones. Think eucalyptus, champagne, ivory, midnight, and soft blush. Stilettos can be tricky on the estate lawns, so block heels and dressy flats are encouraged.",
+    title: "Palette & attire",
+    body: "Our aṣọ̀-ebi palette sings in emerald, coral, royal purple, and molten gold. Think richly beaded fabrics, gele or fila, and comfortable shoes for hours of dancing.",
   },
   transport:
-    "Shuttle service will depart from El Encanto and The Vinery Inn sixty minutes prior to each event. Valet is available onsite for those driving.",
+    "Ride-hailing drop-off is available at each venue entrance with dedicated ushers. Complimentary valet and limited parking passes will be emailed to drivers two weeks out.",
   registryNote:
-    "Your presence is the greatest gift. For those who have asked, we have curated a registry with experiences and heirloom pieces linked below.",
+    "Your presence is everything. If you feel moved to give, we have blended experiences, art, and community causes that matter deeply to us.",
 };
 
 export const weddingParty = [
   {
-    role: "Maid of Honor",
-    name: "Elise Hart",
+    role: "Maid of Honour",
+    name: "Adaora Okafor",
     description:
-      "Childhood confidante, crossword rival, and the keeper of Aurora's best stories.",
+      "Joan's sister, lawyer with a heart of gold, and queen of choreographing family dances.",
   },
   {
     role: "Best Man",
-    name: "Noah Reyes",
+    name: "Kunle Adebayo",
     description:
-      "Milan's younger brother, surfer in residence, and fearless toastmaster.",
+      "Theo's big cousin, hype man in chief, and the brain behind our midnight owambes.",
   },
   {
     role: "Bridesmaid",
-    name: "Callie Stone",
+    name: "Zainab Lawal",
     description:
-      "Studio mate turned sister, co founder of the Bloom and Brush collective with Aurora.",
+      "College roommate, textile designer, and the creative eye behind our aṣọ̀-ebi fabrics.",
   },
   {
     role: "Groomsman",
-    name: "Julian Carter",
+    name: "Chidi Nwosu",
     description:
-      "Met Milan during architecture school critiques and never stopped trading design ideas.",
+      "Business partner, strategist, and the first to insist on late-night brainstorming over suya.",
   },
   {
     role: "Flower Girl",
-    name: "Luna Hart",
+    name: "Imela Okeke",
     description:
-      "Elise's daughter who insists on sprinkling petals with her rescue puppy, Piper.",
+      "Joan's goddaughter who has promised to scatter petals and mini talking drums down the aisle.",
   },
   {
     role: "Ring Bearer",
-    name: "Mateo Reyes",
+    name: "Bolu Adebayo",
     description:
-      "Milan's cousin, aspiring astronaut, and unofficial DJ of every family party.",
+      "Theo's nephew, budding photographer, and the kid capturing behind-the-scenes moments on a disposable camera.",
   },
 ];
 
 export const registryItems = [
   {
-    name: "Mediterranean honeymoon adventure",
+    name: "Zanzibar & Cape Town honeymoon",
     description:
-      "Sunset sailing in the Cyclades, cooking classes in Naxos, and cliffside dinners in Amalfi.",
-    link: "https://example.com/honeymoon-registry",
+      "Dhow sailing at sunset, Cape Winelands tastings, and a photography tour capturing every adventure.",
+    link: "https://example.com/honeymoon-zanzibar",
   },
   {
-    name: "Heirloom dining collection",
+    name: "Nigerian art collection",
     description:
-      "Hand thrown ceramics crafted by artisans in Ojai to host many future gatherings.",
-    link: "https://example.com/dining-collection",
+      "Commissioned pieces from emerging Lagos artists to fill the studio and celebrate our creative roots.",
+    link: "https://example.com/nigerian-art",
   },
   {
     name: "Community giving",
     description:
-      "In lieu of favors, we will donate to SurfRider and the Santa Barbara Food Bank in honor of our guests.",
-    link: "https://example.com/giving",
+      "Support for Slum2School and The Irede Foundation in honour of the communities that raised us.",
+    link: "https://example.com/community-giving",
   },
 ];
 
 export const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1520854221050-0f4caff449fb?auto=format&fit=crop&w=1200&q=75",
-    alt: "Sunset over coastal cliffs with a couple embracing.",
+    src: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=75",
+    alt: "Bride in a beaded gele smiling beneath Lagos light.",
   },
   {
-    src: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=75",
-    alt: "Table setting with candles and florals.",
+    src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=75",
+    alt: "Couple sharing a laugh in vibrant traditional attire.",
   },
   {
-    src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=75",
-    alt: "Bridal bouquet with blush and ivory roses.",
+    src: "https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=1200&q=75",
+    alt: "Patterned Ankara fabrics layered in jewel tones.",
   },
   {
-    src: "https://images.unsplash.com/photo-1471115853179-bb1d604434e0?auto=format&fit=crop&w=1200&q=75",
-    alt: "A quiet path through vineyards at dusk.",
+    src: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=75",
+    alt: "Tablescape with tropical florals and glowing candles.",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=1200&q=75",
+    alt: "Talking drummers leading a jubilant procession.",
   },
   {
     src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=75",
-    alt: "Couple walking through an olive grove.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1530023367847-a683933f4177?auto=format&fit=crop&w=1200&q=75",
-    alt: "Wedding altar with floral arch and ocean backdrop.",
+    alt: "Sunset portraits along the Lagos waterfront.",
   },
 ];
 
 export const faqs = [
   {
+    question: "What should I wear to each ceremony?",
+    answer:
+      "Friday is playful cocktail. Saturday is our aṣọ̀-ebi celebration—please rock the emerald, coral, or royal purple fabrics we shared. Sunday is Lagos chic with gold accents; gele and agbada are joyfully welcome!",
+  },
+  {
+    question: "Is parking available?",
+    answer:
+      "Yes. Valet is complimentary at every venue. If you prefer to drive yourself, reply in the RSVP form and we will email you a parking pass and arrival instructions two weeks prior.",
+  },
+  {
     question: "Can I bring my children?",
     answer:
-      "We love your little ones, but we kindly request an adults only celebration, with the exception of our wedding party.",
-  },
-  {
-    question: "What will the weather be like?",
-    answer:
-      "Late May in Santa Ynez is warm during the day at about 75 F with cooler evenings near 55 F. A light shawl or jacket is recommended once the sun sets.",
-  },
-  {
-    question: "Will there be transportation?",
-    answer:
-      "Yes. Shuttles will run between the host hotels and each event. Please indicate in your RSVP if you plan to ride with us.",
+      "The traditional engagement welcomes children until 8 PM. Sunday's white wedding will be an adults-focused celebration so parents can dance freely—please reach out if you need help arranging childcare.",
   },
 ];
 
 export const contact = {
-  planner: "Maris Bloom Events",
-  email: "hello@marisbloom.com",
-  phone: "(805) 555-0183",
-  note: "Reach out to our planner with any travel questions, menu requests, or surprises you would like to help us plan.",
+  planner: "Ìfé Weddings & Events",
+  email: "team@ifeweddings.com",
+  phone: "+234 803 555 0199",
+  note: "Reach out to our planner for parking passes, fabric pick-up, or any special surprise you would love to add to the programme.",
 };
 
 export const audioTrack = {
   file:
-    "https://cdn.pixabay.com/download/audio/2023/02/06/audio_a2c77f3cce.mp3?filename=moonlight-139016.mp3",
-  title: "Coastal Reverie - Sofia Wilder",
+    "https://p.scdn.co/mp3-preview/6b09d5c0a8c21fc9968436d5cfbcd4f661d6f21d?cid=774b29d4f13844c495f206cafdad9c86",
+  title: "Photograph - Ed Sheeran",
   description:
-    "Press play for the piano piece that will accompany Aurora's walk down the aisle.",
+    "Press play to hear the song that will score Theo and Joan's first dance. If playback pauses, tap the Spotify link to keep the groove going.",
+  link: "https://open.spotify.com/track/6fxVffaTuwjgEkE9ZXR2u7",
 };
 
-export const countdownTarget = "2026-05-24T16:30:00-07:00";
+export const countdownTarget = "2025-11-30T15:00:00+01:00";

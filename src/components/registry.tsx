@@ -12,12 +12,12 @@ export function RegistrySection() {
           Registry
         </p>
         <h2 className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl">
-          A few meaningful offerings
+          Gifts that echo our rhythm
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-ink/70">
-          Your company is a gift, always. If you wish to mark the occasion with
-          something more, these experiences and pieces reflect what we dream of
-          building together.
+          Your presence lights up the dance floor. For those asking how else to
+          celebrate us, these experiences, art pieces, and causes are close to
+          our hearts.
         </p>
       </div>
       <div className="mt-12 grid gap-6 sm:grid-cols-3">

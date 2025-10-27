@@ -13,11 +13,11 @@ export function WeddingPartySection() {
           Inner circle
         </p>
         <h2 className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl">
-          Our wedding party
+          The crew behind the magic
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-ink/70">
-          These incredible humans have been with us through every chapter. We
-          cannot imagine this day without them by our side.
+          Family, friends, hype team—they have prayed, planned, and danced with
+          us every step. Lagos is louder and lovelier because of them.
         </p>
       </div>
       <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

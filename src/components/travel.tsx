@@ -13,20 +13,19 @@ export function TravelSection() {
       <div className="grid gap-12 md:grid-cols-[1.2fr,0.8fr] md:gap-16">
         <div>
           <p className="font-display text-xs uppercase tracking-[0.6em] text-olive/70">
-            Travel Notes
+            Lagos logistics
           </p>
           <h2 className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl">
-            Planning your stay
+            Flowing with the city
           </h2>
           <p className="mt-4 text-base leading-7 text-ink/70">
-            We have gathered our favorite guidance for arriving, relaxing, and
-            dressing the part. Reach out to our planner with any bespoke
-            requests - we want the celebration to feel effortless from the
-            moment you land.
+            We know most of you already navigate Lagos like pros. These notes
+            gather timing tips, stay suggestions, and the colour story for our
+            aṣọ̀-ebi so every moment feels seamless.
           </p>
           <div className="mt-10 space-y-8">
             <div>
-              <h3 className="font-display text-2xl text-ink">Airports</h3>
+              <h3 className="font-display text-2xl text-ink">Arrivals &amp; timing</h3>
               <ul className="mt-4 space-y-3 text-sm leading-7 text-ink/70">
                 {travelEssentials.airports.map((airport) => (
                   <li key={airport.name}>
@@ -84,7 +83,7 @@ export function TravelSection() {
             <p className="mt-3">{travelEssentials.dressCode.body}</p>
           </div>
           <div className="rounded-2xl border border-olive/15 bg-cream/80 p-6 text-sm leading-7 text-ink/70 shadow-inner shadow-olive/10">
-            <p className="font-display text-lg text-ink">Transportation</p>
+            <p className="font-display text-lg text-ink">Getting around</p>
             <p className="mt-3">{travelEssentials.transport}</p>
           </div>
           <div className="rounded-2xl border border-olive/15 bg-cream/80 p-6 text-sm leading-7 text-ink/70 shadow-inner shadow-olive/10">

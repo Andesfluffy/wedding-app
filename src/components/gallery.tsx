@@ -15,11 +15,11 @@ export function GallerySection() {
           Mood board
         </p>
         <h2 className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl">
-          Visual whispers of the day
+          Colours of Lagos love
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-ink/70">
-          A glimpse into the textures, tones, and light guiding the celebration.
-          We cannot wait to see it all come to life with you there.
+          Jewel tones, tropical blooms, and metallic flashes—the palette guiding
+          every aso-ebi, floral arch, and midnight dance break.
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -9,15 +9,15 @@ export function SiteFooter() {
       <div className="grid gap-10 md:grid-cols-[1.3fr,0.7fr] md:gap-16">
         <div>
           <p className="font-display text-sm uppercase tracking-[0.6em] text-white/60">
-            Aurora &amp; Milan
+            Theo &amp; Joan
           </p>
           <h2 className="mt-4 font-display text-4xl tracking-tight">
-            See you in Santa Ynez
+            See you in Victoria Island
           </h2>
           <p className="mt-4 max-w-lg text-sm leading-7 text-white/80">
-            We are counting down the days until we can hug you in person.
-            Please reach out if there is anything you need as you plan your
-            journey to the coast.
+            We are counting down to dancing under Lagos skies with you. Reach
+            out if you need valet passes, fabric pick-up, or anything that makes
+            the weekend easier.
           </p>
           <div className="mt-8 flex flex-col gap-2 text-sm text-white/75">
             <span className="uppercase tracking-[0.3em] text-white/60">
@@ -54,7 +54,7 @@ export function SiteFooter() {
             </nav>
           </div>
           <div className="rounded-3xl border border-white/20 bg-white/10 px-5 py-4 text-xs uppercase tracking-[0.3em] text-white/80">
-            Made with love and long playlists • © {new Date().getFullYear()}
+            Made with love, talking drums &amp; long playlists • © {new Date().getFullYear()}
           </div>
         </div>
       </div>
