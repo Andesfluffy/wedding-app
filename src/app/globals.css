@@ -7,23 +7,53 @@
 @theme inline {
   --font-sans: var(--font-body);
   --font-display: var(--font-heading);
-  --color-cream: #110a07;
-  --color-champagne: #bb8223;
-  --color-fog: #1b120c;
-  --color-sand: #22150d;
-  --color-ink: #f4e7d3;
-  --color-olive: #f0bf58;
-  --color-blush: #e0a651;
-  --color-gold: #f6c45c;
-  --color-platinum: #1a100b;
-  --color-white: #ffffff;
-  --color-night: #050404;
-  --color-onyx: #0c0806;
-  --color-char: #1d110b;
-  --color-ember: #c4842b;
-  --color-gilded: #f9d27a;
-  --color-ivory: #f6ead5;
-  --color-bronze: #8a5520;
+  --color-pale-dogwood-100: #481a10;
+  --color-pale-dogwood-200: #903420;
+  --color-pale-dogwood-300: #d35235;
+  --color-pale-dogwood-400: #e28f7d;
+  --color-pale-dogwood-500: #f2ccc3;
+  --color-pale-dogwood-600: #f5d7d0;
+  --color-pale-dogwood-700: #f7e1dc;
+  --color-pale-dogwood-800: #faebe8;
+  --color-pale-dogwood-900: #fcf5f3;
+  --color-light-coral-100: #3d0e0d;
+  --color-light-coral-200: #7b1c1a;
+  --color-light-coral-300: #b82a27;
+  --color-light-coral-400: #da5250;
+  --color-light-coral-500: #e78f8e;
+  --color-light-coral-600: #eca5a4;
+  --color-light-coral-700: #f1bcbb;
+  --color-light-coral-800: #f5d2d2;
+  --color-light-coral-900: #fae9e8;
+  --color-misty-rose-100: #610008;
+  --color-misty-rose-200: #c20010;
+  --color-misty-rose-300: #ff2436;
+  --color-misty-rose-400: #ff858f;
+  --color-misty-rose-500: #ffe6e8;
+  --color-misty-rose-600: #ffebec;
+  --color-misty-rose-700: #fff0f1;
+  --color-misty-rose-800: #fff5f6;
+  --color-misty-rose-900: #fffafa;
+  --color-celadon-100: #1a3518;
+  --color-celadon-200: #346a31;
+  --color-celadon-300: #4e9f49;
+  --color-celadon-400: #7ac076;
+  --color-celadon-500: #acd8aa;
+  --color-celadon-600: #bee0bc;
+  --color-celadon-700: #cee8cd;
+  --color-celadon-800: #def0dd;
+  --color-celadon-900: #eff7ee;
+  --color-salmon-pink-100: #450612;
+  --color-salmon-pink-200: #8b0c23;
+  --color-salmon-pink-300: #d01235;
+  --color-salmon-pink-400: #ee4060;
+  --color-salmon-pink-500: #f48498;
+  --color-salmon-pink-600: #f79dae;
+  --color-salmon-pink-700: #f9b6c2;
+  --color-salmon-pink-800: #fbced6;
+  --color-salmon-pink-900: #fde7eb;
+  --color-ink: #2c1f29;
+  --color-ivory: #fff9f8;
 }
 
 * {
@@ -38,19 +68,20 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 12% 18%, rgba(246, 196, 92, 0.28), transparent 45%),
-    radial-gradient(circle at 82% 12%, rgba(200, 132, 42, 0.35), transparent 50%),
-    radial-gradient(circle at 65% 78%, rgba(111, 70, 29, 0.28), transparent 52%),
-    linear-gradient(135deg, rgba(10, 6, 5, 0.95), rgba(5, 4, 4, 0.9));
-  background-color: var(--color-night);
+    radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--color-misty-rose-500) 65%, transparent), transparent 50%),
+    radial-gradient(circle at 85% 18%, color-mix(in srgb, var(--color-pale-dogwood-500) 55%, transparent), transparent 58%),
+    radial-gradient(circle at 30% 78%, color-mix(in srgb, var(--color-salmon-pink-500) 60%, transparent), transparent 60%),
+    radial-gradient(circle at 78% 72%, color-mix(in srgb, var(--color-celadon-500) 45%, transparent), transparent 65%),
+    linear-gradient(135deg, var(--color-light-coral-200), var(--color-ink));
+  background-color: var(--color-light-coral-200);
   color: var(--color-ivory);
   font-family: var(--font-sans);
   letter-spacing: 0.01em;
 }
 
 ::selection {
-  background: rgba(246, 196, 92, 0.6);
-  color: var(--color-night);
+  background: color-mix(in srgb, var(--color-salmon-pink-500) 45%, var(--color-misty-rose-600));
+  color: var(--color-ink);
 }
 
 a {
