@@ -240,7 +240,8 @@ export const contact = {
 };
 
 export const audioTrack = {
-  file: "/audio/aurora-milan-theme.mp3",
+  file:
+    "https://cdn.pixabay.com/download/audio/2023/02/06/audio_a2c77f3cce.mp3?filename=moonlight-139016.mp3",
   title: "Coastal Reverie - Sofia Wilder",
   description:
     "Press play for the piano piece that will accompany Aurora's walk down the aisle.",

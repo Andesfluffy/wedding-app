@@ -40,14 +40,15 @@ function getTimeRemaining(target: Date): CountdownState {
 
 export function CountdownSection() {
   const targetDate = useMemo(() => new Date(countdownTarget), []);
-  const [time, setTime] = useState<CountdownState>(() =>
-    getTimeRemaining(targetDate)
-  );
+  const [time, setTime] = useState<CountdownState>(initialState);
 
   useEffect(() => {
-    const interval = window.setInterval(() => {
+    const updateTime = () => {
       setTime(getTimeRemaining(targetDate));
-    }, 1000);
+    };
+
+    updateTime();
+    const interval = window.setInterval(updateTime, 1000);
     return () => window.clearInterval(interval);
   }, [targetDate]);
 
