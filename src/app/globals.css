@@ -7,13 +7,14 @@
 @theme inline {
   --font-sans: var(--font-body);
   --font-display: var(--font-heading);
-  --color-cream: #fff7ef;
-  --color-fog: #ffe4f4;
-  --color-sand: #ffd1a6;
-  --color-ink: #160a1b;
-  --color-olive: #0d9d8a;
-  --color-blush: #ff5c8a;
-  --color-gold: #ffc857;
+  --color-cream: #fffaf0;
+  --color-fog: #eef1f8;
+  --color-sand: #ded2bf;
+  --color-ink: #1a191f;
+  --color-olive: #b9862c;
+  --color-blush: #ffd89a;
+  --color-gold: #f4ce4b;
+  --color-platinum: #d7ddeb;
   --color-white: #ffffff;
 }
 
@@ -29,9 +30,11 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 15% 20%, rgba(255, 92, 138, 0.2), transparent 45%),
-    radial-gradient(circle at 85% 15%, rgba(13, 157, 138, 0.18), transparent 50%),
-    radial-gradient(circle at 50% 85%, rgba(255, 200, 87, 0.25), transparent 55%),
+    radial-gradient(circle at 18% 24%, rgba(244, 206, 75, 0.45), transparent 45%),
+    radial-gradient(circle at 82% 18%, rgba(215, 221, 235, 0.48), transparent 52%),
+    radial-gradient(circle at 52% 78%, rgba(185, 134, 44, 0.38), transparent 56%),
+    radial-gradient(circle at 88% 72%, rgba(255, 255, 255, 0.42), transparent 60%),
+    linear-gradient(135deg, rgba(255, 250, 240, 0.94), rgba(238, 241, 248, 0.92)),
     var(--color-cream);
   color: var(--color-ink);
   font-family: var(--font-sans);
@@ -39,7 +42,7 @@ body {
 }
 
 ::selection {
-  background: rgba(21, 99, 86, 0.35);
+  background: rgba(244, 206, 75, 0.55);
 }
 
 a {

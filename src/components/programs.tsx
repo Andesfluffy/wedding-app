@@ -11,11 +11,11 @@ export function ProgramSection() {
   return (
     <section
       id="program"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-white/50 bg-gradient-to-br from-cream/90 via-white/80 to-fog/80 px-6 py-20 shadow-2xl shadow-olive/10 backdrop-blur md:px-16"
+      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/25 bg-gradient-to-br from-cream/95 via-white/85 to-platinum/80 px-6 py-20 shadow-[0_40px_120px_-40px_rgba(185,134,44,0.35)] backdrop-blur md:px-16"
     >
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
-          <p className="font-display text-xs uppercase tracking-[0.6em] text-olive/70">
+          <p className="font-display text-xs uppercase tracking-[0.6em] text-gold/80">
             Ceremony &amp; reception
           </p>
           <h2 className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl">
@@ -27,7 +27,7 @@ export function ProgramSection() {
             into one elegant guide for your wedding-day link.
           </p>
         </div>
-        <div className="rounded-3xl border border-olive/20 bg-cream/70 px-6 py-4 text-xs uppercase tracking-[0.3em] text-olive/80 shadow-inner shadow-olive/10">
+        <div className="rounded-3xl border border-gold/35 bg-gradient-to-br from-white/85 via-cream/80 to-gold/25 px-6 py-4 text-xs uppercase tracking-[0.3em] text-olive/90 shadow-inner shadow-olive/15">
           Save this link for November 29. Tap each section for the latest
           timings and highlights throughout the day.
         </div>
@@ -36,12 +36,12 @@ export function ProgramSection() {
       <div className="mt-14 grid gap-8 lg:grid-cols-[1.1fr,1.1fr,0.9fr]">
         <ProgramCard
           title="Kingdom Hall program"
-          accent="from-olive/15 via-white/70 to-cream/60"
+          accent="from-gold/45 via-white/90 to-platinum/70"
           items={kingdomHallProgram}
         />
         <ProgramCard
           title="Reception flow"
-          accent="from-rose/10 via-white/70 to-cream/60"
+          accent="from-platinum/65 via-white/88 to-gold/35"
           items={receptionProgram}
         />
         <PhotographyCard />
@@ -71,20 +71,22 @@ function ProgramCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
-      className={`flex h-full flex-col rounded-[2.5rem] border border-olive/15 bg-gradient-to-br ${accent} p-8 shadow-xl shadow-olive/10`}
+      className={`flex h-full flex-col rounded-[2.5rem] border border-gold/25 bg-gradient-to-br ${accent} p-8 shadow-xl shadow-[0_30px_80px_-35px_rgba(180,138,60,0.4)]`}
     >
-      <h3 className="font-display text-2xl text-ink">{title}</h3>
-      <dl className="mt-6 flex flex-col gap-5 text-sm leading-7 text-ink/70">
+      <h3 className="font-display text-2xl text-ink">
+        {title}
+      </h3>
+      <dl className="mt-6 flex flex-col gap-5 text-sm leading-7 text-ink/75">
         {items.map((item) => (
           <div
             key={`${item.time}-${item.title}`}
-            className="rounded-2xl border border-white/60 bg-white/70 p-4 shadow-inner shadow-olive/5"
+            className="rounded-2xl border border-gold/35 bg-gradient-to-br from-white/85 via-cream/80 to-platinum/70 p-4 shadow-inner shadow-olive/10"
           >
-            <dt className="font-display text-xs uppercase tracking-[0.3em] text-olive/80">
+            <dt className="font-display text-xs uppercase tracking-[0.3em] text-gold/85">
               {item.time}
             </dt>
             <dd className="mt-2 font-display text-lg text-ink">{item.title}</dd>
-            <p className="mt-1 text-[0.95rem] leading-6 text-ink/65">
+            <p className="mt-1 text-[0.95rem] leading-6 text-ink/70">
               {item.description}
             </p>
           </div>
@@ -101,10 +103,10 @@ function PhotographyCard() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6 }}
-      className="flex h-full flex-col rounded-[2.5rem] border border-olive/15 bg-gradient-to-br from-ink/[0.04] via-white/75 to-cream/60 p-8 shadow-xl shadow-olive/10"
+      className="flex h-full flex-col rounded-[2.5rem] border border-gold/25 bg-gradient-to-br from-platinum/70 via-white/88 to-gold/30 p-8 shadow-xl shadow-[0_30px_80px_-35px_rgba(180,138,60,0.4)]"
     >
       <h3 className="font-display text-2xl text-ink">Order of photography</h3>
-      <p className="mt-3 text-sm leading-7 text-ink/70">
+      <p className="mt-3 text-sm leading-7 text-ink/75">
         Share these moments with your crew so everyone knows when to gather
         for portraits and when to let loose on the dance floor.
       </p>
@@ -112,10 +114,10 @@ function PhotographyCard() {
         {photographyMoments.map((moment) => (
           <li
             key={moment.title}
-            className="rounded-2xl border border-white/60 bg-white/70 p-4 shadow-inner shadow-olive/5"
+            className="rounded-2xl border border-gold/35 bg-gradient-to-br from-white/85 via-cream/80 to-platinum/70 p-4 shadow-inner shadow-olive/10"
           >
             <p className="font-display text-lg text-ink">{moment.title}</p>
-            <p className="mt-1 text-[0.95rem] leading-6 text-ink/65">
+            <p className="mt-1 text-[0.95rem] leading-6 text-ink/70">
               {moment.description}
             </p>
           </li>
