@@ -15,9 +15,9 @@ const body = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Theophilus & Joan - Kingdom Hall Wedding",
+  title: "Theophilus & Joan - Lagos Celebration",
   description:
-    "Celebrate Theophilus Oyeyemi and Joan Ogogo on November 29, 2025. Discover the wedding day schedule, travel notes, wedding party, and RSVP details for their vibrant Kingdom Hall celebration.",
+    "Celebrate Theophilus and Joan on November 29, 2025 in Magodo, Lagos. Explore the schedule, travel notes, wedding party, and RSVP details for their colourful Kingdom Hall ceremony and reception.",
 };
 
 export default function RootLayout({

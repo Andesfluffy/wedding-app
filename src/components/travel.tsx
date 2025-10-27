@@ -8,7 +8,7 @@ export function TravelSection() {
   return (
     <section
       id="travel"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-ink/5 bg-cream/80 px-6 py-20 shadow-xl shadow-olive/10 backdrop-blur"
+      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-ink/5 bg-gradient-to-br from-cream/80 via-white/75 to-fog/70 px-6 py-20 shadow-xl shadow-olive/10 backdrop-blur"
     >
       <div className="grid gap-12 md:grid-cols-[1.2fr,0.8fr] md:gap-16">
         <div>

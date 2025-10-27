@@ -7,7 +7,7 @@ export function WeekendEvents() {
   return (
     <section
       id="schedule"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-white/40 bg-white/85 px-6 py-20 shadow-2xl shadow-olive/10 backdrop-blur md:px-16"
+      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-white/40 bg-gradient-to-br from-white/90 via-white/75 to-cream/80 px-6 py-20 shadow-2xl shadow-olive/10 backdrop-blur md:px-16"
     >
       <div className="flex flex-col items-start gap-8 md:flex-row md:items-end md:gap-16">
         <div className="max-w-xl">
@@ -19,11 +19,11 @@ export function WeekendEvents() {
           </h2>
           <p className="mt-4 text-base leading-7 text-ink/70">
             Every moment unfolds in the Kingdom Hall grounds so you can relax,
-            rejoice, and celebrate with us from the first hymn to the final
+            reconnect, and celebrate with us from the first toast to the final
             dance break.
           </p>
         </div>
-        <div className="rounded-3xl border border-olive/20 bg-cream/70 px-6 py-4 text-xs uppercase tracking-[0.3em] text-olive/80 shadow-inner shadow-olive/10">
+        <div className="rounded-3xl border border-olive/20 bg-fog/70 px-6 py-4 text-xs uppercase tracking-[0.3em] text-olive/80 shadow-inner shadow-olive/10">
           Beat Lagos traffic by leaving early. Share dietary notes or parking
           needs in the RSVP form so we can plan ahead.
         </div>

@@ -1,7 +1,7 @@
 export const weddingDetails = {
   couple: {
-    firstPartner: "Theophilus Oyeyemi",
-    secondPartner: "Joan Ogogo",
+    firstPartner: "Theophilus",
+    secondPartner: "Joan",
   },
   date: "November 29, 2025",
   weekday: "Saturday",
@@ -10,9 +10,9 @@ export const weddingDetails = {
   location: "Magodo Phase II, Lagos, Nigeria",
   rsvpDeadline: "Kindly RSVP by August 31, 2025",
   intro:
-    "We cannot wait to gather with you for a Kingdom Hall celebration bursting with gratitude, colour, and unstoppable joy.",
+    "We are counting down to a Lagos celebration bursting with colour, laughter, and the friends who feel like family.",
   description:
-    "Share in a spirit-filled service, our heartfelt vows, and an ecstatic reception that keeps the praises high and the smiles brighter than the Lagos sun.",
+    "Join us for heartfelt vows at the Kingdom Hall and a Saturday reception that slides straight into a high-energy dance floor.",
 };
 
 export const navigation = [
@@ -27,27 +27,27 @@ export const navigation = [
 export const storyMoments = [
   {
     year: "2016",
-    title: "Ministry partners",
+    title: "A chance team-up",
     description:
-      "Theophilus and Joan teamed up on a congregation outreach in Surulere. Between door-to-door ministry and shared snacks, they discovered a rhythm that felt heaven-sent.",
+      "Theophilus and Joan were paired for a volunteer outreach in Surulere. Between planning routes and swapping playlists, sparks of friendship started flying.",
   },
   {
     year: "2018",
-    title: "Study sessions & sunsets",
+    title: "Side hustles & sunsets",
     description:
-      "Bible study meetups turned into long Lagos sunsets, business brainstorms, and laughter-filled danfo rides that made city traffic feel like a private concert.",
+      "Study sessions turned into Lagos sunset hangouts, small-business brainstorms, and laughter-filled danfo rides that made traffic feel like a private concert.",
   },
   {
     year: "2022",
-    title: "A joyful proposal",
+    title: "A surprise proposal",
     description:
-      "Theophilus orchestrated a surprise proposal after a Saturday field service, filling the Kingdom Hall garden with fairy lights, family, and praise songs.",
+      "After a Saturday of errands, Theophilus led Joan to a garden glowing with fairy lights, favourite people, and a ring that had everyone cheering.",
   },
   {
     year: "2024",
     title: "Ready for forever",
     description:
-      "Now settled in Magodo, they host vibrant dinner parties, mentor teens in the congregation, and plan a wedding day that mirrors their faith, culture, and unstoppable optimism.",
+      "Now settled in Magodo, they host vibrant dinner parties, cheer on their community, and plan a wedding day that mirrors their culture, humour, and unstoppable optimism.",
   },
 ];
 
@@ -55,22 +55,22 @@ export const weekendEvents = [
   {
     day: "Saturday",
     date: "November 29",
-    title: "Kingdom Hall Wedding Ceremony",
+    title: "Ceremony & vows",
     time: "12:00 PM",
     location: "Kingdom Hall of Jehovah's Witnesses, Magodo Phase II",
     attire: "Polished jewel tones with joyful accents",
     description:
-      "Arrive early to settle in with family and friends before the worshipful service begins. Expect heartfelt vows, vibrant choir harmonies, and a celebration anchored in faith.",
+      "Arrive early to settle in with family and friends. Expect heartfelt vows, colourful décor, and a ceremony that feels warm, personal, and full of smiles.",
   },
   {
     day: "Saturday",
     date: "November 29",
-    title: "Reception & Thanksgiving Social",
+    title: "Reception & after-party",
     time: "2:00 PM - 6:30 PM",
     location: "Kingdom Hall Reception Pavilion, Magodo Phase II",
     attire: "Same-day celebration best with radiant colours",
     description:
-      "After the ceremony, we continue on-site with jubilant praise, gourmet Nigerian bites, and a live band keeping the energy sky-high until sunset.",
+      "After the ceremony we stay on-site for playful cocktails, Nigerian bites, and a live band that glides from love songs to dance-floor anthems until sunset.",
   },
 ];
 
@@ -79,19 +79,19 @@ export const travelEssentials = {
     {
       name: "Murtala Muhammed International (LOS)",
       details:
-        "For out-of-town guests, the airport is about 25 minutes from Magodo outside of peak traffic. Plan extra time for customs and Saturday travel.",
+        "For out-of-town guests, the airport is about 30 minutes from Magodo when traffic is light. Build in extra time for customs and Saturday travel flair.",
     },
     {
-      name: "Congregation family",
+      name: "For Lagos fam",
       details:
-        "Thank you for serving with us all year long. Please arrive by 11:15 AM so ushers can seat everyone before the ceremony begins.",
+        "Leave before 11:00 AM so you can settle in, grab selfies, and catch our pre-ceremony first-look moments.",
     },
   ],
   accommodations: [
     {
       name: "Radisson Blu Lagos Ikeja",
       description:
-        "Business-class comfort 15 minutes from the Kingdom Hall with airport shuttles and hearty breakfasts.",
+        "Business-class comfort 15 minutes from the Kingdom Hall with airport shuttles, skyline views, and hearty breakfasts.",
       link: "https://www.radissonhotels.com/en-us/hotels/radisson-blu-lagos-ikeja",
     },
     {
@@ -103,54 +103,54 @@ export const travelEssentials = {
     {
       name: "Presken Hotel @ Awolowo Way",
       description:
-        "A vibrant boutique stay for guests seeking convenience, modern amenities, and cheerful service.",
+        "A vibrant boutique stay with colourful interiors, speedy room service, and cheerful staff.",
       link: "https://www.preskenhotels.com/",
     },
   ],
   dressCode: {
     title: "Palette & attire",
-    body: "Our colour story beams in emerald, champagne gold, and ruby accents. Think dapper suits, elegant dresses, gele or fila, and dancing-ready shoes.",
+    body: "Our colour story beams in emerald, champagne gold, and ruby accents. Think dapper suits, elegant dresses, gele or fila, and shoes ready for Afrobeats spins.",
   },
   transport:
     "Ride-hailing drop-off is available at the Kingdom Hall gate with attendants on site. Complimentary parking passes will be emailed to drivers two weeks out.",
   registryNote:
-    "Your presence means the world. If you would love to gift us, we have curated experiences and causes that reflect our hearts.",
+    "Your presence means the world. If you would love to gift us, we curated fun experiences and home upgrades we cannot wait to enjoy.",
 };
 
 export const weddingParty = [
   {
     role: "Maid of Honour",
-    name: "Deborah Ogogo",
+    name: "Deborah",
     description:
       "Joan's big sister, dynamic project manager, and the choreography genius behind our reception entrance.",
   },
   {
     role: "Best Man",
-    name: "Ayobami Oyeyemi",
+    name: "Ayobami",
     description:
       "Theophilus' brother, resident hype man, and the strategist keeping every timeline on point.",
   },
   {
     role: "Bridesmaid",
-    name: "Zainab Lawal",
+    name: "Zainab",
     description:
       "College roommate, textile artist, and the creative eye shaping our jewel-toned décor.",
   },
   {
     role: "Groomsman",
-    name: "Chidi Nwosu",
+    name: "Chidi",
     description:
-      "Business partner, strategy guru, and the first to spark late-night praise jams over suya.",
+      "Business partner, strategy guru, and the first to spark late-night kitchen jams over suya.",
   },
   {
     role: "Flower Girl",
-    name: "Imela Okeke",
+    name: "Imela",
     description:
       "Joan's goddaughter who has promised to scatter petals and sunshine down the aisle.",
   },
   {
     role: "Ring Bearer",
-    name: "Daniel Oyeyemi",
+    name: "Daniel",
     description:
       "Theophilus' nephew, budding photographer, and the kid capturing behind-the-scenes joy on his instant camera.",
   },
@@ -158,22 +158,22 @@ export const weddingParty = [
 
 export const registryItems = [
   {
-    name: "Sunrise getaway to Mauritius",
+    name: "Saturday brunch & bubbly bar",
     description:
-      "Sponsor oceanfront mornings, snorkeling adventures, and a gratitude journal workshop for our first married retreat.",
-    link: "https://example.com/honeymoon-mauritius",
+      "Help us stock our kitchen with a waffle maker, mimosa set, and Lagos coffee beans for post-wedding hangouts.",
+    link: "https://example.com/brunch-bar",
   },
   {
-    name: "Nigerian art collection",
+    name: "Date-night adventure fund",
     description:
-      "Commissioned pieces from emerging Lagos artists to fill our home with stories of faith, resilience, and colour.",
-    link: "https://example.com/nigerian-art",
+      "Tickets to concerts, food tours, and beach getaways we plan to enjoy as newlyweds.",
+    link: "https://example.com/date-night",
   },
   {
-    name: "Community giving",
+    name: "Game night lounge essentials",
     description:
-      "Support for Slum2School and The Irede Foundation in honour of the communities that raised us.",
-    link: "https://example.com/community-giving",
+      "Cozy throw blankets, board games, and a projector so we can host movie marathons with you.",
+    link: "https://example.com/game-night",
   },
 ];
 
@@ -206,9 +206,9 @@ export const galleryImages = [
 
 export const faqs = [
   {
-    question: "What should I wear to each ceremony?",
+    question: "What should I wear?",
     answer:
-      "This is a single-day celebration. Please arrive in polished jewel tones with gele or fila if you wish—comfortable shoes encouraged for hours of praise and dancing!",
+      "This is a single-day celebration. Arrive in polished jewel tones with gele or fila if you wish—comfortable shoes encouraged for hours of photos, hugs, and dancing!",
   },
   {
     question: "Is parking available?",
@@ -226,6 +226,6 @@ export const contact = {
   planner: "Radiant Vows Events",
   email: "hello@radiantvows.ng",
   phone: "+234 803 200 4422",
-  note: "Connect with our planner for parking passes, special requests, or joyful surprises you want us to schedule in advance.",
+  note: "Connect with our planner for parking passes, special requests, or fun surprises you want us to schedule in advance.",
 };
 export const countdownTarget = "2025-11-29T12:00:00+01:00";

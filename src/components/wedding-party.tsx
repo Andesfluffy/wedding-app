@@ -6,7 +6,7 @@ import { weddingParty } from "@/data/content";
 export function WeddingPartySection() {
   return (
     <section
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-white/40 bg-white/85 px-6 py-20 shadow-2xl shadow-olive/10 backdrop-blur md:px-16"
+      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-white/40 bg-gradient-to-br from-white/90 via-white/75 to-cream/80 px-6 py-20 shadow-2xl shadow-olive/10 backdrop-blur md:px-16"
     >
       <div className="text-center">
         <p className="font-display text-xs uppercase tracking-[0.6em] text-olive/70">
@@ -16,7 +16,7 @@ export function WeddingPartySection() {
           The crew behind the magic
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-ink/70">
-          Family, friends, hype team—they have prayed, planned, and danced with
+          Family, friends, hype team—they have planned, hyped, and danced with
           us every step. Lagos is louder and lovelier because of them.
         </p>
       </div>

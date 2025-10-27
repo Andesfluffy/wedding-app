@@ -15,7 +15,7 @@ export function SiteFooter() {
             See you in Magodo
           </h2>
           <p className="mt-4 max-w-lg text-sm leading-7 text-white/80">
-            We are counting down to praising, laughing, and dancing with you.
+            We are counting down to laughing, cheering, and dancing with you.
             Reach out if you need parking passes, attire guidance, or anything
             that keeps the day superb.
           </p>

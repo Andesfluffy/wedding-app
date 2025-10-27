@@ -66,7 +66,7 @@ export function Navigation() {
           href="#top"
           className="font-display text-lg uppercase tracking-[0.4em] text-olive"
         >
-          T & J
+          Theo & Joan
         </Link>
         <nav className="hidden gap-6 text-sm font-medium text-ink/80 md:flex">
           {navigation.map((item) => (
