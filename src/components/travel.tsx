@@ -19,9 +19,8 @@ export function TravelSection() {
             Flowing with the city
           </h2>
           <p className="mt-4 text-base leading-7 text-ink/70">
-            We know most of you already navigate Lagos like pros. These notes
-            gather timing tips, stay suggestions, and the colour story for our
-            aṣọ̀-ebi so every moment feels seamless.
+            Whether you call Lagos home or are flying in, these notes keep the
+            journey smooth—from travel timing to radiant attire inspiration.
           </p>
           <div className="mt-10 space-y-8">
             <div>

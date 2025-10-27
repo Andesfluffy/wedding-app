@@ -1,4 +1,3 @@
-import { AudioPlayer } from "@/components/audio-player";
 import { CountdownSection } from "@/components/countdown";
 import { FaqSection } from "@/components/faqs";
 import { GallerySection } from "@/components/gallery";
@@ -29,7 +28,6 @@ export default function Home() {
         <RsvpSection />
       </main>
       <SiteFooter />
-      <AudioPlayer />
     </div>
   );
 }

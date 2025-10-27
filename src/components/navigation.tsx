@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navigation } from "@/data/content";
 import { cn } from "@/lib/utils";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handler = () => setIsScrolled(window.scrollY > 32);
@@ -14,6 +16,35 @@ export function Navigation() {
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      menuRef.current?.focus();
+    }
+  }, [isMenuOpen]);
 
   return (
     <header
@@ -57,55 +88,58 @@ export function Navigation() {
         <button
           type="button"
           className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 bg-white text-xs font-medium text-ink/70 shadow-sm md:hidden"
-          onClick={() => {
-            const menu = document.querySelector<HTMLDialogElement>(
-              "#wedding-nav-dialog"
-            );
-            menu?.showModal();
-          }}
+          onClick={() => setMenuOpen(true)}
+          aria-expanded={isMenuOpen}
+          aria-controls="wedding-nav-menu"
         >
           Menu
         </button>
       </div>
-      <dialog
-        id="wedding-nav-dialog"
-        className="mx-auto mt-3 w-[90vw] max-w-sm rounded-3xl border border-ink/10 bg-white/95 p-6 backdrop:bg-black/30"
-      >
-        <div className="flex items-center justify-between">
-          <span className="font-display text-lg uppercase tracking-[0.3em] text-olive">
-            Theo &amp; Joan
-          </span>
-          <button
-            type="button"
-            className="rounded-full border border-ink/10 px-3 py-1 text-xs uppercase tracking-widest text-ink/60"
-            onClick={() => {
-              const dialog = document.getElementById(
-                "wedding-nav-dialog"
-              ) as HTMLDialogElement | null;
-              dialog?.close();
-            }}
+      {isMenuOpen && (
+        <div
+          className="pointer-events-auto fixed inset-0 z-50 flex items-start justify-center bg-black/40 px-6 pt-28"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              setMenuOpen(false);
+            }
+          }}
+        >
+          <div
+            id="wedding-nav-menu"
+            ref={menuRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Wedding navigation"
+            tabIndex={-1}
+            className="w-full max-w-sm rounded-3xl border border-ink/10 bg-white/95 p-6 shadow-2xl shadow-olive/20"
           >
-            Close
-          </button>
+            <div className="flex items-center justify-between">
+              <span className="font-display text-lg uppercase tracking-[0.3em] text-olive">
+                Theophilus &amp; Joan
+              </span>
+              <button
+                type="button"
+                className="rounded-full border border-ink/10 px-3 py-1 text-xs uppercase tracking-widest text-ink/60"
+                onClick={() => setMenuOpen(false)}
+              >
+                Close
+              </button>
+            </div>
+            <nav className="mt-6 flex flex-col gap-4 text-base">
+              {navigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-2xl border border-transparent px-3 py-2 text-ink/80 transition hover:border-olive/30 hover:bg-olive/5"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
         </div>
-        <nav className="mt-6 flex flex-col gap-4 text-base">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="rounded-2xl border border-transparent px-3 py-2 text-ink/80 transition hover:border-olive/30 hover:bg-olive/5"
-              onClick={() => {
-                const dialog = document.getElementById(
-                  "wedding-nav-dialog"
-                ) as HTMLDialogElement | null;
-                dialog?.close();
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-      </dialog>
+      )}
     </header>
   );
 }

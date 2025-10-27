@@ -14,11 +14,11 @@ export function StoryTimeline() {
           Our Story
         </p>
         <h2 className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl">
-          Lagos moments woven in colour
+          A faith-filled love story
         </h2>
         <p className="mt-4 text-base leading-7 text-ink/70">
-          From art fairs to Tarkwa Bay sunrises, these are the memories that
-          brought Theo and Joan to a dance floor filled with family.
+          From ministry partners to creative collaborators, these milestones
+          carried Theophilus and Joan to a Saturday overflowing with praise.
         </p>
       </div>
       <div className="mt-16 space-y-10 border-l border-olive/20 pl-6 sm:pl-10">

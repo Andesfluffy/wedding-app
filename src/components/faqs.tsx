@@ -18,8 +18,8 @@ export function FaqSection() {
           Questions, answered
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-ink/70">
-          Still curious? Send a note to Ìfé Weddings and the team will guide you
-          through fabrics, parking, or anything else on your mind.
+          Still curious? Send a note to Radiant Vows Events and the team will
+          guide you through attire, parking, or anything else on your mind.
         </p>
       </div>
       <div className="mt-12 space-y-4">

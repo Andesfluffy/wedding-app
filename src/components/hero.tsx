@@ -33,18 +33,21 @@ export function Hero() {
           <p className="mx-auto max-w-xl text-base leading-7 text-ink/75 sm:text-lg md:mx-0">
             {weddingDetails.intro}
           </p>
+          <p className="mx-auto max-w-xl text-sm leading-7 text-ink/60 sm:text-base md:mx-0">
+            {weddingDetails.description}
+          </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <Link
               href="#rsvp"
               className="inline-flex items-center justify-center rounded-full bg-olive px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg shadow-olive/40 transition hover:bg-olive/90"
             >
-              RSVP Today
+              RSVP & Celebrate
             </Link>
             <Link
-              href="#weekend"
+              href="#schedule"
               className="text-sm font-medium uppercase tracking-[0.4em] text-gold transition hover:text-gold/70"
             >
-              Lagos Celebrations
+              Wedding Day Details
             </Link>
           </div>
         </motion.div>
@@ -88,7 +91,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.4 }}
           className="inline-flex items-center gap-3 rounded-full border border-olive/20 bg-white/80 px-5 py-2 text-xs uppercase tracking-[0.4em] text-ink/60 shadow-sm shadow-olive/20 backdrop-blur"
         >
-          Scroll to explore
+          Scroll for every vibrant detail
           <span className="h-1.5 w-1.5 rounded-full bg-blush" />
         </motion.div>
       </div>
