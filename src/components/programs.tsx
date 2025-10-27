@@ -41,7 +41,7 @@ export function ProgramSection() {
         />
         <ProgramCard
           title="Reception flow"
-          accent="from-rose/10 via-white/70 to-cream/60"
+          accent="from-sand/30 via-white/70 to-fog/55"
           items={receptionProgram}
         />
         <PhotographyCard />

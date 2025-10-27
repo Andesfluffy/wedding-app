@@ -175,7 +175,7 @@ export const travelEssentials = {
     "Magodo Phase II, Ikeja GRA, and Maryland offer plenty of hotels and serviced apartments within 20 minutes of the venue. Share your budget and vibe in the RSVP form if you would like our planner to shortlist stays for you.",
   dressCode: {
     title: "Palette & attire",
-    body: "Our colour story beams in emerald, champagne gold, and ruby accents. Think dapper suits, elegant dresses, gele or fila, and shoes ready for Afrobeats spins.",
+    body: "Our colour story glows in luminous white, brushed gold, and platinum grey accents. Think dapper suits, elegant dresses, gele or fila, and shoes ready for Afrobeats spins.",
   },
   transport:
     "Ride-hailing drop-off is available at the Kingdom Hall gate with attendants on site. Complimentary parking passes will be emailed to drivers two weeks out.",
