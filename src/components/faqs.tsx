@@ -9,7 +9,7 @@ export function FaqSection() {
   const [active, setActive] = useState<number | null>(0);
 
   return (
-    <section className="relative mx-auto mt-24 max-w-4xl rounded-[3rem] border border-ink/5 bg-cream/85 px-6 py-20 shadow-xl shadow-olive/10 backdrop-blur md:px-10">
+    <section className="relative mx-auto mt-24 max-w-4xl rounded-[3rem] border border-ink/5 bg-gradient-to-br from-cream/85 via-white/75 to-fog/70 px-6 py-20 shadow-xl shadow-olive/10 backdrop-blur md:px-10">
       <div className="text-center">
         <p className="font-display text-xs uppercase tracking-[0.6em] text-olive/70">
           FAQ
@@ -18,8 +18,8 @@ export function FaqSection() {
           Questions, answered
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-ink/70">
-          Still curious? Send a note to Ìfé Weddings and the team will guide you
-          through fabrics, parking, or anything else on your mind.
+          Still curious? Send a note to Radiant Vows Events and the team will
+          guide you through attire, parking, or anything else on your mind.
         </p>
       </div>
       <div className="mt-12 space-y-4">

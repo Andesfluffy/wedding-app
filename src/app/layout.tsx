@@ -15,9 +15,9 @@ const body = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Aurora & Milan - Wedding Celebration",
+  title: "Theophilus & Joan - Lagos Celebration",
   description:
-    "Celebrate the wedding weekend with Aurora Lane and Milan Reyes. Find the schedule, travel details, wedding party, and RSVP all in one elegant invitation.",
+    "Celebrate Theophilus and Joan on November 29, 2025 in Magodo, Lagos. Explore the schedule, travel notes, wedding party, and RSVP details for their colourful Kingdom Hall ceremony and reception.",
 };
 
 export default function RootLayout({

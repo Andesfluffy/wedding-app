@@ -8,7 +8,7 @@ export function GallerySection() {
   return (
     <section
       id="gallery"
-      className="relative mx-auto mt-24 max-w-6xl overflow-hidden rounded-[3.5rem] border border-ink/5 bg-white/90 px-6 py-20 shadow-2xl shadow-olive/10 backdrop-blur md:px-12"
+      className="relative mx-auto mt-24 max-w-6xl overflow-hidden rounded-[3.5rem] border border-ink/5 bg-gradient-to-br from-white/90 via-white/75 to-fog/70 px-6 py-20 shadow-2xl shadow-olive/10 backdrop-blur md:px-12"
     >
       <div className="mb-10 text-center">
         <p className="font-display text-xs uppercase tracking-[0.6em] text-olive/70">

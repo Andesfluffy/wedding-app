@@ -8,7 +8,7 @@ export function TravelSection() {
   return (
     <section
       id="travel"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-ink/5 bg-cream/80 px-6 py-20 shadow-xl shadow-olive/10 backdrop-blur"
+      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-ink/5 bg-gradient-to-br from-cream/80 via-white/75 to-fog/70 px-6 py-20 shadow-xl shadow-olive/10 backdrop-blur"
     >
       <div className="grid gap-12 md:grid-cols-[1.2fr,0.8fr] md:gap-16">
         <div>
@@ -19,9 +19,8 @@ export function TravelSection() {
             Flowing with the city
           </h2>
           <p className="mt-4 text-base leading-7 text-ink/70">
-            We know most of you already navigate Lagos like pros. These notes
-            gather timing tips, stay suggestions, and the colour story for our
-            aṣọ̀-ebi so every moment feels seamless.
+            Whether you call Lagos home or are flying in, these notes keep the
+            journey smooth—from travel timing to radiant attire inspiration.
           </p>
           <div className="mt-10 space-y-8">
             <div>

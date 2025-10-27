@@ -7,18 +7,19 @@ export function StoryTimeline() {
   return (
     <section
       id="story"
-      className="relative mx-auto mt-24 max-w-5xl rounded-[3rem] border border-ink/5 bg-white/85 px-6 py-20 shadow-xl shadow-olive/5 backdrop-blur sm:px-14"
+      className="relative mx-auto mt-24 max-w-5xl rounded-[3rem] border border-ink/5 bg-gradient-to-br from-white/90 via-white/75 to-cream/80 px-6 py-20 shadow-xl shadow-olive/10 backdrop-blur sm:px-14"
     >
       <div className="mx-auto max-w-2xl text-center sm:text-left">
         <p className="font-display text-xs uppercase tracking-[0.6em] text-olive/70">
           Our Story
         </p>
         <h2 className="mt-4 font-display text-4xl tracking-tight text-ink sm:text-5xl">
-          Lagos moments woven in colour
+          A Lagos love story
         </h2>
         <p className="mt-4 text-base leading-7 text-ink/70">
-          From art fairs to Tarkwa Bay sunrises, these are the memories that
-          brought Theo and Joan to a dance floor filled with family.
+          From volunteer teammates to creative collaborators, these milestones
+          carried Theophilus and Joan to a Saturday overflowing with colour and
+          laughter.
         </p>
       </div>
       <div className="mt-16 space-y-10 border-l border-olive/20 pl-6 sm:pl-10">

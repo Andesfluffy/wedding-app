@@ -54,14 +54,14 @@ export function RsvpSection() {
 
       setStatus("success");
       setFeedback(
-        "Thank you! We have received your RSVP and will send final Lagos weekend details in October."
+        "Thank you! We have received your RSVP and will send final wedding day details in October."
       );
       setForm(initialState);
     } catch (error) {
       console.error(error);
       setStatus("error");
       setFeedback(
-        "We were not able to send your RSVP right now. Please try again or email team@ifeweddings.com."
+        "We were not able to send your RSVP right now. Please try again or email hello@radiantvows.ng."
       );
     }
   };
@@ -69,7 +69,7 @@ export function RsvpSection() {
   return (
     <section
       id="rsvp"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-white/50 bg-white/90 px-6 py-20 shadow-2xl shadow-olive/10 backdrop-blur md:px-16"
+      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-white/50 bg-gradient-to-br from-white/90 via-white/75 to-cream/80 px-6 py-20 shadow-2xl shadow-olive/10 backdrop-blur md:px-16"
     >
       <div className="grid gap-16 lg:grid-cols-[1.1fr,0.9fr]">
         <div>
@@ -80,9 +80,9 @@ export function RsvpSection() {
             We cannot wait to celebrate with you
           </h2>
           <p className="mt-4 text-base leading-7 text-ink/70">
-            Kindly share your plans so we can set your place, prepare fabrics,
-            and coordinate valet support. Prefer email? Reach out to{" "}
-            team@ifeweddings.com and we will take care of you.
+            Kindly share your plans so we can set your place, personalise
+            treats, and coordinate valet support. Prefer email? Reach out to{" "}
+            hello@radiantvows.ng and we will take care of you.
           </p>
           {status !== "idle" && (
             <motion.div
@@ -100,7 +100,7 @@ export function RsvpSection() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 rounded-[2.5rem] border border-olive/15 bg-cream/75 px-6 py-8 shadow-xl shadow-olive/10"
+          className="space-y-6 rounded-[2.5rem] border border-olive/15 bg-white/80 px-6 py-8 shadow-xl shadow-olive/10"
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
