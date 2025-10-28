@@ -69,7 +69,7 @@ export function RsvpSection() {
   return (
     <section
       id="rsvp"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_50px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur md:px-16"
+      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/45 bg-gradient-to-br from-pearl/96 via-porcelain/90 to-champagne/88 px-6 py-20 shadow-[0_50px_140px_-60px_rgba(210,163,60,0.55)] backdrop-blur md:px-16"
     >
       <div className="grid gap-16 lg:grid-cols-[1.1fr,0.9fr]">
         <div>
@@ -79,7 +79,7 @@ export function RsvpSection() {
           <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">
             We cannot wait to celebrate with you
           </h2>
-          <p className="mt-4 text-base leading-7 text-ivory/70">
+          <p className="mt-4 text-base leading-7 text-ink/75">
             Kindly share your plans so we can set your place, personalise
             treats, and coordinate valet support. Prefer email? Reach out to{" "}
             hello@radiantvows.ng and we will take care of you.
@@ -90,8 +90,8 @@ export function RsvpSection() {
               animate={{ opacity: 1, y: 0 }}
               className={`mt-6 rounded-3xl border px-4 py-3 text-sm leading-6 ${
                 status === "success"
-                  ? "border-gold/35 bg-night/70 text-gilded"
-                  : "border-bronze/30 bg-night/60 text-ivory/70"
+                  ? "border-gold/40 bg-pearl/80 text-ink"
+                  : "border-bronze/35 bg-pearl/75 text-ink/80"
               }`}
             >
               {feedback}
@@ -100,7 +100,7 @@ export function RsvpSection() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 rounded-[2.5rem] border border-gold/30 bg-night/80 px-6 py-8 shadow-[0_35px_110px_-60px_rgba(249,210,122,0.45)]"
+          className="space-y-6 rounded-[2.5rem] border border-gold/40 bg-pearl/85 px-6 py-8 shadow-[0_35px_110px_-60px_rgba(210,163,60,0.5)]"
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
@@ -119,7 +119,7 @@ export function RsvpSection() {
                   setForm((prev) => ({ ...prev, fullName: event.target.value }))
                 }
                 required
-                className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+                className="mt-2 w-full rounded-2xl border border-gold/30 bg-pearl/80 px-4 py-3 text-sm text-ink shadow-[inset_0_12px_35px_rgba(223,179,74,0.12)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
             </div>
             <div>
@@ -138,7 +138,7 @@ export function RsvpSection() {
                   setForm((prev) => ({ ...prev, email: event.target.value }))
                 }
                 required
-                className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+                className="mt-2 w-full rounded-2xl border border-gold/30 bg-pearl/80 px-4 py-3 text-sm text-ink shadow-[inset_0_12px_35px_rgba(223,179,74,0.12)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
             </div>
           </div>
@@ -153,10 +153,10 @@ export function RsvpSection() {
               ].map((option) => (
                 <label
                   key={option.value}
-                  className={`flex items-center justify-between rounded-2xl border px-4 py-3 text-sm shadow-[inset_0_15px_30px_rgba(249,210,122,0.08)] transition ${
+                  className={`flex items-center justify-between rounded-2xl border px-4 py-3 text-sm shadow-[inset_0_15px_30px_rgba(223,179,74,0.12)] transition ${
                     form.attendance === option.value
-                      ? "border-gold/45 bg-night/85 text-gilded"
-                      : "border-gold/25 bg-night/70 text-ivory"
+                      ? "border-gold/50 bg-pearl/90 text-ink"
+                      : "border-gold/30 bg-pearl/80 text-ink/75"
                   }`}
                 >
                   <span>{option.label}</span>
@@ -198,10 +198,10 @@ export function RsvpSection() {
                     guests: event.target.value,
                   }))
                 }
-                className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+                className="mt-2 w-full rounded-2xl border border-gold/30 bg-pearl/80 px-4 py-3 text-sm text-ink shadow-[inset_0_12px_35px_rgba(223,179,74,0.12)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
             </div>
-            <label className="flex items-center gap-3 rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)]">
+            <label className="flex items-center gap-3 rounded-2xl border border-gold/30 bg-pearl/80 px-4 py-3 text-sm text-ink shadow-[inset_0_12px_35px_rgba(223,179,74,0.12)]">
               <input
                 type="checkbox"
                 checked={form.shuttle}
@@ -234,13 +234,13 @@ export function RsvpSection() {
                 }))
               }
               rows={4}
-              className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+              className="mt-2 w-full rounded-2xl border border-gold/30 bg-pearl/80 px-4 py-3 text-sm text-ink shadow-[inset_0_12px_35px_rgba(223,179,74,0.12)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
             />
           </div>
           <button
             type="submit"
             disabled={status === "loading"}
-            className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-night shadow-[0_18px_60px_rgba(246,196,92,0.45)] transition hover:shadow-[0_20px_70px_rgba(249,210,122,0.6)] disabled:cursor-not-allowed disabled:opacity-70"
+            className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-ink shadow-[0_20px_65px_rgba(223,179,74,0.5)] transition hover:shadow-[0_24px_85px_rgba(229,192,110,0.65)] disabled:cursor-not-allowed disabled:opacity-70"
           >
             {status === "loading" ? "Sending..." : "Send RSVP"}
           </button>
