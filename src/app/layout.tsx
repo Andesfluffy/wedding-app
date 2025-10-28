@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const heading = Playfair_Display({
+const heading = Cormorant_Garamond({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
 });
 
-const body = Manrope({
+const body = Source_Sans_3({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-body",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
