@@ -240,7 +240,7 @@ export function RsvpSection() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-night shadow-[0_18px_60px_rgba(246,196,92,0.45)] transition hover:shadow-[0_20px_70px_rgba(249,210,122,0.6)] disabled:cursor-not-allowed disabled:opacity-70"
+            className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-ink shadow-[0_18px_60px_rgba(246,196,92,0.45)] transition hover:shadow-[0_20px_70px_rgba(249,210,122,0.6)] disabled:cursor-not-allowed disabled:opacity-70"
           >
             {status === "loading" ? "Sending..." : "Send RSVP"}
           </button>

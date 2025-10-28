@@ -39,7 +39,7 @@ export function Hero() {
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <Link
               href="#rsvp"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-night shadow-[0_18px_60px_rgba(246,196,92,0.45)] transition hover:shadow-[0_20px_70px_rgba(249,210,122,0.6)]"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-8 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-ink shadow-[0_18px_60px_rgba(246,196,92,0.45)] transition hover:shadow-[0_20px_70px_rgba(249,210,122,0.6)]"
             >
               RSVP & Celebrate
             </Link>

@@ -7,53 +7,20 @@
 @theme inline {
   --font-sans: var(--font-body);
   --font-display: var(--font-heading);
-  --color-heirloom-lilac-100: #2b1c3c;
-  --color-heirloom-lilac-200: #563878;
-  --color-heirloom-lilac-300: #7b52a3;
-  --color-heirloom-lilac-400: #a384cc;
-  --color-heirloom-lilac-500: #cdb7e6;
-  --color-heirloom-lilac-600: #d9c6ec;
-  --color-heirloom-lilac-700: #e5d6f2;
-  --color-heirloom-lilac-800: #f1e6f7;
-  --color-heirloom-lilac-900: #f9f2fb;
-  --color-champagne-veil-100: #3f2d12;
-  --color-champagne-veil-200: #7e5a23;
-  --color-champagne-veil-300: #a87b36;
-  --color-champagne-veil-400: #d6a55e;
-  --color-champagne-veil-500: #f2deb5;
-  --color-champagne-veil-600: #f5e6c4;
-  --color-champagne-veil-700: #f8eed3;
-  --color-champagne-veil-800: #fbf5e2;
-  --color-champagne-veil-900: #fdfaf0;
-  --color-seaglass-100: #112e27;
-  --color-seaglass-200: #1e5545;
-  --color-seaglass-300: #2e7c63;
-  --color-seaglass-400: #3fa487;
-  --color-seaglass-500: #8edec8;
-  --color-seaglass-600: #a5e4d2;
-  --color-seaglass-700: #beeadd;
-  --color-seaglass-800: #d7f1e9;
-  --color-seaglass-900: #edf8f5;
-  --color-blush-quartz-100: #461723;
-  --color-blush-quartz-200: #7f2c42;
-  --color-blush-quartz-300: #b24463;
-  --color-blush-quartz-400: #d77a8c;
-  --color-blush-quartz-500: #f1c6cf;
-  --color-blush-quartz-600: #f4d1d8;
-  --color-blush-quartz-700: #f7dce2;
-  --color-blush-quartz-800: #fae7eb;
-  --color-blush-quartz-900: #fdf2f5;
-  --color-mirage-blue-100: #0c2037;
-  --color-mirage-blue-200: #173b62;
-  --color-mirage-blue-300: #21558c;
-  --color-mirage-blue-400: #4376b3;
-  --color-mirage-blue-500: #b1c8e8;
-  --color-mirage-blue-600: #c0d3ee;
-  --color-mirage-blue-700: #cfdff3;
-  --color-mirage-blue-800: #deeaf7;
-  --color-mirage-blue-900: #eef4fb;
-  --color-ink: #22112b;
-  --color-pearl: #fffbf7;
+  --color-ink: #2f2416;
+  --color-ivory: #3a2b1c;
+  --color-cream: #fff8ef;
+  --color-pearl: #ffffff;
+  --color-night: #faf3e4;
+  --color-char: #f4ead8;
+  --color-onyx: #ecdec6;
+  --color-gold: #c8a34a;
+  --color-gilded: #f2d9a8;
+  --color-bronze: #b48740;
+  --color-ember: #efc58b;
+  --color-rosewater: #f7e1d6;
+  --color-soft-lilac: #efe7ff;
+  --color-mist: #f2f5ff;
 }
 
 * {
@@ -68,20 +35,19 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 12% 18%, color-mix(in srgb, var(--color-blush-quartz-500) 70%, transparent), transparent 52%),
-    radial-gradient(circle at 84% 22%, color-mix(in srgb, var(--color-heirloom-lilac-500) 65%, transparent), transparent 58%),
-    radial-gradient(45% 60% at 25% 78%, color-mix(in srgb, var(--color-seaglass-500) 60%, transparent), transparent 60%),
-    conic-gradient(from 210deg at 70% 70%, color-mix(in srgb, var(--color-mirage-blue-500) 30%, transparent) 0 25%, color-mix(in srgb, var(--color-champagne-veil-500) 55%, transparent) 25% 60%, transparent 60%),
-    linear-gradient(130deg, var(--color-champagne-veil-800), var(--color-seaglass-900));
-  background-color: var(--color-champagne-veil-800);
+    radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--color-gilded) 35%, transparent), transparent 55%),
+    radial-gradient(circle at 82% 15%, color-mix(in srgb, var(--color-rosewater) 30%, transparent), transparent 62%),
+    radial-gradient(45% 60% at 28% 78%, color-mix(in srgb, var(--color-soft-lilac) 28%, transparent), transparent 65%),
+    linear-gradient(130deg, var(--color-pearl), var(--color-cream));
+  background-color: var(--color-cream);
   color: var(--color-ink);
   font-family: var(--font-sans);
   letter-spacing: 0.01em;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-heirloom-lilac-400) 40%, var(--color-blush-quartz-500));
-  color: var(--color-pearl);
+  background: color-mix(in srgb, var(--color-gilded) 55%, var(--color-rosewater));
+  color: var(--color-ink);
 }
 
 a {
