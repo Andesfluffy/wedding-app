@@ -11,16 +11,18 @@
   --color-ivory: #3a2b1c;
   --color-cream: #fff8ef;
   --color-pearl: #ffffff;
-  --color-night: #faf3e4;
-  --color-char: #f4ead8;
-  --color-onyx: #ecdec6;
-  --color-gold: #c8a34a;
-  --color-gilded: #f2d9a8;
-  --color-bronze: #b48740;
-  --color-ember: #efc58b;
-  --color-rosewater: #f7e1d6;
-  --color-soft-lilac: #efe7ff;
+  --color-night: #fef8f2;
+  --color-char: #f2e2d0;
+  --color-onyx: #e0dad3;
+  --color-gold: #d5b13a;
+  --color-gilded: #f8e6bd;
+  --color-bronze: #c1934f;
+  --color-ember: #8f2a41;
+  --color-rosewater: #f2d4d6;
+  --color-soft-lilac: #ebe2ff;
   --color-mist: #f2f5ff;
+  --color-dove: #d5cfc6;
+  --color-merlot: #7c2140;
 }
 
 * {
@@ -35,10 +37,14 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--color-gilded) 35%, transparent), transparent 55%),
-    radial-gradient(circle at 82% 15%, color-mix(in srgb, var(--color-rosewater) 30%, transparent), transparent 62%),
-    radial-gradient(45% 60% at 28% 78%, color-mix(in srgb, var(--color-soft-lilac) 28%, transparent), transparent 65%),
-    linear-gradient(130deg, var(--color-pearl), var(--color-cream));
+    radial-gradient(circle at 16% 12%, color-mix(in srgb, var(--color-gold) 45%, transparent), transparent 52%),
+    radial-gradient(circle at 82% 18%, color-mix(in srgb, var(--color-merlot) 32%, transparent), transparent 60%),
+    radial-gradient(45% 60% at 28% 78%, color-mix(in srgb, var(--color-dove) 28%, transparent), transparent 68%),
+    linear-gradient(
+      130deg,
+      var(--color-pearl),
+      color-mix(in srgb, var(--color-cream) 65%, var(--color-dove) 35%)
+    );
   background-color: var(--color-cream);
   color: var(--color-ink);
   font-family: var(--font-sans);
@@ -46,7 +52,7 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-gilded) 55%, var(--color-rosewater));
+  background: color-mix(in srgb, var(--color-gold) 55%, var(--color-merlot) 45%);
   color: var(--color-ink);
 }
 

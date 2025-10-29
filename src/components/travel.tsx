@@ -1,13 +1,32 @@
 "use client";
 
+import clsx from "clsx";
 import { motion } from "framer-motion";
 import { travelEssentials } from "@/data/content";
 
 export function TravelSection() {
+  const palette = [
+    {
+      name: "Grey",
+      wrapper: "border-dove/60 bg-dove/20 text-ink/70",
+      dot: "bg-dove",
+    },
+    {
+      name: "Beige",
+      wrapper: "border-gold/40 bg-char/35 text-ink/70",
+      dot: "bg-char",
+    },
+    {
+      name: "Maroon",
+      wrapper: "border-merlot/40 bg-merlot/15 text-merlot/80",
+      dot: "bg-merlot",
+    },
+  ];
+
   return (
     <section
       id="travel"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/30 bg-gradient-to-br from-night/90 via-onyx/86 to-char/88 px-6 py-20 shadow-[0_45px_130px_-60px_rgba(249,210,122,0.5)] backdrop-blur"
+      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/35 bg-gradient-to-br from-night/92 via-dove/88 to-rosewater/85 px-6 py-20 shadow-[0_45px_140px_-60px_rgba(213,177,58,0.6),0_0_110px_-50px_rgba(124,33,64,0.3)] backdrop-blur"
     >
       <div className="grid gap-12 md:grid-cols-[1.2fr,0.8fr] md:gap-16">
         <div>
@@ -34,9 +53,9 @@ export function TravelSection() {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-gold/25 bg-night/75 p-6 text-sm leading-7 text-ivory/75 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]">
+            <div className="rounded-3xl border border-merlot/25 bg-pearl/88 p-6 text-sm leading-7 text-ink/75 shadow-[inset_0_18px_45px_rgba(124,33,64,0.12)]">
               <h3 className="font-display text-2xl text-gilded">Where to stay</h3>
-              <p className="mt-3">{travelEssentials.stayNote}</p>
+              <p className="mt-3 text-ink/75">{travelEssentials.stayNote}</p>
             </div>
           </div>
         </div>
@@ -46,20 +65,36 @@ export function TravelSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col gap-6 rounded-[2.5rem] border border-gold/30 bg-night/85 p-8 text-ivory shadow-[0_35px_110px_-60px_rgba(249,210,122,0.45)]"
+          className="flex flex-col gap-6 rounded-[2.5rem] border border-merlot/25 bg-pearl/90 p-8 text-ivory shadow-[0_35px_110px_-60px_rgba(213,177,58,0.5),0_0_80px_-45px_rgba(124,33,64,0.28)]"
         >
-          <div className="rounded-2xl border border-gold/25 bg-night/75 p-6 text-sm leading-7 text-ivory/75 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]">
-            <p className="font-display text-lg text-gilded">
+          <div className="rounded-2xl border border-gold/25 bg-pearl/90 p-6 text-sm leading-7 text-ink/75 shadow-[inset_0_18px_45px_rgba(213,177,58,0.12)]">
+            <p className="font-display text-lg text-merlot">
               {travelEssentials.dressCode.title}
             </p>
             <p className="mt-3">{travelEssentials.dressCode.body}</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {palette.map((swatch) => (
+                <span
+                  key={swatch.name}
+                  className={clsx(
+                    "inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em]",
+                    swatch.wrapper
+                  )}
+                >
+                  <span
+                    className={clsx("h-2.5 w-2.5 rounded-full", swatch.dot)}
+                  />
+                  {swatch.name}
+                </span>
+              ))}
+            </div>
           </div>
-          <div className="rounded-2xl border border-gold/25 bg-night/75 p-6 text-sm leading-7 text-ivory/75 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]">
-            <p className="font-display text-lg text-gilded">Getting around</p>
+          <div className="rounded-2xl border border-gold/25 bg-pearl/90 p-6 text-sm leading-7 text-ink/75 shadow-[inset_0_18px_45px_rgba(213,177,58,0.12)]">
+            <p className="font-display text-lg text-merlot">Getting around</p>
             <p className="mt-3">{travelEssentials.transport}</p>
           </div>
-          <div className="rounded-2xl border border-gold/25 bg-night/75 p-6 text-sm leading-7 text-ivory/75 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]">
-            <p className="font-display text-lg text-gilded">Registry</p>
+          <div className="rounded-2xl border border-gold/25 bg-pearl/90 p-6 text-sm leading-7 text-ink/75 shadow-[inset_0_18px_45px_rgba(213,177,58,0.12)]">
+            <p className="font-display text-lg text-merlot">Registry</p>
             <p className="mt-3">{travelEssentials.registryNote}</p>
           </div>
         </motion.div>

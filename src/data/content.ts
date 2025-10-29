@@ -10,9 +10,9 @@ export const weddingDetails = {
   location: "Magodo Phase II, Lagos, Nigeria",
   rsvpDeadline: "Kindly RSVP by October 5, 2025",
   intro:
-    "We are counting down to a heart-warming celebration bathed in luminous whites, molten golds, and silvered greys—alive with laughter and the friends who feel like family.",
+    "We are counting down to a heart-warming celebration shimmering in luminous whites, brilliant gold, dove greys, and merlot whispers—alive with laughter and the friends who feel like family.",
   description:
-    "Join us for heartfelt vows at the Kingdom Hall and a Saturday reception that shimmers into a high-energy dance floor glowing well past sunset.",
+    "Join us for heartfelt vows at the Kingdom Hall and a Saturday reception awash in glowy gold, dove grey, and maroon accents that keep the night vibrant well past sunset.",
 };
 
 export const navigation = [
@@ -110,28 +110,40 @@ export const photographyMoments = [
 
 export const storyMoments = [
   {
-    year: "2016",
-    title: "A chance team-up",
+    year: "2015",
+    title: "A curious friend request",
     description:
-      "Theophilus and Joan were paired for a volunteer outreach in Surulere. Between planning routes and swapping playlists, sparks of friendship started flying.",
+      "Theo sent a friend request to the girl he once swore he would avoid. Curiosity—and a little bravery—opened the first door.",
   },
   {
-    year: "2018",
-    title: "Side hustles & sunsets",
+    year: "2016-2018",
+    title: "Friendship that stuck",
     description:
-      "Study sessions turned into Lagos sunset hangouts, small-business brainstorms, and laughter-filled danfo rides that made traffic feel like a private concert.",
+      "What started as cautious chats became late-night conversations, inside jokes, and shared projects that dissolved the childhood rivalry.",
   },
   {
-    year: "2022",
-    title: "A surprise proposal",
+    year: "Dec 2018",
+    title: "Making it official",
     description:
-      "After a Saturday of errands, Theophilus led Joan to a garden glowing with fairy lights, favourite people, and a ring that had everyone cheering.",
+      "After months of heart-to-hearts, they decided to call it what it was—a love story in motion—and began dating.",
   },
   {
-    year: "2024",
-    title: "Ready for forever",
+    year: "2019-2024",
+    title: "Growing together",
     description:
-      "Now settled in Magodo, they host vibrant dinner parties, cheer on their community, and plan a wedding day that mirrors their culture, humour, and unstoppable optimism.",
+      "From bold adventures to cosy evenings, they learned patience, partnership, and the joy of cheering for each other in every season.",
+  },
+  {
+    year: "Feb 2025",
+    title: "The proposal",
+    description:
+      "Theo surprised Joan with a question under string lights, surrounded by family, friends, and the nostalgia of their journey.",
+  },
+  {
+    year: "Nov 2025",
+    title: "Best friends say yes",
+    description:
+      "Now they meet you at the altar—best friends and forever partners—ready to celebrate a lifetime of love.",
   },
 ];
 
@@ -175,7 +187,7 @@ export const travelEssentials = {
     "Magodo Phase II, Ikeja GRA, and Maryland offer plenty of hotels and serviced apartments within 20 minutes of the venue. Share your budget and vibe in the RSVP form if you would like our planner to shortlist stays for you.",
   dressCode: {
     title: "Palette & attire",
-    body: "Our colour story glows in luminous white, brushed gold, and platinum grey accents. Think dapper suits, elegant dresses, gele or fila, and shoes ready for Afrobeats spins.",
+    body: "Colours of the day: Grey, beige, and maroon. Think dove-grey suits, creamy beige fabrics, merlot pops, gele or fila, and shoes ready for Afrobeats spins.",
   },
   transport:
     "Ride-hailing drop-off is available at the Kingdom Hall gate with attendants on site. Complimentary parking passes will be emailed to drivers two weeks out.",
@@ -185,40 +197,52 @@ export const travelEssentials = {
 
 export const weddingParty = [
   {
-    role: "Maid of Honour",
-    name: "Deborah",
+    role: "Chief Bridesmaid",
+    name: "Mary Rasheed",
     description:
-      "Joan's big sister, dynamic project manager, and the choreography genius behind our reception entrance.",
-  },
-  {
-    role: "Best Man",
-    name: "Damola",
-    description:
-      "Theophilus' brother, resident hype man, and the strategist keeping every timeline on point.",
+      "Joan's sister-friend who schedules fittings, calms nerves, and keeps every detail sparkling.",
   },
   {
     role: "Bridesmaid",
-    name: "Zainab",
+    name: "Wurami Bewaji",
     description:
-      "College roommate, textile artist, and the creative eye shaping our jewel-toned décor.",
+      "Creative confidante bringing soft glam, thoughtful prayers, and maroon flair to the aisle.",
+  },
+  {
+    role: "Bridesmaid",
+    name: "Adaeze Ugochukwu",
+    description:
+      "Theo's cousin who bridges both families with warm hugs, honest advice, and endless laughter.",
+  },
+  {
+    role: "Bridesmaid",
+    name: "Teniola Alufa",
+    description:
+      "College bestie, playlist curator, and the spark that keeps our dance rehearsals lively.",
+  },
+  {
+    role: "Best Man",
+    name: "Adedamola Oyeyemi",
+    description:
+      "Theo's day-one strategist ensuring timelines are tight, suits are crisp, and the groom stays relaxed.",
   },
   {
     role: "Groomsman",
-    name: "Chidi",
+    name: "Edwards Ugochukwu",
     description:
-      "Business partner, strategy guru, and the first to spark late-night kitchen jams over suya.",
+      "Brother of the groom whose calm energy balances the crew and keeps the jokes coming.",
   },
   {
-    role: "Flower Girl",
-    name: "Imela",
+    role: "Groomsman",
+    name: "Harolds Ugochukwu",
     description:
-      "Joan's goddaughter who has promised to scatter petals and sunshine down the aisle.",
+      "Detail-focused sibling making sure every toast, mic, and boutonnière lands perfectly.",
   },
   {
-    role: "Ring Bearer",
-    name: "Daniel",
+    role: "Groomsman",
+    name: "Melvin Ove",
     description:
-      "Theophilus' nephew, budding photographer, and the kid capturing behind-the-scenes joy on his instant camera.",
+      "Theo's lifelong friend and resident hype man ready to fuel the party from first dance to finale.",
   },
 ];
 
