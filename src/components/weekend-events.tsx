@@ -11,7 +11,7 @@ export function WeekendEvents() {
     >
       <div className="flex flex-col items-start gap-8 md:flex-row md:items-end md:gap-16">
         <div className="max-w-xl">
-          <p className="font-display text-xs uppercase tracking-[0.6em] text-gold/80">
+          <p className="font-display text-xs uppercase tracking-[0.6em] text-gold">
             Wedding day schedule
           </p>
           <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">
@@ -45,7 +45,7 @@ export function WeekendEvents() {
             <h3 className="mt-5 font-display text-2xl text-gilded">
               {event.title}
             </h3>
-            <p className="mt-3 text-sm font-medium uppercase tracking-[0.3em] text-gold/75">
+            <p className="mt-3 text-sm font-medium uppercase tracking-[0.3em] text-gold">
               {event.time}
             </p>
             <p className="mt-2 text-sm text-ivory/60">{event.location}</p>

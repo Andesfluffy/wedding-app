@@ -15,7 +15,7 @@ export function ProgramSection() {
     >
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
-          <p className="font-display text-xs uppercase tracking-[0.6em] text-gold/80">
+          <p className="font-display text-xs uppercase tracking-[0.6em] text-gold">
             Ceremony &amp; reception
           </p>
           <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">
@@ -82,7 +82,7 @@ function ProgramCard({
             key={`${item.time}-${item.title}`}
             className="rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-4 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]"
           >
-            <dt className="font-display text-xs uppercase tracking-[0.3em] text-gold/85">
+            <dt className="font-display text-xs uppercase tracking-[0.3em] text-gold">
               {item.time}
             </dt>
             <dd className="mt-2 font-display text-lg text-ivory">{item.title}</dd>
