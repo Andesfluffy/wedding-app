@@ -7,20 +7,22 @@
 @theme inline {
   --font-sans: var(--font-body);
   --font-display: var(--font-heading);
-  --color-ink: #2f2416;
-  --color-ivory: #3a2b1c;
-  --color-cream: #fff8ef;
+  --color-ink: #1c130a;
+  --color-ivory: #2a1a10;
+  --color-cream: #fbf1e2;
   --color-pearl: #ffffff;
-  --color-night: #faf3e4;
-  --color-char: #f4ead8;
-  --color-onyx: #ecdec6;
-  --color-gold: #c8a34a;
-  --color-gilded: #f2d9a8;
-  --color-bronze: #b48740;
-  --color-ember: #efc58b;
-  --color-rosewater: #f7e1d6;
-  --color-soft-lilac: #efe7ff;
-  --color-mist: #f2f5ff;
+  --color-night: #f6ede2;
+  --color-char: #efe1cf;
+  --color-onyx: #e4d6c5;
+  --color-gold: #d4a93d;
+  --color-gilded: #f2d896;
+  --color-bronze: #a9742f;
+  --color-ember: #6d1830;
+  --color-rosewater: #f5d6d8;
+  --color-soft-lilac: #e7defc;
+  --color-mist: #eef2ff;
+  --color-dove: #c5bcb0;
+  --color-merlot: #5a0f29;
 }
 
 * {
@@ -35,10 +37,14 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--color-gilded) 35%, transparent), transparent 55%),
-    radial-gradient(circle at 82% 15%, color-mix(in srgb, var(--color-rosewater) 30%, transparent), transparent 62%),
-    radial-gradient(45% 60% at 28% 78%, color-mix(in srgb, var(--color-soft-lilac) 28%, transparent), transparent 65%),
-    linear-gradient(130deg, var(--color-pearl), var(--color-cream));
+    radial-gradient(circle at 18% 14%, color-mix(in srgb, var(--color-gold) 28%, transparent), transparent 52%),
+    radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--color-merlot) 20%, transparent), transparent 58%),
+    radial-gradient(42% 55% at 30% 76%, color-mix(in srgb, var(--color-dove) 26%, transparent), transparent 70%),
+    linear-gradient(
+      135deg,
+      var(--color-pearl),
+      color-mix(in srgb, var(--color-cream) 70%, var(--color-night) 30%)
+    );
   background-color: var(--color-cream);
   color: var(--color-ink);
   font-family: var(--font-sans);
@@ -46,7 +52,7 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-gilded) 55%, var(--color-rosewater));
+  background: color-mix(in srgb, var(--color-gold) 55%, var(--color-merlot) 45%);
   color: var(--color-ink);
 }
 
