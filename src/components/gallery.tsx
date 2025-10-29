@@ -11,7 +11,7 @@ export function GallerySection() {
       className="relative mx-auto mt-24 max-w-6xl overflow-hidden rounded-[3.5rem] border border-gold/30 bg-gradient-to-br from-night/90 via-onyx/85 to-char/88 px-6 py-20 shadow-[0_45px_130px_-60px_rgba(249,210,122,0.5)] backdrop-blur md:px-12"
     >
       <div className="mb-10 text-center">
-        <p className="font-display text-xs uppercase tracking-[0.6em] text-gold/80">
+        <p className="font-display text-xs uppercase tracking-[0.6em] text-gold">
           Mood board
         </p>
         <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">

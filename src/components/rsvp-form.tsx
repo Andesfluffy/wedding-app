@@ -73,7 +73,7 @@ export function RsvpSection() {
     >
       <div className="grid gap-16 lg:grid-cols-[1.1fr,0.9fr]">
         <div>
-          <p className="font-display text-xs uppercase tracking-[0.6em] text-gold/80">
+          <p className="font-display text-xs uppercase tracking-[0.6em] text-gold">
             RSVP
           </p>
           <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">
@@ -106,7 +106,7 @@ export function RsvpSection() {
             <div>
               <label
                 htmlFor="fullName"
-                className="text-xs uppercase tracking-[0.3em] text-gold/70"
+                className="text-xs uppercase tracking-[0.3em] text-gold"
               >
                 Full name
               </label>
@@ -125,7 +125,7 @@ export function RsvpSection() {
             <div>
               <label
                 htmlFor="email"
-                className="text-xs uppercase tracking-[0.3em] text-gold/70"
+                className="text-xs uppercase tracking-[0.3em] text-gold"
               >
                 Email
               </label>
@@ -143,7 +143,7 @@ export function RsvpSection() {
             </div>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-gold/70">
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">
               Will you join us?
             </p>
             <div className="mt-3 grid gap-3 sm:grid-cols-2">
@@ -181,7 +181,7 @@ export function RsvpSection() {
             <div>
               <label
                 htmlFor="guests"
-                className="text-xs uppercase tracking-[0.3em] text-gold/70"
+                className="text-xs uppercase tracking-[0.3em] text-gold"
               >
                 Number of guests (including you)
               </label>
@@ -219,7 +219,7 @@ export function RsvpSection() {
           <div>
             <label
               htmlFor="message"
-              className="text-xs uppercase tracking-[0.3em] text-gold/70"
+              className="text-xs uppercase tracking-[0.3em] text-gold"
             >
               Notes, allergies, or song requests
             </label>
