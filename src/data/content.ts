@@ -7,12 +7,12 @@ export const weddingDetails = {
   weekday: "Saturday",
   time: "12:00 PM",
   venue: "Kingdom Hall of Jehovah's Witnesses",
-  location: "Magodo Phase II, Lagos, Nigeria",
-  rsvpDeadline: "Kindly RSVP by October 5, 2025",
+  location: "4 Kingdom hall avenue,off Joseph Abume street,Igando, Lagos",
+  rsvpDeadline: "Kindly RSVP by November 9, 2025",
   intro:
-    "We are counting down to a heart-warming celebration shimmering in luminous whites, brilliant gold, dove greys, and merlot whispers—alive with laughter and the friends who feel like family.",
+    "Love has led us here — to a moment that feels both tender and eternal. We’re counting down to a day filled with laughter, joy, and the warmth of those who’ve walked life’s journey with us",
   description:
-    "Join us for heartfelt vows at the Kingdom Hall and a Saturday reception awash in glowy gold, dove grey, and maroon accents that keep the night vibrant well past sunset.",
+    "Join us as we make our vows before Jehovah, surrounded by family and friends who have become family by heart. Then stay as we celebrate the beauty of love, faith, and new beginnings — a day to remember, simple yet unforgettable",
 };
 
 export const navigation = [
@@ -119,7 +119,7 @@ export const storyMoments = [
     year: "2016-2018",
     title: "Friendship that stuck",
     description:
-      "What started as cautious chats became late-night conversations, inside jokes, and shared projects that dissolved the childhood rivalry.",
+      "What started as cautious chats became late-night conversations, inside jokes, and shared moments that dissolved the childhood rivalry.",
   },
   {
     year: "Dec 2018",
@@ -137,13 +137,13 @@ export const storyMoments = [
     year: "Feb 2025",
     title: "The proposal",
     description:
-      "Theo surprised Joan with a question under string lights, surrounded by family, friends, and the nostalgia of their journey.",
+      "Theo surprised Joan with a question after a quiet evening under the lights, surrounded by family, friends, and the nostalgia of their journey.",
   },
   {
     year: "Nov 2025",
     title: "Best friends say yes",
     description:
-      "Now they meet you at the altar—best friends and forever partners—ready to celebrate a lifetime of love.",
+      "Now they meet you and the friends as forever partners—ready to celebrate a lifetime of love.",
   },
 ];
 
@@ -153,7 +153,7 @@ export const weekendEvents = [
     date: "November 29",
     title: "Registry & vows",
     time: "12:00 PM",
-    location: "Kingdom Hall of Jehovah's Witnesses, Magodo Phase II",
+    location: "4 Kingdom hall avenue,off Joseph Abume street,Igando, Lagos",
     attire: "Decent , Formal attrie with colourful accents",
     description:
       "Arrive early to settle in with family and friends. Expect heartfelt vows, an encouraging and instructional talk, and a ceremony that feels warm, personal, and full of smiles.",
@@ -175,7 +175,7 @@ export const travelEssentials = {
     {
       name: "Murtala Muhammed International (LOS)",
       details:
-        "For out-of-town guests, the airport is about 55 minutes from ... when traffic is light. Build in extra time for customs and Saturday travel flair.",
+        "For out-of-town guests, the airport is about 55 minutes from ... when traffic is light. Build in extra time for delays and Saturday travel flair.",
     },
     {
       name: "For Lagos fam",

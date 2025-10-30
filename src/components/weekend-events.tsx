@@ -18,14 +18,14 @@ export function WeekendEvents() {
             One unforgettable Saturday
           </h2>
           <p className="mt-4 text-base leading-7 text-ivory/70">
-            Every moment unfolds in the Kingdom Hall grounds so you can relax,
-            reconnect, and celebrate with us from the first toast to the final
-            dance break.
+            Every moment unfolds in and around Igando so you can relax,
+            reconnect, and celebrate with us from the first moments to the home
+            stretch.
           </p>
         </div>
         <div className="rounded-3xl border border-gold/25 bg-night/70 px-6 py-4 text-xs uppercase tracking-[0.3em] text-ivory/75 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]">
-          Beat Lagos traffic by leaving early. Share dietary notes or parking
-          needs in the RSVP form so we can plan ahead.
+          Beat Lagos traffic by leaving early. Share notes in the RSVP form so
+          we can plan ahead.
         </div>
       </div>
       <div className="mt-14 grid gap-8 md:grid-cols-2">

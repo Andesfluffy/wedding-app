@@ -28,7 +28,9 @@ export function Hero() {
           </p>
           <h1 className="font-display text-5xl font-semibold tracking-tight text-ink sm:text-6xl md:text-7xl">
             {weddingDetails.couple.firstPartner}{" "}
-            <span className="bg-gradient-to-r from-merlot via-gold to-merlot bg-clip-text font-medium text-transparent">&</span>{" "}
+            <span className="bg-gradient-to-r from-merlot via-gold to-merlot bg-clip-text font-medium text-transparent">
+              &
+            </span>{" "}
             {weddingDetails.couple.secondPartner}
           </h1>
           <p className="mx-auto max-w-xl text-base leading-7 text-ink/80 sm:text-lg md:mx-0">
@@ -57,15 +59,13 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
           className="mt-16 w-full max-w-sm rounded-3xl border border-merlot/30 bg-pearl/95 p-8 text-left shadow-[0_25px_90px_-50px_rgba(212,169,61,0.55),0_0_80px_-45px_rgba(90,15,41,0.28)] backdrop-blur md:mt-0"
-      >
+        >
           <div className="space-y-3 text-sm leading-6 text-ink/75">
             <div>
               <p className="font-semibold uppercase tracking-[0.28em] text-merlot">
                 Venue
               </p>
-              <p className="font-semibold text-ink">
-                {weddingDetails.venue}
-              </p>
+              <p className="font-semibold text-ink">{weddingDetails.venue}</p>
               <p>{weddingDetails.location}</p>
             </div>
             <div>
@@ -92,7 +92,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.4 }}
           className="inline-flex items-center gap-3 rounded-full border border-merlot/30 bg-rosewater/80 px-5 py-2 text-xs font-medium uppercase tracking-[0.32em] text-ink/70 shadow-[0_12px_40px_-20px_rgba(90,15,41,0.32)] backdrop-blur"
         >
-          Scroll for every vibrant detail
+          What God has yoked together, let no man put apart - Mt 19 : 6
           <span className="h-1.5 w-1.5 rounded-full bg-gold" />
         </motion.div>
       </div>
