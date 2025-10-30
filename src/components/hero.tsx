@@ -92,7 +92,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.4 }}
           className="inline-flex items-center gap-3 rounded-full border border-merlot/30 bg-rosewater/80 px-5 py-2 text-xs font-medium uppercase tracking-[0.32em] text-ink/70 shadow-[0_12px_40px_-20px_rgba(90,15,41,0.32)] backdrop-blur"
         >
-          What God has yoked together, let no man put apart - Mt 19 : 6
+          Mt 19 : 6
           <span className="h-1.5 w-1.5 rounded-full bg-gold" />
         </motion.div>
       </div>
