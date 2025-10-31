@@ -229,18 +229,6 @@ export const weekendEvents = [
 ];
 
 export const travelEssentials = {
-  airports: [
-    {
-      name: "Murtala Muhammed International (LOS)",
-      details:
-        "For out-of-town guests, the airport is about 55 minutes from ... when traffic is light. Build in extra time for delays and Saturday travel flair.",
-    },
-    {
-      name: "For Lagos fam",
-      details:
-        "Leave before 11:00 AM so you can settle in, grab selfies, and catch our pre-ceremony first-look moments.",
-    },
-  ],
   dressCode: {
     title: "Palette & attire",
     body: "Colours of the day: Grey, beige, and maroon. Think dove-grey suits, creamy beige fabrics, merlot pops, gele or fila, and shoes ready for Afrobeats spins.",
