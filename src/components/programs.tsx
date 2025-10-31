@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   kingdomHallProgram,
@@ -108,6 +109,7 @@ function ProgramCard({
 
 function PhotographyCard() {
   const { window, location, note, order } = photographySchedule;
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <motion.article
@@ -123,19 +125,48 @@ function PhotographyCard() {
         <p className="mt-1 text-[0.95rem] text-ivory/70">{location}</p>
         <p className="mt-3 text-[0.95rem] text-ivory/70">{note}</p>
       </div>
-      <ul className="mt-6 flex flex-col gap-3 text-sm leading-7 text-ivory/75">
-        {order.map((group, index) => (
-          <li
-            key={group}
-            className="flex items-start gap-3 rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-4 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]"
+      <button
+        type="button"
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-expanded={isOpen}
+        className="group mt-6 flex w-full items-center justify-between rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 px-5 py-4 text-left shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)] transition hover:border-gold/40"
+      >
+        <div>
+          <p className="font-display text-xs uppercase tracking-[0.3em] text-gold">
+            Photography order
+          </p>
+          <p className="mt-2 font-display text-lg text-ivory">
+            {isOpen ? "Hide lineup" : "View lineup"}
+          </p>
+        </div>
+        <span
+          aria-hidden="true"
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-night/70 font-display text-base text-gold transition duration-300 group-hover:border-gold/45 group-hover:text-gilded"
+        >
+          <motion.span
+            animate={{ rotate: isOpen ? 45 : 0 }}
+            transition={{ duration: 0.25 }}
+            className="inline-block"
           >
-            <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-night/70 font-display text-xs font-semibold text-gold">
-              {index + 1}
-            </span>
-            <p className="text-[0.95rem] leading-6 text-ivory/75">{group}</p>
-          </li>
-        ))}
-      </ul>
+            +
+          </motion.span>
+        </span>
+      </button>
+      {isOpen && (
+        <ul className="mt-4 flex flex-col gap-3 text-sm leading-7 text-ivory/75">
+          {order.map((group, index) => (
+            <li
+              key={group}
+              className="flex items-start gap-3 rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-4 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]"
+            >
+              <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-night/70 font-display text-xs font-semibold text-gold">
+                {index + 1}
+              </span>
+              <p className="text-[0.95rem] leading-6 text-ivory/75">{group}</p>
+            </li>
+          ))}
+        </ul>
+      )}
     </motion.article>
   );
 }
