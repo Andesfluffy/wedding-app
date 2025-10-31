@@ -26,7 +26,7 @@ export const kingdomHallProgram = [
     time: "11:30 AM",
     title: "Guests arrive & are seated",
     description:
-      "Ushers guide everyone to their rows while soft conversations and warm welcomes fill the hall.",
+      "Attendants guide everyone to their rows while soft conversations and warm welcomes fill the hall.",
   },
   {
     time: "11:45 AM",
@@ -212,7 +212,7 @@ export const weekendEvents = [
     title: "Registry & vows",
     time: "12:00 PM",
     location: "4 Kingdom hall avenue,off Joseph Abume street,Igando, Lagos",
-    attire: "Decent , Formal attrie with colourful accents",
+    attire: "Decent , Formal",
     description:
       "Arrive early to settle in with family and friends. Expect heartfelt vows, an encouraging and instructional talk, and a ceremony that feels warm, personal, and full of smiles.",
   },
@@ -222,7 +222,7 @@ export const weekendEvents = [
     title: "Reception & after-party",
     time: "2:00 PM - 6:30 PM",
     location: "Hall Reception Pavilion, Magodo Phase II",
-    attire: "Same-day celebration best with radiant colours",
+    attire: "Decent , Ravishing",
     description:
       "After the ceremony we move to ... for playful cocktails, delicious bites, and a colourful event that glides from love songs to dance-floor anthems until sunset.",
   },

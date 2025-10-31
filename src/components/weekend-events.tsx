@@ -23,8 +23,7 @@ export function WeekendEvents() {
           </p>
         </div>
         <div className="rounded-3xl border border-gold/25 bg-night/70 px-6 py-4 text-xs uppercase tracking-[0.3em] text-ivory/75 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]">
-          Beat Lagos traffic by leaving early. Share notes in the RSVP form so
-          we can plan ahead.
+          Beat Lagos traffic by leaving early.
         </div>
       </div>
       <div className="mt-14 grid gap-6 md:grid-cols-2">

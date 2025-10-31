@@ -28,8 +28,7 @@ export function ProgramSection() {
           </p>
         </div>
         <div className="rounded-3xl border border-gold/30 bg-gradient-to-br from-night/80 via-char/80 to-onyx/80 px-6 py-4 text-xs uppercase tracking-[0.3em] text-ivory/75 shadow-[inset_0_20px_50px_rgba(249,210,122,0.12)]">
-          Save this link for November 29. Tap each section for the latest
-          timings and highlights throughout the day.
+          Tap each section for the latest highlights throughout the day.
         </div>
       </div>
 
@@ -73,9 +72,7 @@ function ProgramCard({
       transition={{ duration: 0.6 }}
       className={`flex h-full flex-col rounded-[2.5rem] border border-gold/30 bg-gradient-to-br ${accent} p-8 text-ivory shadow-[0_35px_110px_-60px_rgba(249,210,122,0.5)]`}
     >
-      <h3 className="font-display text-2xl text-gilded">
-        {title}
-      </h3>
+      <h3 className="font-display text-2xl text-gilded">{title}</h3>
       <ul className="mt-6 flex flex-col gap-4 text-sm leading-7 text-ivory/75">
         {items.map((item) => (
           <li key={`${item.time}-${item.title}`}>
@@ -119,7 +116,9 @@ function PhotographyCard() {
       transition={{ duration: 0.6 }}
       className="flex h-full flex-col rounded-[2.5rem] border border-gold/30 bg-gradient-to-br from-night/85 via-char/82 to-ember/30 p-8 text-ivory shadow-[0_35px_110px_-60px_rgba(249,210,122,0.5)]"
     >
-      <h3 className="font-display text-2xl text-gilded">Order of photography</h3>
+      <h3 className="font-display text-2xl text-gilded">
+        Order of photography
+      </h3>
       <div className="mt-3 rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-5 text-sm leading-7 text-ivory/75 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]">
         <p className="font-display text-lg text-ivory">{window}</p>
         <p className="mt-1 text-[0.95rem] text-ivory/70">{location}</p>
