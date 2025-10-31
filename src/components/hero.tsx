@@ -41,13 +41,13 @@ export function Hero() {
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <Link
-              href="#rsvp"
+              href="/#rsvp"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl shadow-[0_18px_60px_rgba(212,169,61,0.55),0_0_40px_rgba(90,15,41,0.28)] transition hover:shadow-[0_22px_70px_rgba(212,169,61,0.6),0_0_50px_rgba(90,15,41,0.32)]"
             >
               RSVP & Celebrate
             </Link>
             <Link
-              href="#schedule"
+              href="/program"
               className="text-sm font-semibold uppercase tracking-[0.32em] text-merlot transition hover:text-gold"
             >
               Wedding Day Details

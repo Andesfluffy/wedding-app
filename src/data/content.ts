@@ -16,12 +16,9 @@ export const weddingDetails = {
 };
 
 export const navigation = [
-  { label: "Home", href: "#top" },
-  { label: "Our Story", href: "#story" },
-  { label: "Wedding Day", href: "#schedule" },
-  { label: "Program", href: "#program" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "RSVP", href: "#rsvp" },
+  { label: "Invitation", href: "/" },
+  { label: "Program", href: "/program" },
+  { label: "Story & Gallery", href: "/story" },
 ];
 
 export const kingdomHallProgram = [

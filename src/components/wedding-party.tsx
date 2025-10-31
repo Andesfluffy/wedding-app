@@ -6,6 +6,7 @@ import { weddingParty } from "@/data/content";
 export function WeddingPartySection() {
   return (
     <section
+      id="party"
       className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/45 bg-gradient-to-br from-pearl/95 via-cream/95 to-night/92 px-6 py-20 shadow-[0_50px_150px_-60px_rgba(212,169,61,0.55),0_0_120px_-50px_rgba(90,15,41,0.3)] backdrop-blur md:px-16"
     >
       <div className="text-center">
