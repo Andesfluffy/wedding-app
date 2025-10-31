@@ -23,87 +23,148 @@ export const navigation = [
 
 export const kingdomHallProgram = [
   {
-    time: "11:00 AM",
-    title: "Kingdom melodies & welcome",
+    time: "11:30 AM",
+    title: "Guests arrive & are seated",
     description:
-      "Soft orchestral Kingdom songs ease you into your seat while ushers guide everyone to family sections and reserved rows.",
+      "Ushers guide everyone to their rows while soft conversations and warm welcomes fill the hall.",
   },
   {
-    time: "11:30 AM",
-    title: "Opening prayer & remarks",
+    time: "11:45 AM",
+    title: "Prelude music",
     description:
-      "Elders offer a warm welcome, share reminders about photography etiquette, and set the tone for a reverent yet joyful ceremony.",
+      "A curated set of Kingdom melodies settles hearts and minds in anticipation of the ceremony.",
   },
   {
     time: "12:00 PM",
-    title: "Marriage discourse",
+    title: "Program begins",
     description:
-      "A 30-minute Bible-based talk celebrates love, friendship, and the commitment Theo and Joan are making before Jehovah.",
+      "The chairman opens the marriage ceremony, sharing a heartfelt welcome and the day’s focus.",
   },
   {
-    time: "12:35 PM",
-    title: "Vows, rings & signing",
+    time: "12:05 PM",
+    title: "Opening song & prayer",
     description:
-      "Witness heartfelt vows, the exchange of rings, and the signing of the marriage register surrounded by close family.",
+      "We join voices for the Kingdom song and bow our heads in a reverent prayer to Jehovah.",
   },
   {
-    time: "12:50 PM",
-    title: "Closing prayer & recessional",
+    time: "12:10 PM",
+    title: "Wedding talk",
     description:
-      "We conclude with a prayer, then stroll outside to greet the couple as photographers capture candid congratulations.",
+      "An encouraging discourse highlights the beauty of marriage and the commitment Theo & Joan are making.",
+  },
+  {
+    time: "12:45 PM",
+    title: "Song & closing prayer",
+    description:
+      "A final Kingdom song and prayer close the spiritual program with gratitude and joy.",
+  },
+  {
+    time: "1:00 PM - 1:30 PM",
+    title: "Photography at the Kingdom Hall",
+    description:
+      "Please remain nearby for swift portraits before we depart for the reception.",
   },
 ];
 
 export const receptionProgram = [
   {
     time: "2:00 PM",
-    title: "Grand arrivals",
+    title: "Soft background music",
     description:
-      "Couple, parents, and wedding party make their entrance to live drums and curated Afro-soul playlists.",
+      "Our DJ sets the ambience while guests arrive, mingle, and get comfortable.",
+  },
+  {
+    time: "2:15 PM",
+    title: "Guests are seated",
+    description:
+      "The MC invites everyone to settle as we prepare for the couple’s big entrance.",
+  },
+  {
+    time: "2:20 PM",
+    title: "Couple’s grand entrance",
+    description:
+      "The bridal party is introduced, then Theo & Joan dance in with radiant energy.",
   },
   {
     time: "2:30 PM",
-    title: "First course & toasts",
+    title: "Opening prayer",
     description:
-      "Settle in for small bites and sparkling cocktails while loved ones share short, heartfelt toasts.",
+      "A short, heartfelt prayer sets a thankful tone for the celebration ahead.",
   },
   {
-    time: "3:15 PM",
-    title: "Cultural performances",
+    time: "2:35 PM",
+    title: "Welcome & family introductions",
     description:
-      "Talking drummers, traditional dancers, and a surprise medley spotlight both families' joyful heritage.",
+      "The MC spotlights both families before the chairman shares warm welcome remarks.",
   },
   {
-    time: "4:00 PM",
-    title: "Dinner service",
+    time: "2:45 PM",
+    title: "Meals & refreshments",
     description:
-      "Buffet stations open with chef-attended favourites, from smoky jollof to continental indulgences.",
+      "Service begins so guests can dine while light music flows in the background.",
   },
   {
-    time: "5:00 PM",
-    title: "Cake, games & open dance",
+    time: "3:30 PM",
+    title: "Cake cutting",
     description:
-      "We slice the cake, play couple-centric games, then hand the night over to the DJ for an endless dance floor.",
+      "A love song plays as the couple slice their cake and share a sweet moment.",
+  },
+  {
+    time: "3:45 PM",
+    title: "Couple’s dances",
+    description:
+      "Theo & Joan share their special dances, followed by a parents’ dance tribute.",
+  },
+  {
+    time: "4:15 PM",
+    title: "Games & fun segment",
+    description:
+      "The MC leads light-hearted games, trivia, and interactive moments with guests.",
+  },
+  {
+    time: "4:45 PM",
+    title: "Music & open dance floor",
+    description:
+      "Family, the bridal train, and close friends take the floor for joyful dancing and candid photos.",
+  },
+  {
+    time: "5:30 PM",
+    title: "Vote of thanks",
+    description:
+      "The groom shares a heartfelt thank-you before the chairman offers closing encouragement.",
+  },
+  {
+    time: "5:45 PM",
+    title: "Closing prayer",
+    description:
+      "We end the reception with gratitude, easing into farewells as the celebration concludes gracefully.",
   },
 ];
 
-export const photographyMoments = [
-  {
-    title: "After the vows",
-    description:
-      "Family portraits begin immediately outside the Kingdom Hall—parents, siblings, bridal party, then extended relatives.",
-  },
-  {
-    title: "Golden-hour portraits",
-    description:
-      "Theo & Joan sneak away at 3:45 PM for sunset shots around the pavilion gardens while guests enjoy dinner service.",
-  },
-  {
-    title: "Dance floor candids",
-    description:
-      "From 5:30 PM the photography team moves between lounge pods and the dance floor for high-energy, joy-filled candids.",
-  },
-];
+export const photographySchedule = {
+  window: "1:00 PM – 1:30 PM",
+  location: "Kingdom Hall grounds",
+  note: "Kindly stay nearby so portraits flow smoothly before we depart for the reception pavilion.",
+  order: [
+    "Bride alone",
+    "Groom alone",
+    "Couple",
+    "Couple with Best Man & Chief Bridesmaid",
+    "Couple with officiating minister",
+    "Couple with bride's parents",
+    "Couple with bride's family",
+    "Couple with groom's parents",
+    "Couple with groom's family",
+    "Bride with bridesmaids",
+    "Groom with groomsmen",
+    "Couple with bridesmaids & groomsmen",
+    "Couple with Egan-West Congregation",
+    "Couple with Oworotimi Congregation",
+    "Couple with bride's colleagues",
+    "Couple with groom's colleagues",
+    "Couple with friends, family & well-wishers",
+  ],
+};
 
 export const storyMoments = [
   {
@@ -180,8 +241,6 @@ export const travelEssentials = {
         "Leave before 11:00 AM so you can settle in, grab selfies, and catch our pre-ceremony first-look moments.",
     },
   ],
-  stayNote:
-    "Magodo Phase II, Ikeja GRA, and Maryland offer plenty of hotels and serviced apartments within 20 minutes of the venue. Share your budget and vibe in the RSVP form if you would like our planner to shortlist stays for you.",
   dressCode: {
     title: "Palette & attire",
     body: "Colours of the day: Grey, beige, and maroon. Think dove-grey suits, creamy beige fabrics, merlot pops, gele or fila, and shoes ready for Afrobeats spins.",
