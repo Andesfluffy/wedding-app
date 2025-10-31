@@ -52,11 +52,6 @@ export function TravelSection() {
                 ))}
               </ul>
             </div>
-
-            <div className="rounded-3xl border border-merlot/25 bg-pearl/95 p-6 text-sm leading-7 text-ink/80 shadow-[inset_0_18px_45px_rgba(90,15,41,0.12)]">
-              <h3 className="font-display text-2xl font-semibold text-merlot">Where to stay</h3>
-              <p className="mt-3">{travelEssentials.stayNote}</p>
-            </div>
           </div>
         </div>
 

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Navigation } from "@/components/navigation";
 import { SiteFooter } from "@/components/footer";
 import { WeekendEvents } from "@/components/weekend-events";
@@ -27,6 +29,21 @@ function ProgramIntro() {
           </div>
           <div className="rounded-3xl border border-gold/30 bg-night/75 px-6 py-4 text-xs uppercase tracking-[0.3em] text-ivory/70 shadow-[inset_0_18px_45px_rgba(249,210,122,0.12)]">
             Lagos, November 29 · Doors open 11:00 AM
+          </div>
+        </div>
+        <div className="relative mt-12 overflow-hidden rounded-[2.5rem] border border-gold/30 shadow-[0_35px_120px_-60px_rgba(249,210,122,0.6)]">
+          <div className="absolute inset-0 bg-gradient-to-tr from-night/35 via-night/10 to-transparent mix-blend-multiply" />
+          <Image
+            src="https://images.unsplash.com/photo-1520256862855-398228c41684?auto=format&fit=crop&w=1600&q=80"
+            alt="Elegant wedding bouquet of white and blush flowers resting on a table"
+            width={1600}
+            height={1066}
+            priority
+            className="h-80 w-full object-cover sm:h-[28rem]"
+          />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-night/60 to-transparent" />
+          <div className="absolute bottom-6 left-6 max-w-xs text-left text-sm text-ivory/90 sm:left-10 sm:max-w-sm sm:text-base">
+            Romantic florals and candlelight set the tone for an evening that blooms with celebration.
           </div>
         </div>
       </div>
