@@ -1,11 +1,14 @@
 import { NextResponse } from "next/server";
+import { Buffer } from "node:buffer";
+import tls from "node:tls";
+
+export const runtime = "nodejs";
 
 type RsvpPayload = {
   fullName?: string;
   email?: string;
   attendance?: "yes" | "no";
   guests?: string;
-  shuttle?: boolean;
   message?: string;
 };
 
@@ -25,12 +28,13 @@ export async function POST(request: Request) {
       email: body.email,
       attendance: body.attendance,
       guests: Number(body.guests ?? 0),
-      shuttle: Boolean(body.shuttle),
       message: body.message ?? "",
       submittedAt: new Date().toISOString(),
     };
 
     console.info("[RSVP]", entry);
+
+    await sendEmailToGmail(entry);
 
     return NextResponse.json({ ok: true });
   } catch (error) {
@@ -40,4 +44,149 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
+}
+
+type RsvpEntry = {
+  fullName: string;
+  email: string;
+  attendance: "yes" | "no";
+  guests: number;
+  message: string;
+  submittedAt: string;
+};
+
+async function sendEmailToGmail(entry: RsvpEntry) {
+  const gmailUser = process.env.RSVP_GMAIL_USER;
+  const gmailAppPassword = process.env.RSVP_GMAIL_APP_PASSWORD;
+  const recipient = process.env.RSVP_RECIPIENT_EMAIL ?? gmailUser;
+
+  if (!gmailUser || !gmailAppPassword) {
+    throw new Error("RSVP Gmail credentials are not configured");
+  }
+
+  if (!recipient) {
+    throw new Error("RSVP recipient email is not configured");
+  }
+
+  const socket = await createSmtpConnection({
+    host: process.env.RSVP_GMAIL_SMTP_HOST ?? "smtp.gmail.com",
+    port: Number(process.env.RSVP_GMAIL_SMTP_PORT ?? 465),
+  });
+
+  try {
+    await expectResponse(socket);
+    await sendCommand(socket, `EHLO ${process.env.RSVP_GMAIL_CLIENT_ID ?? "localhost"}`);
+    await sendCommand(socket, "AUTH LOGIN");
+    await sendCommand(socket, Buffer.from(gmailUser, "utf8").toString("base64"));
+    await sendCommand(socket, Buffer.from(gmailAppPassword, "utf8").toString("base64"));
+    await sendCommand(socket, `MAIL FROM:<${gmailUser}>`);
+    await sendCommand(socket, `RCPT TO:<${recipient}>`);
+    await sendCommand(socket, "DATA");
+
+    const lines = [
+      `From: "Wedding RSVP" <${gmailUser}>`,
+      `To: ${recipient}`,
+      `Subject: RSVP from ${entry.fullName}`,
+      "MIME-Version: 1.0",
+      "Content-Type: text/plain; charset=utf-8",
+      "Content-Transfer-Encoding: 8bit",
+      "",
+      formatEntry(entry),
+    ];
+
+    socket.write(`${lines.join("\r\n")}\r\n.\r\n`);
+    await expectResponse(socket);
+    await sendCommand(socket, "QUIT");
+  } finally {
+    socket.end();
+  }
+}
+
+function formatEntry(entry: RsvpEntry) {
+  return [
+    `Name: ${entry.fullName}`,
+    `Email: ${entry.email}`,
+    `Attendance: ${entry.attendance === "yes" ? "Attending" : "Not attending"}`,
+    `Guests (including primary guest): ${entry.guests}`,
+    "",
+    "Message:",
+    entry.message.trim() ? entry.message : "(none)",
+    "",
+    `Submitted: ${entry.submittedAt}`,
+  ].join("\r\n");
+}
+
+async function createSmtpConnection({
+  host,
+  port,
+}: {
+  host: string;
+  port: number;
+}) {
+  return await new Promise<tls.TLSSocket>((resolve, reject) => {
+    const socket = tls.connect({ host, port, rejectUnauthorized: true });
+    const onError = (error: Error) => {
+      socket.off("secureConnect", onConnect);
+      reject(error);
+    };
+    const onConnect = () => {
+      socket.setEncoding("utf8");
+      socket.setTimeout(10000);
+      socket.off("error", onError);
+      resolve(socket);
+    };
+    socket.once("secureConnect", onConnect);
+    socket.once("error", onError);
+  });
+}
+
+async function sendCommand(socket: tls.TLSSocket, command: string) {
+  socket.write(`${command}\r\n`);
+  return expectResponse(socket);
+}
+
+async function expectResponse(socket: tls.TLSSocket) {
+  socket.setTimeout(10000);
+  const response = await new Promise<string>((resolve, reject) => {
+    let buffer = "";
+
+    const onData = (chunk: string) => {
+      buffer += chunk;
+      const lines = buffer.split("\r\n").filter(Boolean);
+      if (!lines.length) {
+        return;
+      }
+      const lastLine = lines[lines.length - 1];
+      if (lastLine.length >= 4 && lastLine[3] === " ") {
+        cleanup();
+        resolve(buffer);
+      }
+    };
+
+    const onError = (error: Error) => {
+      cleanup();
+      reject(error);
+    };
+
+    const onTimeout = () => {
+      cleanup();
+      reject(new Error("SMTP response timed out"));
+    };
+
+    const cleanup = () => {
+      socket.off("data", onData);
+      socket.off("error", onError);
+      socket.off("timeout", onTimeout);
+    };
+
+    socket.on("data", onData);
+    socket.once("error", onError);
+    socket.once("timeout", onTimeout);
+  });
+
+  const status = Number(response.slice(0, 3));
+  if (Number.isNaN(status) || status >= 400) {
+    throw new Error(`SMTP error: ${response.trim()}`);
+  }
+  return response;
 }

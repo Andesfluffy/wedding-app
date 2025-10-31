@@ -8,7 +8,6 @@ type FormState = {
   email: string;
   attendance: "yes" | "no" | "";
   guests: string;
-  shuttle: boolean;
   message: string;
 };
 
@@ -17,7 +16,6 @@ const initialState: FormState = {
   email: "",
   attendance: "",
   guests: "0",
-  shuttle: false,
   message: "",
 };
 
@@ -80,9 +78,9 @@ export function RsvpSection() {
             We cannot wait to celebrate with you
           </h2>
           <p className="mt-4 text-base leading-7 text-ivory/70">
-            Kindly share your plans so we can set your place, personalise
-            treats, and coordinate valet support. Prefer email? Reach out to{" "}
-            hello@radiantvows.ng and we will take care of you.
+            Kindly share your plans so we can set your place and personalise
+            treats. Prefer email? Reach out to hello@radiantvows.ng and we will
+            take care of you.
           </p>
           {status !== "idle" && (
             <motion.div
@@ -201,20 +199,6 @@ export function RsvpSection() {
                 className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
             </div>
-            <label className="flex items-center gap-3 rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)]">
-              <input
-                type="checkbox"
-                checked={form.shuttle}
-                onChange={(event) =>
-                  setForm((prev) => ({
-                    ...prev,
-                    shuttle: event.target.checked,
-                  }))
-                }
-                className="h-4 w-4 border-gold accent-gold"
-              />
-              Please reserve valet or ride support for me
-            </label>
           </div>
           <div>
             <label
