@@ -24,7 +24,10 @@ function StoryIntro() {
               A Lagos love story in full colour
             </h1>
             <p className="text-base leading-7 text-ink/80 md:max-w-xl">
-              Journey through the moments, the faces, and the joyful details that brought us here. Scroll to explore our timeline, wedding party, photo mood board, registry wishes, and answers for curious guests.
+              Journey through the moments, the faces, and the joyful details
+              that brought us here. Scroll to explore our timeline, wedding
+              party, photo mood board, registry wishes, and answers for curious
+              guests.
             </p>
           </div>
           <div className="rounded-3xl border border-gold/30 bg-rosewater/80 px-6 py-4 text-xs uppercase tracking-[0.3em] text-ink/70 shadow-[inset_0_18px_45px_rgba(212,169,61,0.12)]">

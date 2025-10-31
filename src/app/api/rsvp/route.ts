@@ -34,9 +34,9 @@ export async function POST(request: Request) {
 
     console.info("[RSVP]", entry);
 
-    await sendEmailToGmail(entry);
+    const delivered = await sendEmailToGmail(entry);
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, delivered });
   } catch (error) {
     console.error("[RSVP_ERROR]", error);
     return NextResponse.json(
@@ -59,13 +59,28 @@ async function sendEmailToGmail(entry: RsvpEntry) {
   const gmailUser = process.env.RSVP_GMAIL_USER;
   const gmailAppPassword = process.env.RSVP_GMAIL_APP_PASSWORD;
   const recipient = process.env.RSVP_RECIPIENT_EMAIL ?? gmailUser;
+  const isProduction = process.env.NODE_ENV === "production";
 
   if (!gmailUser || !gmailAppPassword) {
-    throw new Error("RSVP Gmail credentials are not configured");
+    if (isProduction) {
+      throw new Error("RSVP Gmail credentials are not configured");
+    }
+    console.warn(
+      "[RSVP_DEV] Gmail credentials are not configured, skipping email delivery."
+    );
+    console.info("[RSVP_DEV] Submission", entry);
+    return false;
   }
 
   if (!recipient) {
-    throw new Error("RSVP recipient email is not configured");
+    if (isProduction) {
+      throw new Error("RSVP recipient email is not configured");
+    }
+    console.warn(
+      "[RSVP_DEV] RSVP recipient email is not configured, skipping email delivery."
+    );
+    console.info("[RSVP_DEV] Submission", entry);
+    return false;
   }
 
   const socket = await createSmtpConnection({
@@ -100,6 +115,7 @@ async function sendEmailToGmail(entry: RsvpEntry) {
   } finally {
     socket.end();
   }
+  return true;
 }
 
 function formatEntry(entry: RsvpEntry) {

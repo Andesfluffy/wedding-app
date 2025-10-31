@@ -21,9 +21,9 @@ const initialState: FormState = {
 
 export function RsvpSection() {
   const [form, setForm] = useState<FormState>(initialState);
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
-    "idle"
-  );
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [feedback, setFeedback] = useState<string>("");
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -33,7 +33,9 @@ export function RsvpSection() {
 
     if (!form.fullName || !form.email || !form.attendance) {
       setStatus("error");
-      setFeedback("Please fill in your name, email, and attendance preference.");
+      setFeedback(
+        "Please fill in your name, email, and attendance preference."
+      );
       return;
     }
 
@@ -51,9 +53,7 @@ export function RsvpSection() {
       }
 
       setStatus("success");
-      setFeedback(
-        "Thank you! We have received your RSVP and will send final wedding day details in October."
-      );
+      setFeedback("Thank you! We have received your RSVP.");
       setForm(initialState);
     } catch (error) {
       console.error(error);
@@ -79,8 +79,7 @@ export function RsvpSection() {
           </h2>
           <p className="mt-4 text-base leading-7 text-ivory/70">
             Kindly share your plans so we can set your place and personalise
-            treats. Prefer email? Reach out to hello@radiantvows.ng and we will
-            take care of you.
+            treats. We will take care of you.
           </p>
           {status !== "idle" && (
             <motion.div
@@ -205,7 +204,7 @@ export function RsvpSection() {
               htmlFor="message"
               className="text-xs uppercase tracking-[0.3em] text-gold"
             >
-              Notes, allergies, or song requests
+              Notes or Extras
             </label>
             <textarea
               id="message"
