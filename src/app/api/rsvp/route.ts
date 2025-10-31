@@ -7,8 +7,9 @@ export const runtime = "nodejs";
 type RsvpPayload = {
   fullName?: string;
   email?: string;
+  phone?: string;
   attendance?: "yes" | "no";
-  guests?: string;
+  guests?: string | number;
   message?: string;
 };
 
@@ -16,19 +17,61 @@ export async function POST(request: Request) {
   try {
     const body = (await request.json()) as RsvpPayload;
 
-    if (!body.fullName || !body.email || !body.attendance) {
+    const fullName = body.fullName?.trim();
+    const email = body.email?.trim();
+    const phone = body.phone?.trim();
+    const attendance = body.attendance;
+    const message = body.message?.toString().trim() ?? "";
+    const guestsValue =
+      typeof body.guests === "number"
+        ? body.guests
+        : Number.parseInt((body.guests ?? "").toString(), 10);
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^[+]?[-()\d\s]{7,20}$/;
+
+    if (!fullName) {
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { error: "Full name is required" },
+        { status: 400 }
+      );
+    }
+
+    if (!email || !emailPattern.test(email)) {
+      return NextResponse.json(
+        { error: "A valid email address is required" },
+        { status: 400 }
+      );
+    }
+
+    if (!phone || !phonePattern.test(phone)) {
+      return NextResponse.json(
+        { error: "A valid phone number is required" },
+        { status: 400 }
+      );
+    }
+
+    if (attendance !== "yes" && attendance !== "no") {
+      return NextResponse.json(
+        { error: "Attendance selection is required" },
+        { status: 400 }
+      );
+    }
+
+    if (!Number.isInteger(guestsValue) || guestsValue < 0 || guestsValue > 10) {
+      return NextResponse.json(
+        { error: "Guest count must be between 0 and 10" },
         { status: 400 }
       );
     }
 
     const entry = {
-      fullName: body.fullName,
-      email: body.email,
-      attendance: body.attendance,
-      guests: Number(body.guests ?? 0),
-      message: body.message ?? "",
+      fullName,
+      email,
+      phone,
+      attendance,
+      guests: guestsValue,
+      message,
       submittedAt: new Date().toISOString(),
     };
 
@@ -49,6 +92,7 @@ export async function POST(request: Request) {
 type RsvpEntry = {
   fullName: string;
   email: string;
+  phone: string;
   attendance: "yes" | "no";
   guests: number;
   message: string;
@@ -122,6 +166,7 @@ function formatEntry(entry: RsvpEntry) {
   return [
     `Name: ${entry.fullName}`,
     `Email: ${entry.email}`,
+    `Phone: ${entry.phone}`,
     `Attendance: ${entry.attendance === "yes" ? "Attending" : "Not attending"}`,
     `Guests (including primary guest): ${entry.guests}`,
     "",
