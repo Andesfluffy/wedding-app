@@ -6,7 +6,10 @@ import { registryItems } from "@/data/content";
 
 export function RegistrySection() {
   return (
-    <section className="relative mx-auto mt-24 max-w-5xl rounded-[3rem] border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_45px_130px_-60px_rgba(249,210,122,0.5)] backdrop-blur md:px-12">
+    <section
+      id="registry"
+      className="relative mx-auto mt-24 max-w-5xl rounded-[3rem] border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_45px_130px_-60px_rgba(249,210,122,0.5)] backdrop-blur md:px-12"
+    >
       <div className="text-center">
         <p className="font-display text-xs uppercase tracking-[0.6em] text-gold">
           Registry

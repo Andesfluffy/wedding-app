@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { navigation } from "@/data/content";
 import { cn } from "@/lib/utils";
 
 export function Navigation() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -46,6 +48,11 @@ export function Navigation() {
     }
   }, [isMenuOpen]);
 
+  const isActive = (href: string) => {
+    const basePath = href.split("#")[0] || "/";
+    return pathname === basePath;
+  };
+
   return (
     <header
       className={cn(
@@ -63,7 +70,7 @@ export function Navigation() {
         )}
       >
         <Link
-          href="#top"
+          href="/"
           className="font-display text-lg uppercase tracking-[0.4em] text-gold drop-shadow-[0_0_8px_rgba(246,196,92,0.4)]"
         >
           Theo & Joan
@@ -73,14 +80,17 @@ export function Navigation() {
             <Link
               key={item.href}
               href={item.href}
-              className="transition-colors hover:text-gold"
+              className={cn(
+                "transition-colors hover:text-gold",
+                isActive(item.href) ? "text-gold" : ""
+              )}
             >
               {item.label}
             </Link>
           ))}
         </nav>
         <Link
-          href="#rsvp"
+          href="/#rsvp"
           className="hidden rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-ink shadow-[0_12px_40px_rgba(246,196,92,0.4)] transition hover:shadow-[0_15px_45px_rgba(249,210,122,0.55)] md:inline-flex"
         >
           RSVP
@@ -130,13 +140,23 @@ export function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-2xl border border-transparent px-3 py-2 text-ink/75 transition hover:border-gold/35 hover:bg-gold/10"
+                  className={cn(
+                    "rounded-2xl border border-transparent px-3 py-2 text-ink/75 transition hover:border-gold/35 hover:bg-gold/10",
+                    isActive(item.href) ? "border-gold/35 bg-gold/10 text-gold" : ""
+                  )}
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
             </nav>
+            <Link
+              href="/#rsvp"
+              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-5 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-ink shadow-[0_15px_45px_rgba(249,210,122,0.5)] transition hover:shadow-[0_18px_55px_rgba(249,210,122,0.55)]"
+              onClick={() => setMenuOpen(false)}
+            >
+              RSVP
+            </Link>
           </div>
         </div>
       )}
