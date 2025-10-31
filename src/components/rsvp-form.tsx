@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 type FormState = {
   fullName: string;
   email: string;
+  phone: string;
   attendance: "yes" | "no" | "";
   guests: string;
   message: string;
@@ -14,6 +15,7 @@ type FormState = {
 const initialState: FormState = {
   fullName: "",
   email: "",
+  phone: "",
   attendance: "",
   guests: "0",
   message: "",
@@ -31,10 +33,49 @@ export function RsvpSection() {
     setStatus("loading");
     setFeedback("");
 
-    if (!form.fullName || !form.email || !form.attendance) {
+    const trimmedForm = {
+      fullName: form.fullName.trim(),
+      email: form.email.trim(),
+      phone: form.phone.trim(),
+      attendance: form.attendance,
+      guests: form.guests.trim(),
+      message: form.message.trim(),
+    };
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^[+]?[-()\d\s]{7,20}$/;
+
+    if (!trimmedForm.fullName) {
+      setStatus("error");
+      setFeedback("Please share the name we should reserve your seat with.");
+      return;
+    }
+
+    if (!trimmedForm.email || !emailPattern.test(trimmedForm.email)) {
+      setStatus("error");
+      setFeedback("Please enter a valid email address so we can reach you.");
+      return;
+    }
+
+    if (!trimmedForm.phone || !phonePattern.test(trimmedForm.phone)) {
       setStatus("error");
       setFeedback(
-        "Please fill in your name, email, and attendance preference."
+        "Please provide a phone number (include country code if outside Nigeria)."
+      );
+      return;
+    }
+
+    if (!trimmedForm.attendance) {
+      setStatus("error");
+      setFeedback("Kindly let us know if you will join us in person.");
+      return;
+    }
+
+    const guestCount = Number.parseInt(trimmedForm.guests, 10);
+    if (Number.isNaN(guestCount) || guestCount < 0 || guestCount > 10) {
+      setStatus("error");
+      setFeedback(
+        "Please share how many guests (including you) are coming — up to 10 seats."
       );
       return;
     }
@@ -45,7 +86,10 @@ export function RsvpSection() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...trimmedForm,
+          guests: guestCount,
+        }),
       });
 
       if (!response.ok) {
@@ -140,6 +184,29 @@ export function RsvpSection() {
             </div>
           </div>
           <div>
+            <label
+              htmlFor="phone"
+              className="text-xs uppercase tracking-[0.3em] text-gold"
+            >
+              Phone number
+            </label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              inputMode="tel"
+              autoComplete="tel"
+              value={form.phone}
+              onChange={(event) =>
+                setForm((prev) => ({ ...prev, phone: event.target.value }))
+              }
+              required
+              pattern="^[+]?[-()\\d\\s]{7,20}$"
+              title="Phone number with 7-20 digits. You may include +, spaces, parentheses, or dashes."
+              className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+            />
+          </div>
+          <div>
             <p className="text-xs uppercase tracking-[0.3em] text-gold">
               Will you join us?
             </p>
@@ -187,13 +254,23 @@ export function RsvpSection() {
                 name="guests"
                 type="number"
                 min={0}
-                max={6}
+                max={10}
+                inputMode="numeric"
                 value={form.guests}
                 onChange={(event) =>
-                  setForm((prev) => ({
-                    ...prev,
-                    guests: event.target.value,
-                  }))
+                  setForm((prev) => {
+                    const rawValue = event.target.value.replace(/[^0-9]/g, "");
+                    if (!rawValue) {
+                      return { ...prev, guests: "" };
+                    }
+                    const nextValue = String(
+                      Math.min(Number.parseInt(rawValue, 10), 10)
+                    );
+                    return {
+                      ...prev,
+                      guests: nextValue,
+                    };
+                  })
                 }
                 className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
