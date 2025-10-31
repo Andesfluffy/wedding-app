@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
   kingdomHallProgram,
   receptionProgram,
-  photographyMoments,
+  photographySchedule,
 } from "@/data/content";
 
 export function ProgramSection() {
@@ -97,6 +97,8 @@ function ProgramCard({
 }
 
 function PhotographyCard() {
+  const { window, location, note, order } = photographySchedule;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -106,20 +108,21 @@ function PhotographyCard() {
       className="flex h-full flex-col rounded-[2.5rem] border border-gold/30 bg-gradient-to-br from-night/85 via-char/82 to-ember/30 p-8 text-ivory shadow-[0_35px_110px_-60px_rgba(249,210,122,0.5)]"
     >
       <h3 className="font-display text-2xl text-gilded">Order of photography</h3>
-      <p className="mt-3 text-sm leading-7 text-ivory/75">
-        Share these moments with your crew so everyone knows when to gather
-        for portraits and when to let loose on the dance floor.
-      </p>
-      <ul className="mt-6 flex flex-col gap-4 text-sm leading-7 text-ivory/70">
-        {photographyMoments.map((moment) => (
+      <div className="mt-3 rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-5 text-sm leading-7 text-ivory/75 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]">
+        <p className="font-display text-lg text-ivory">{window}</p>
+        <p className="mt-1 text-[0.95rem] text-ivory/70">{location}</p>
+        <p className="mt-3 text-[0.95rem] text-ivory/70">{note}</p>
+      </div>
+      <ul className="mt-6 flex flex-col gap-3 text-sm leading-7 text-ivory/75">
+        {order.map((group, index) => (
           <li
-            key={moment.title}
-            className="rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-4 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]"
+            key={group}
+            className="flex items-start gap-3 rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-4 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]"
           >
-            <p className="font-display text-lg text-ivory">{moment.title}</p>
-            <p className="mt-1 text-[0.95rem] leading-6 text-ivory/70">
-              {moment.description}
-            </p>
+            <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-night/70 font-display text-xs font-semibold text-gold">
+              {index + 1}
+            </span>
+            <p className="text-[0.95rem] leading-6 text-ivory/75">{group}</p>
           </li>
         ))}
       </ul>
