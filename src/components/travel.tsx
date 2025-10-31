@@ -26,7 +26,7 @@ export function TravelSection() {
   return (
     <section
       id="travel"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/40 bg-gradient-to-br from-pearl/95 via-cream/95 to-night/92 px-6 py-20 shadow-[0_45px_140px_-60px_rgba(212,169,61,0.55),0_0_110px_-50px_rgba(90,15,41,0.3)] backdrop-blur"
+      className="relative mx-auto mt-24 max-w-6xl scroll-mt-32 rounded-[3.5rem] border border-gold/40 bg-gradient-to-br from-pearl/95 via-cream/95 to-night/92 px-6 py-20 shadow-[0_45px_140px_-60px_rgba(212,169,61,0.55),0_0_110px_-50px_rgba(90,15,41,0.3)] backdrop-blur"
     >
       <motion.div
         initial={{ opacity: 0, y: 24 }}

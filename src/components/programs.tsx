@@ -11,7 +11,7 @@ export function ProgramSection() {
   return (
     <section
       id="program"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_50px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur md:px-16"
+      className="relative mx-auto mt-24 max-w-6xl scroll-mt-32 rounded-[3.5rem] border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_50px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur md:px-16"
     >
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div className="max-w-xl">
@@ -19,12 +19,11 @@ export function ProgramSection() {
             Ceremony &amp; reception
           </p>
           <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">
-            A full-day program at a glance
+            Ceremony &amp; reception highlights
           </h2>
           <p className="mt-4 text-base leading-7 text-ivory/70">
-            From the Kingdom Hall discourse to golden-hour portraits and the
-            last song of the night, everything you need is beautifully tucked
-            into one elegant guide for your wedding-day link.
+            Tap through the timeline to open the notes you need—perfect for a
+            quick check between moments.
           </p>
         </div>
         <div className="rounded-3xl border border-gold/30 bg-gradient-to-br from-night/80 via-char/80 to-onyx/80 px-6 py-4 text-xs uppercase tracking-[0.3em] text-ivory/75 shadow-[inset_0_20px_50px_rgba(249,210,122,0.12)]">
@@ -76,22 +75,33 @@ function ProgramCard({
       <h3 className="font-display text-2xl text-gilded">
         {title}
       </h3>
-      <dl className="mt-6 flex flex-col gap-5 text-sm leading-7 text-ivory/75">
+      <ul className="mt-6 flex flex-col gap-4 text-sm leading-7 text-ivory/75">
         {items.map((item) => (
-          <div
-            key={`${item.time}-${item.title}`}
-            className="rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-4 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]"
-          >
-            <dt className="font-display text-xs uppercase tracking-[0.3em] text-gold">
-              {item.time}
-            </dt>
-            <dd className="mt-2 font-display text-lg text-ivory">{item.title}</dd>
-            <p className="mt-1 text-[0.95rem] leading-6 text-ivory/70">
-              {item.description}
-            </p>
-          </div>
+          <li key={`${item.time}-${item.title}`}>
+            <details className="group rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-4 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)] transition hover:border-gold/40 [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex w-full cursor-pointer flex-col gap-2 text-left sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="font-display text-xs uppercase tracking-[0.3em] text-gold">
+                    {item.time}
+                  </p>
+                  <p className="mt-2 font-display text-lg text-ivory">
+                    {item.title}
+                  </p>
+                </div>
+                <span
+                  aria-hidden="true"
+                  className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-night/70 font-display text-base text-gold transition duration-300 group-open:rotate-45 sm:mt-0"
+                >
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 text-[0.95rem] leading-6 text-ivory/70">
+                {item.description}
+              </p>
+            </details>
+          </li>
         ))}
-      </dl>
+      </ul>
     </motion.article>
   );
 }
