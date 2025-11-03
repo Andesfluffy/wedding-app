@@ -23,7 +23,7 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="space-y-6"
         >
-          <p className="font-display text-xs font-semibold uppercase tracking-[0.6em] text-gold">
+          <p className="font-display text-xs font-semibold uppercase tracking-[0.6em] text-black">
             {weddingDetails.weekday} / {weddingDetails.date}
           </p>
           <h1 className="font-display text-5xl font-semibold tracking-tight text-ink sm:text-6xl md:text-7xl">

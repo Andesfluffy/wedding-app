@@ -34,7 +34,7 @@ function ProgramIntro() {
         <div className="absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-merlot/25 blur-3xl sm:left-1/3" />
       </div>
       <div className="mx-auto max-w-5xl rounded-[3rem] border border-gold/40 bg-gradient-to-br from-night/92 via-onyx/90 to-char/90 px-6 py-16 text-center shadow-[0_45px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur sm:px-12 md:text-left">
-        <p className="font-display text-xs uppercase tracking-[0.6em] text-gold">
+        <p className="font-display text-xs uppercase tracking-[0.6em] text-black">
           Wedding day flow
         </p>
         <div className="mt-6 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
@@ -57,7 +57,7 @@ function ProgramIntro() {
               key={item.label}
               className="rounded-2xl border border-gold/35 bg-night/80 px-5 py-4 text-left text-ivory/80 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]"
             >
-              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-gold">
+              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-black">
                 {item.label}
               </p>
               <p className="mt-2 font-display text-base text-ivory">

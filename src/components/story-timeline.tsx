@@ -10,7 +10,7 @@ export function StoryTimeline() {
       className="relative mx-auto mt-24 max-w-5xl rounded-[3rem] border border-gold/40 bg-gradient-to-br from-pearl/95 via-cream/95 to-night/92 px-6 py-20 shadow-[0_45px_140px_-60px_rgba(212,169,61,0.55),0_0_110px_-50px_rgba(90,15,41,0.3)] backdrop-blur sm:px-14"
     >
       <div className="mx-auto max-w-2xl text-center sm:text-left">
-        <p className="font-display text-xs font-semibold uppercase tracking-[0.6em] text-gold">
+        <p className="font-display text-xs font-semibold uppercase tracking-[0.6em] text-black">
           Our Story
         </p>
         <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
