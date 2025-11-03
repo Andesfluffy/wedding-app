@@ -15,11 +15,10 @@ export function GallerySection() {
           Mood board
         </p>
         <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">
-          Colours of Lagos love
+          Colours of Love
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-ivory/70">
-          Jewel tones, tropical blooms, and metallic flashes—the palette guiding
-          every aso-ebi, floral arch, and midnight dance break.
+          Pictorial views of the love shared between Theo and Joan.
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

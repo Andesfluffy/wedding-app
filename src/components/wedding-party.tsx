@@ -14,11 +14,11 @@ export function WeddingPartySection() {
           Inner circle
         </p>
         <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-          The crew behind the magic
+          The crew
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-ink/80">
           Family, friends, hype team—they have planned, hyped, and danced with
-          us every step. Lagos is louder and lovelier because of them.
+          us every step. Its all better because of them.
         </p>
       </div>
       <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -256,7 +256,7 @@ export const weddingParty = [
     role: "Bridesmaid",
     name: "Adaeze Ugochukwu",
     description:
-      "Theo's cousin who bridges both families with warm hugs, honest advice, and endless laughter.",
+      "Theo's friend , shes been rooting for them since day one and now stands ready with endless support and joy.",
   },
   {
     role: "Bridesmaid",
@@ -266,21 +266,21 @@ export const weddingParty = [
   },
   {
     role: "Best Man",
-    name: "Adedamola Oyeyemi",
+    name: "Damola Oyeyemi",
     description:
-      "Theo's day-one strategist ensuring timelines are tight, suits are crisp, and the groom stays relaxed.",
+      "The Groom's brother ! Theo's day-one strategist ensuring timelines are tight, suits are crisp, and the groom stays relaxed.",
   },
   {
     role: "Groomsman",
     name: "Edwards Ugochukwu",
     description:
-      "Brother of the groom whose calm energy balances the crew and keeps the jokes coming.",
+      "friend of the groom whose calm energy balances the crew and keeps the jokes coming.",
   },
   {
     role: "Groomsman",
     name: "Harolds Ugochukwu",
     description:
-      "Detail-focused sibling making sure every toast, mic, and boutonnière lands perfectly.",
+      "Happening guy,  making sure every toast, mic, and boutonnière lands perfectly.",
   },
   {
     role: "Groomsman",
@@ -292,22 +292,12 @@ export const weddingParty = [
 
 export const registryItems = [
   {
-    name: "Saturday brunch & bubbly bar",
+    name: "Bank transfer (Naira)",
     description:
-      "Help us stock our kitchen with a waffle maker, mimosa set, and Lagos coffee beans for post-wedding hangouts.",
-    link: "https://example.com/brunch-bar",
-  },
-  {
-    name: "Date-night adventure fund",
-    description:
-      "Tickets to concerts, food tours, and beach getaways we plan to enjoy as newlyweds.",
-    link: "https://example.com/date-night",
-  },
-  {
-    name: "Game night lounge essentials",
-    description:
-      "Cozy throw blankets, board games, and a projector so we can host movie marathons with you.",
-    link: "https://example.com/game-night",
+      "Send love directly to our joint wedding account. Kindly add your name so we can thank you warmly after the celebration.",
+    bank: "GTBank",
+    accountName: "Theophilus & Joan Ugochukwu",
+    accountNumber: "0123456789",
   },
 ];
 
@@ -342,12 +332,12 @@ export const faqs = [
   {
     question: "What should I wear?",
     answer:
-      "This is a single-day celebration. Arrive in polished jewel tones with gele or fila if you wish—comfortable shoes encouraged for hours of photos, hugs, and dancing!",
+      "This is a single-day celebration. Arrive in your favorite dress tones with gele or fila if you wish—comfortable shoes encouraged for hours of photos, hugs, and dancing!",
   },
   {
     question: "Is parking available?",
     answer:
-      "Yes. Complimentary parking passes and arrival instructions will be emailed two weeks ahead. Kindly display your pass on the dashboard when you arrive.",
+      "Yes. There is ample parking at both the Kingdom Hall and the reception venue. Attendants will be on site to guide you.",
   },
   {
     question: "Can I bring my children?",
