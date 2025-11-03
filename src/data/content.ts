@@ -221,7 +221,7 @@ export const weekendEvents = [
     date: "November 29",
     title: "Reception & after-party",
     time: "2:00 PM - 6:30 PM",
-    location: "Hall Reception Pavilion, Magodo Phase II",
+    location: "New Love Hotel -193,195 Isuti rd, Egan, Igando",
     attire: "Decent , Ravishing",
     description:
       "After the ceremony we move to ... for playful cocktails, delicious bites, and a colourful event that glides from love songs to dance-floor anthems until sunset.",
@@ -231,10 +231,10 @@ export const weekendEvents = [
 export const travelEssentials = {
   dressCode: {
     title: "Palette & attire",
-    body: "Colours of the day: Grey, beige, and maroon. Think dove-grey suits, creamy beige fabrics, merlot pops, gele or fila, and shoes ready for Afrobeats spins.",
+    body: "Colours of the day: Grey, beige, and maroon.",
   },
   transport:
-    "Ride-hailing drop-off is available at the Kingdom Hall gate with attendants on site. Complimentary parking passes will be emailed to drivers two weeks out.",
+    "Ride-hailing drop-off is available at the Kingdom Hall gate with attendants on site.",
   registryNote:
     "Your presence means the world. If you would love to gift us, we curated fun experiences and home upgrades we cannot wait to enjoy.",
 };

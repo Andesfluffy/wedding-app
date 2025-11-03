@@ -7,11 +7,11 @@ import { TravelSection } from "@/components/travel";
 const highlightCards = [
   {
     label: "Ceremony",
-    value: "Kingdom Hall · 12:00 PM",
+    value: "4 Kingdom Hall Avenue, off Joseph Abume Street, Igando · 12:00 PM",
   },
   {
     label: "Reception",
-    value: "Hall Reception Pavilion · 2:00 PM",
+    value: "New Love Hotel -193,195 Isuti rd, Egan, Igando · 2:00 PM",
   },
   {
     label: "Palette",
