@@ -295,9 +295,9 @@ export const registryItems = [
     name: "Bank transfer (Naira)",
     description:
       "Send love directly to our joint wedding account. Kindly add your name so we can thank you warmly after the celebration.",
-    bank: "GTBank",
-    accountName: "Theophilus & Joan Ugochukwu",
-    accountNumber: "0123456789",
+    bank: "Opay",
+    accountName: "Theophilus Oyeyemi",
+    accountNumber: "8107144024",
   },
 ];
 
