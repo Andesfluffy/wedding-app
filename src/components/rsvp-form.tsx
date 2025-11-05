@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 type FormState = {
@@ -21,12 +21,19 @@ const initialState: FormState = {
   message: "",
 };
 
-export function RsvpSection() {
+export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxGuests?: number }) {
   const [form, setForm] = useState<FormState>(initialState);
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [feedback, setFeedback] = useState<string>("");
+
+  // Pre-fill guest name when provided via URL
+  useEffect(() => {
+    if (guestName) {
+      setForm(prev => ({ ...prev, fullName: decodeURIComponent(guestName) }));
+    }
+  }, [guestName]);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -40,6 +47,7 @@ export function RsvpSection() {
       attendance: form.attendance,
       guests: form.guests.trim(),
       message: form.message.trim(),
+      maxGuests: maxGuests || 10,
     };
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -72,10 +80,11 @@ export function RsvpSection() {
     }
 
     const guestCount = Number.parseInt(trimmedForm.guests, 10);
-    if (Number.isNaN(guestCount) || guestCount < 0 || guestCount > 10) {
+    const maxAllowed = maxGuests || 10;
+    if (Number.isNaN(guestCount) || guestCount < 0 || guestCount > maxAllowed) {
       setStatus("error");
       setFeedback(
-        "Please share how many guests (including you) are coming — up to 10 seats."
+        `Please share how many guests (including you) are coming — up to ${maxAllowed} seat${maxAllowed > 1 ? 's' : ''}.`
       );
       return;
     }
@@ -111,7 +120,7 @@ export function RsvpSection() {
   return (
     <section
       id="rsvp"
-      className="relative mx-auto mt-24 max-w-6xl rounded-[3.5rem] border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_50px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur md:px-16"
+      className="relative mx-auto mt-4 max-w-6xl rounded-xl border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_50px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur md:px-16"
     >
       <div className="grid gap-16 lg:grid-cols-[1.1fr,0.9fr]">
         <div>
@@ -248,13 +257,18 @@ export function RsvpSection() {
                 className="text-xs uppercase tracking-[0.3em] text-black"
               >
                 Number of guests (including you)
+                {maxGuests && (
+                  <span className="ml-2 text-xs text-gold">
+                    (Max: {maxGuests})
+                  </span>
+                )}
               </label>
               <input
                 id="guests"
                 name="guests"
                 type="number"
                 min={0}
-                max={10}
+                max={maxGuests || 10}
                 inputMode="numeric"
                 value={form.guests}
                 onChange={(event) =>
@@ -264,7 +278,7 @@ export function RsvpSection() {
                       return { ...prev, guests: "" };
                     }
                     const nextValue = String(
-                      Math.min(Number.parseInt(rawValue, 10), 10)
+                      Math.min(Number.parseInt(rawValue, 10), maxGuests || 10)
                     );
                     return {
                       ...prev,
@@ -276,27 +290,7 @@ export function RsvpSection() {
               />
             </div>
           </div>
-          <div>
-            <label
-              htmlFor="message"
-              className="text-xs uppercase tracking-[0.3em] text-black"
-            >
-              Notes or Extras
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={form.message}
-              onChange={(event) =>
-                setForm((prev) => ({
-                  ...prev,
-                  message: event.target.value,
-                }))
-              }
-              rows={4}
-              className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
-            />
-          </div>
+
           <button
             type="submit"
             disabled={status === "loading"}

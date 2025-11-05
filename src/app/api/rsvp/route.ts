@@ -11,6 +11,7 @@ type RsvpPayload = {
   attendance?: "yes" | "no";
   guests?: string | number;
   message?: string;
+  maxGuests?: number;
 };
 
 export async function POST(request: Request) {
@@ -26,6 +27,7 @@ export async function POST(request: Request) {
       typeof body.guests === "number"
         ? body.guests
         : Number.parseInt((body.guests ?? "").toString(), 10);
+    const maxGuestsValue = body.maxGuests || 10;
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phonePattern = /^[+]?[-()\d\s]{7,20}$/;
@@ -58,9 +60,9 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!Number.isInteger(guestsValue) || guestsValue < 0 || guestsValue > 10) {
+    if (!Number.isInteger(guestsValue) || guestsValue < 0 || guestsValue > maxGuestsValue) {
       return NextResponse.json(
-        { error: "Guest count must be between 0 and 10" },
+        { error: `Guest count must be between 0 and ${maxGuestsValue}` },
         { status: 400 }
       );
     }

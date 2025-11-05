@@ -1,4 +1,8 @@
 export const weddingDetails = {
+  families: {
+    groom: "Bro Francis Oyeyemi and Sis Helen Oyeyemi",
+    bride: "Bro David Ogogo and Sis Joy Ogogo",
+  },
   couple: {
     firstPartner: "Theo",
     secondPartner: "Joan",
@@ -7,7 +11,8 @@ export const weddingDetails = {
   weekday: "Saturday",
   time: "12:00 PM",
   venue: "Kingdom Hall of Jehovah's Witnesses",
-  location: "4 Kingdom hall avenue,off Joseph Abume street,Igando, Lagos",
+  location:
+    "4 Kingdom hall avenue, off Joseph Abume street, Isuti road, Igando, Lagos",
   rsvpDeadline: "Kindly RSVP by November 9, 2025",
   intro:
     "Love has led us here — to a moment that feels both tender and eternal. We’re counting down to a day filled with laughter, joy, and the warmth of those who’ve walked life’s journey with us",

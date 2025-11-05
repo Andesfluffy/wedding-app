@@ -7,7 +7,7 @@ export function StoryTimeline() {
   return (
     <section
       id="story"
-      className="relative mx-auto mt-24 max-w-5xl rounded-[3rem] border border-gold/40 bg-gradient-to-br from-pearl/95 via-cream/95 to-night/92 px-6 py-20 shadow-[0_45px_140px_-60px_rgba(212,169,61,0.55),0_0_110px_-50px_rgba(90,15,41,0.3)] backdrop-blur sm:px-14"
+      className="relative mx-auto mt-24 max-w-5xl rounded-xl border border-gold/40 bg-gradient-to-br from-pearl/95 via-cream/95 to-night/92 px-6 py-20 shadow-[0_45px_140px_-60px_rgba(212,169,61,0.55),0_0_110px_-50px_rgba(90,15,41,0.3)] backdrop-blur sm:px-14"
     >
       <div className="mx-auto max-w-2xl text-center sm:text-left">
         <p className="font-display text-xs font-semibold uppercase tracking-[0.6em] text-black">
@@ -36,7 +36,7 @@ export function StoryTimeline() {
             inside jokes, and a friendship that quietly bloomed into love. The
             person we once couldn’t stand became the one we can’t live without.
           </p>
-      </div>
+        </div>
       </div>
       <div className="mt-16 space-y-10 border-l border-merlot/25 pl-6 sm:pl-10">
         {storyMoments.map((moment, index) => (

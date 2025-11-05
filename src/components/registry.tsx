@@ -15,7 +15,7 @@ export function RegistrySection() {
   return (
     <section
       id="registry"
-      className="relative mx-auto mt-24 max-w-5xl rounded-[3rem] border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_45px_130px_-60px_rgba(249,210,122,0.5)] backdrop-blur md:px-12"
+      className="relative mx-auto mt-24 max-w-5xl rounded-xl border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_45px_130px_-60px_rgba(249,210,122,0.5)] backdrop-blur md:px-12"
     >
       <div className="text-center">
         <p className="font-display text-xs uppercase tracking-[0.6em] text-black">
@@ -42,8 +42,7 @@ export function RegistrySection() {
           >
             <span className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-night/75 px-4 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-gold/80 shadow-[inset_0_12px_30px_rgba(249,210,122,0.08)]">
               Direct gift
-              <span className="h-1.5 w-1.5 rounded-full bg-gold/70" />
-              ₦
+              <span className="h-1.5 w-1.5 rounded-full bg-gold/70" />₦
             </span>
             <h3 className="font-display text-xl text-black">{item.name}</h3>
             <p className="mt-3 flex-1 text-sm leading-7 text-ivory/70">

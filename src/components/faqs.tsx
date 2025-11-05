@@ -11,7 +11,7 @@ export function FaqSection() {
   return (
     <section
       id="faq"
-      className="relative mx-auto mt-24 max-w-4xl rounded-[3rem] border border-gold/30 bg-gradient-to-br from-night/90 via-onyx/86 to-char/88 px-6 py-20 shadow-[0_40px_120px_-55px_rgba(249,210,122,0.5)] backdrop-blur md:px-10"
+      className="relative mx-auto mt-24 max-w-4xl rounded-xl border border-gold/30 bg-gradient-to-br from-night/90 via-onyx/86 to-char/88 px-6 py-20 shadow-[0_40px_120px_-55px_rgba(249,210,122,0.5)] backdrop-blur md:px-10"
     >
       <div className="text-center">
         <p className="font-display text-xs uppercase tracking-[0.6em] text-black">

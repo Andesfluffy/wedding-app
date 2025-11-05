@@ -33,7 +33,7 @@ function ProgramIntro() {
         <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-night/45 blur-3xl" />
         <div className="absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-merlot/25 blur-3xl sm:left-1/3" />
       </div>
-      <div className="mx-auto max-w-5xl rounded-[3rem] border border-gold/40 bg-gradient-to-br from-night/92 via-onyx/90 to-char/90 px-6 py-16 text-center shadow-[0_45px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur sm:px-12 md:text-left">
+      <div className="mx-auto max-w-5xl rounded-xl border border-gold/40 bg-gradient-to-br from-night/92 via-onyx/90 to-char/90 px-6 py-16 text-center shadow-[0_45px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur sm:px-12 md:text-left">
         <p className="font-display text-xs uppercase tracking-[0.6em] text-black">
           Wedding day flow
         </p>

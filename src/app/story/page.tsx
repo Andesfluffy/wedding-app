@@ -14,7 +14,7 @@ function StoryIntro() {
         <div className="absolute -right-20 top-1/4 h-72 w-72 rounded-full bg-gold/30 blur-3xl sm:h-96 sm:w-96" />
         <div className="absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-night/40 blur-3xl" />
       </div>
-      <div className="mx-auto max-w-5xl rounded-[3rem] border border-gold/35 bg-gradient-to-br from-pearl/95 via-cream/95 to-night/92 px-6 py-16 text-center shadow-[0_45px_140px_-60px_rgba(212,169,61,0.55)] backdrop-blur sm:px-12 md:text-left">
+      <div className="mx-auto max-w-5xl rounded-xl border border-gold/35 bg-gradient-to-br from-pearl/95 via-cream/95 to-night/92 px-6 py-16 text-center shadow-[0_45px_140px_-60px_rgba(212,169,61,0.55)] backdrop-blur sm:px-12 md:text-left">
         <p className="font-display text-xs uppercase tracking-[0.6em] text-black">
           Theo &amp; Joan
         </p>
