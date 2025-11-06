@@ -5,39 +5,25 @@ import { CopyLinkRow } from "./CopyLinkRow";
 import { ExportLinksControls } from "./ExportLinksControls";
 
 export default function GuestLinksPage() {
-  const categories = {
-    "Groom's Family & Friends": guestList.filter((g) =>
-      g.id.startsWith("groom-family")
-    ),
-    "Groom's Brothers & Associates": guestList.filter((g) =>
-      g.id.startsWith("groom-brothers")
-    ),
-    "Bride's Family": guestList.filter((g) =>
-      g.id.startsWith("bride-family")
-    ),
-    "Bride's Brothers & Congregation": guestList.filter((g) =>
-      g.id.startsWith("bride-brothers")
-    ),
-    "Bride's Sisters & Friends": guestList.filter((g) =>
-      g.id.startsWith("bride-friends")
-    ),
-    "Bride's Counselors & Mentors": guestList.filter((g) =>
-      g.id.startsWith("bride-mentors")
-    ),
-    "Bride's Colleagues & Associates": guestList.filter((g) =>
-      g.id.startsWith("bride-colleagues")
-    ),
-    "Original Family": guestList.filter((g) => g.id.startsWith("family")),
-    "Original Friends": guestList.filter((g) => g.id.startsWith("friend")),
-    "Original Colleagues": guestList.filter((g) =>
-      g.id.startsWith("colleague")
-    ),
-    "Original Congregation": guestList.filter((g) =>
-      g.id.startsWith("congregation")
-    ),
-    "Original Special Guests": guestList.filter((g) =>
-      g.id.startsWith("special")
-    ),
+  // Derive categories based on the order/pattern in guest-list
+  const idNum = (id: string) => {
+    const n = parseInt(id.split("-")[1], 10);
+    return isNaN(n) ? 0 : n;
+  };
+
+  const brideGuests = guestList.filter((g) => {
+    const n = idNum(g.id);
+    return n >= 1 && n <= 56;
+  });
+
+  const groomGuests = guestList.filter((g) => {
+    const n = idNum(g.id);
+    return n >= 57;
+  });
+
+  const categories: Record<string, typeof guestList> = {
+    "Bride's Family": brideGuests,
+    "Groom's Family & Friends": groomGuests,
   };
 
   const allLinks = guestList.map((g) => ({
@@ -59,7 +45,7 @@ export default function GuestLinksPage() {
           </p>
           <div className="bg-rose-100 border border-rose-200 rounded-lg p-4 text-left sm:text-center">
             <p className="text-sm sm:text-base text-rose-700 leading-relaxed">
-              <strong>How to use:</strong> Copy the link next to each guest’s
+              <strong>How to use:</strong> Copy the link next to each guest's
               name and send it to them. The link is signed and cannot be
               tampered with.
             </p>
@@ -135,18 +121,18 @@ export default function GuestLinksPage() {
             </div>
             <div className="text-center p-3 sm:p-4 bg-green-50 rounded-lg">
               <div className="text-xl sm:text-2xl font-bold text-green-600">
-                {guestList.filter((g) => g.id.startsWith("groom")).length}
+                {brideGuests.length}
               </div>
               <div className="text-xs sm:text-sm text-gray-600">
-                Groom’s Side
+                Bride's Side
               </div>
             </div>
             <div className="text-center p-3 sm:p-4 bg-purple-50 rounded-lg">
               <div className="text-xl sm:text-2xl font-bold text-purple-600">
-                {guestList.filter((g) => g.id.startsWith("bride")).length}
+                {groomGuests.length}
               </div>
               <div className="text-xs sm:text-sm text-gray-600">
-                Bride’s Side
+                Groom's Side
               </div>
             </div>
           </div>
