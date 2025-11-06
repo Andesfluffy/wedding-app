@@ -1,3 +1,4 @@
+import React, { Suspense } from "react";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
@@ -31,10 +32,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${body.variable} bg-cream antialiased`}>
-       <Navigation />
+      <body
+        className={`${heading.variable} ${body.variable} bg-cream antialiased`}
+      >
+        <Suspense fallback={null}>
+          <Navigation />
+        </Suspense>
         {children}
-      <SiteFooter />
+        <SiteFooter />
       </body>
     </html>
   );

@@ -1,10 +1,10 @@
-import { Navigation } from "@/components/navigation";
 import { ProgramSection } from "@/components/programs";
 
 const highlightCards = [
   {
     label: "Ceremony",
-    value: "4 Kingdom hall avenue, off Joseph Abume street, Isuti road, Igando, Lagos · 12:00 PM",
+    value:
+      "4 Kingdom hall avenue, off Joseph Abume street, Isuti road, Igando, Lagos · 12:00 PM",
   },
   {
     label: "Reception",
@@ -36,7 +36,7 @@ function ProgramIntro() {
         </p>
         <div className="mt-6 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="rounded-3xl border border-gold/30 bg-night/75 px-6 py-4 text-xs uppercase tracking-[0.3em] text-ivory/70 shadow-[inset_0_18px_45px_rgba(249,210,122,0.12)] font-bold">
-           Saturday · November 29 · 2025
+            Saturday · November 29 · 2025
           </div>
         </div>
         <div className="mt-10 grid gap-3 sm:grid-cols-3">
@@ -59,11 +59,9 @@ function ProgramIntro() {
   );
 }
 
-
 export default function ProgramPage() {
   return (
     <div className="relative overflow-hidden">
-      <Navigation />
       <main className="mx-auto flex max-w-6xl flex-col gap-16 px-4 sm:px-6 md:px-10">
         <ProgramIntro />
         <ProgramSection />
