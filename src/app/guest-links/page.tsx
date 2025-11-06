@@ -9,7 +9,6 @@ export default function GuestLinksPage() {
   
   };
 
-  // Precompute signed URL paths server-side so secrets never touch the client
   const allLinks = guestList.map((g) => ({
     name: g.name,
     urlPath: generateGuestUrl(g.id),
