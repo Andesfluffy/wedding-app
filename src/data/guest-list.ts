@@ -146,12 +146,9 @@ export function generateGuestUrl(guestId: string): string {
   const guest = findGuestById(guestId);
   if (!guest) return '/';
   
-  const params = new URLSearchParams({
-    guest: guest.name,
-    max: guest.maxGuests.toString()
-  });
-  
-  return `/?${params.toString()}`;
+  // Import dynamically to avoid circular dependencies
+  const { generateSignedUrl } = require('@/lib/url-signer');
+  return generateSignedUrl(guest.name, guest.maxGuests);
 }
 
 export function generateAllGuestLinks(baseUrl: string = ''): Array<{name: string, url: string, maxGuests: number}> {

@@ -29,42 +29,30 @@ export const navigation = [
 export const kingdomHallProgram = [
   {
     time: "11:30 AM",
-    title: "Guests arrive & are seated",
+    title: "Guest arrivals",
     description:
       "Attendants guide everyone to their rows while soft conversations and warm welcomes fill the hall.",
   },
   {
-    time: "11:45 AM",
-    title: "Prelude music",
-    description:
-      "A curated set of Kingdom melodies settles hearts and minds in anticipation of the ceremony.",
-  },
-  {
     time: "12:00 PM",
-    title: "Program begins",
+    title: "Opening song & prayer",
     description:
       "The chairman opens the marriage ceremony, sharing a heartfelt welcome and the day’s focus.",
   },
   {
     time: "12:05 PM",
-    title: "Opening song & prayer",
-    description:
-      "We join voices for the Kingdom song and bow our heads in a reverent prayer to Jehovah.",
-  },
-  {
-    time: "12:10 PM",
     title: "Wedding talk",
     description:
       "An encouraging discourse highlights the beauty of marriage and the commitment Theo & Joan are making.",
   },
   {
-    time: "12:45 PM",
-    title: "Song & closing prayer",
+    time: "12:35 PM",
+    title: "Closing song & prayer",
     description:
       "A final Kingdom song and prayer close the spiritual program with gratitude and joy.",
   },
   {
-    time: "1:00 PM - 1:30 PM",
+    time: "12:45 PM",
     title: "Photography at the Kingdom Hall",
     description:
       "Please remain nearby for swift portraits before we depart for the reception.",
@@ -73,32 +61,32 @@ export const kingdomHallProgram = [
 
 export const receptionProgram = [
   {
-    time: "2:00 PM",
-    title: "Soft background music",
+    time: "1:45 PM",
+    title: "Guest arrivals",
     description:
       "Our DJ sets the ambience while guests arrive, mingle, and get comfortable.",
   },
   {
-    time: "2:15 PM",
-    title: "Guests are seated",
-    description:
-      "The MC invites everyone to settle as we prepare for the couple’s big entrance.",
-  },
-  {
-    time: "2:20 PM",
-    title: "Couple’s grand entrance",
+    time: "2:00 PM",
+    title: "Couple’s entrance",
     description:
       "The bridal party is introduced, then Theo & Joan dance in with radiant energy.",
   },
   {
-    time: "2:30 PM",
+    time: "2:10 PM",
     title: "Opening prayer",
     description:
       "A short, heartfelt prayer sets a thankful tone for the celebration ahead.",
   },
   {
-    time: "2:35 PM",
+    time: "2:15 PM",
     title: "Welcome & family introductions",
+    description:
+      "The MC spotlights both families before the chairman shares warm welcome remarks.",
+  },
+  {
+    time: "2:15 PM",
+    title: "Chairman’s opening remarks",
     description:
       "The MC spotlights both families before the chairman shares warm welcome remarks.",
   },
@@ -122,9 +110,27 @@ export const receptionProgram = [
   },
   {
     time: "4:15 PM",
-    title: "Games & fun segment",
+    title: "Fun & Games",
     description:
       "The MC leads light-hearted games, trivia, and interactive moments with guests.",
+  },
+  {
+    time: "4:15 PM",
+    title: "Chairman's closing remarks",
+    description:
+      "The MC leads light-hearted games, trivia, and interactive moments with guests.",
+  },
+   {
+    time: "5:30 PM",
+    title: "Vote of thanks",
+    description:
+      "The groom shares a heartfelt thank-you before the chairman offers closing encouragement.",
+  },
+   {
+    time: "5:45 PM",
+    title: "Closing prayer",
+    description:
+      "We end the reception with gratitude, easing into farewells as the celebration concludes gracefully.",
   },
   {
     time: "4:45 PM",
@@ -132,18 +138,7 @@ export const receptionProgram = [
     description:
       "Family, the bridal train, and close friends take the floor for joyful dancing and candid photos.",
   },
-  {
-    time: "5:30 PM",
-    title: "Vote of thanks",
-    description:
-      "The groom shares a heartfelt thank-you before the chairman offers closing encouragement.",
-  },
-  {
-    time: "5:45 PM",
-    title: "Closing prayer",
-    description:
-      "We end the reception with gratitude, easing into farewells as the celebration concludes gracefully.",
-  },
+ 
 ];
 
 export const photographySchedule = {
@@ -236,7 +231,7 @@ export const weekendEvents = [
 export const travelEssentials = {
   dressCode: {
     title: "Palette & attire",
-    body: "Colours of the day: Grey, beige, and maroon.",
+    body: "Colours of the day: Ash, beige, and maroon.",
   },
   transport:
     "Ride-hailing drop-off is available at the Kingdom Hall gate with attendants on site.",

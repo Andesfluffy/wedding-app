@@ -112,7 +112,7 @@ export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxG
       console.error(error);
       setStatus("error");
       setFeedback(
-        "We were not able to send your RSVP right now. Please try again or email hello@radiantvows.ng."
+        "We were not able to send your RSVP right now. Please try again."
       );
     }
   };
@@ -120,7 +120,7 @@ export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxG
   return (
     <section
       id="rsvp"
-      className="relative mx-auto mt-4 max-w-6xl rounded-xl border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_50px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur md:px-16"
+      className="relative mx-auto mt-24 max-w-6xl rounded-xl border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-16 shadow-[0_50px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur md:px-16"
     >
       <div className="grid gap-16 lg:grid-cols-[1.1fr,0.9fr]">
         <div>
@@ -150,7 +150,7 @@ export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxG
         </div>
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 rounded-[2.5rem] border border-gold/30 bg-night/80 px-6 py-8 shadow-[0_35px_110px_-60px_rgba(249,210,122,0.45)]"
+          className="space-y-6 rounded-xl border border-gold/30 bg-night/80 px-6 py-8 shadow-[0_35px_110px_-60px_rgba(249,210,122,0.45)]"
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
@@ -169,7 +169,7 @@ export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxG
                   setForm((prev) => ({ ...prev, fullName: event.target.value }))
                 }
                 required
-                className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+                className="mt-2 w-full rounded-xl border border-gold/25 bg-night/70 px-4 py-3 text-sm shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
             </div>
             <div>
@@ -188,7 +188,7 @@ export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxG
                   setForm((prev) => ({ ...prev, email: event.target.value }))
                 }
                 required
-                className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+                className="mt-2 w-full rounded-xl border border-gold/25 bg-night/70 px-4 py-3 text-sm shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
             </div>
           </div>
@@ -211,8 +211,8 @@ export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxG
               }
               required
               pattern="^[+]?[-()\\d\\s]{7,20}$"
-              title="Phone number with 7-20 digits. You may include +, spaces, parentheses, or dashes."
-              className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+              title="Phone number with 11 digits."
+              className="mt-2 w-full rounded-xl border border-gold/25 bg-night/70 px-4 py-3 text-sm textow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
             />
           </div>
           <div>
@@ -286,7 +286,7 @@ export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxG
                     };
                   })
                 }
-                className="mt-2 w-full rounded-2xl border border-gold/25 bg-night/70 px-4 py-3 text-sm text-ivory shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+                className="mt-2 w-full rounded-xl border border-gold/25 bg-night/70 px-4 py-3 text-sm shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
               />
             </div>
           </div>
@@ -294,7 +294,7 @@ export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxG
           <button
             type="submit"
             disabled={status === "loading"}
-            className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-ink shadow-[0_18px_60px_rgba(246,196,92,0.45)] transition hover:shadow-[0_20px_70px_rgba(249,210,122,0.6)] disabled:cursor-not-allowed disabled:opacity-70"
+           className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] border"
           >
             {status === "loading" ? "Sending..." : "Send RSVP"}
           </button>

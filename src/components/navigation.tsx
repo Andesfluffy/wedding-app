@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { navigation } from "@/data/content";
 import { cn } from "@/lib/utils";
+import { Hamburger, HamburgerIcon, Menu } from "lucide-react";
 
 export function Navigation() {
   const pathname = usePathname();
@@ -62,7 +63,7 @@ export function Navigation() {
     >
       <div
         className={cn(
-          "pointer-events-auto mx-auto flex max-w-6xl items-center justify-between rounded-full border px-6 py-4 backdrop-blur",
+          "pointer-events-auto mx-auto flex max-w-6xl items-center justify-between rounded-xl border px-6 py-4 backdrop-blur",
           "shadow-[0_25px_80px_-50px_rgba(244,206,133,0.45)] transition duration-300",
           isScrolled
             ? "border-gold/40 bg-pearl/92"
@@ -73,7 +74,7 @@ export function Navigation() {
           href="/"
           className="font-display text-lg uppercase tracking-[0.4em] text-gold drop-shadow-[0_0_8px_rgba(246,196,92,0.4)]"
         >
-          Theo & Joan
+          Joan & Theo
         </Link>
         <nav className="hidden gap-6 text-sm font-medium text-ink/70 md:flex">
           {navigation.map((item) => (
@@ -91,18 +92,18 @@ export function Navigation() {
         </nav>
         <Link
           href="/#rsvp"
-          className="hidden rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-ink shadow-[0_12px_40px_rgba(246,196,92,0.4)] transition hover:shadow-[0_15px_45px_rgba(249,210,122,0.55)] md:inline-flex"
+          className="hidden rounded-xl px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-ink md:inline-flex"
         >
           RSVP
         </Link>
         <button
           type="button"
-          className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gold/30 bg-pearl/85 text-xs font-medium text-ink/70 shadow-sm md:hidden"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-gold/30 bg-pearl/85 text-xs font-medium text-ink/70 shadow-sm md:hidden"
           onClick={() => setMenuOpen(true)}
           aria-expanded={isMenuOpen}
           aria-controls="wedding-nav-menu"
         >
-          Menu
+          <Menu/>
         </button>
       </div>
       {isMenuOpen && (
@@ -125,11 +126,11 @@ export function Navigation() {
           >
             <div className="flex items-center justify-between">
               <span className="font-display text-lg uppercase tracking-[0.3em] text-gold">
-                Theophilus &amp; Joan
+                Joan & Theo
               </span>
               <button
                 type="button"
-                className="rounded-full border border-gold/30 px-3 py-1 text-xs uppercase tracking-widest text-ink/70"
+                className="rounded-md border border-gold/30 px-3 py-1 text-xs uppercase tracking-widest text-ink/70"
                 onClick={() => setMenuOpen(false)}
               >
                 Close
@@ -141,7 +142,7 @@ export function Navigation() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "rounded-2xl border border-transparent px-3 py-2 text-ink/75 transition hover:border-gold/35 hover:bg-gold/10",
+                    "rounded-xl border border-transparent px-3 py-2 text-ink/75 transition hover:border-gold/35 hover:bg-gold/10",
                     isActive(item.href) ? "border-gold/35 bg-gold/10 text-gold" : ""
                   )}
                   onClick={() => setMenuOpen(false)}
@@ -151,8 +152,8 @@ export function Navigation() {
               ))}
             </nav>
             <Link
-              href="/#rsvp"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-ember via-gold to-gilded px-5 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-ink shadow-[0_15px_45px_rgba(249,210,122,0.5)] transition hover:shadow-[0_18px_55px_rgba(249,210,122,0.55)]"
+              href="/rsvp"
+              className="mt-8 inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
               onClick={() => setMenuOpen(false)}
             >
               RSVP

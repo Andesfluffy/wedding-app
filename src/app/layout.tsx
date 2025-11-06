@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+import { Navigation } from "@/components/navigation";
 
 const heading = Cormorant_Garamond({
   subsets: ["latin"],
@@ -17,9 +18,9 @@ const body = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Theophilus & Joan - Lagos Celebration",
+  title: "Joan & Theophilus",
   description:
-    "Celebrate Theophilus and Joan on November 29, 2025 in Magodo, Lagos. Explore the schedule, travel notes, wedding party, and RSVP details for their colourful Kingdom Hall ceremony and reception.",
+    "Celebrate Theophilus and Joan on November 29. Explore the schedule and details of their wedding party",
 };
 
 export default function RootLayout({
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${heading.variable} ${body.variable} bg-cream antialiased`}>
+       <Navigation />
         {children}
       </body>
     </html>

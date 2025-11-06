@@ -7,7 +7,7 @@ import { travelEssentials } from "@/data/content";
 export function TravelSection() {
   const palette = [
     {
-      name: "Grey",
+      name: "Ash",
       wrapper: "border-dove/60 bg-dove/20 text-ink/80",
       dot: "bg-dove",
     },

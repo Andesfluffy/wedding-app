@@ -12,95 +12,87 @@ export function ProgramSection() {
   return (
     <section
       id="program"
-      className="relative mx-auto mt-24 max-w-6xl scroll-mt-32 rounded-[3.5rem] border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-6 py-20 shadow-[0_50px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur md:px-16"
+      // className="relative mx-auto mt-2 max-w-6xl scroll-mt-32 rounded-xl border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-4 py-12 shadow-[0_50px_140px_-60px_rgba(249,210,122,0.55)] backdrop-blur"
     >
-      <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-        <div className="max-w-xl">
-          <p className="font-display text-xs uppercase tracking-[0.6em] text-black">
-            Ceremony &amp; reception
-          </p>
-          <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">
-            Ceremony &amp; reception highlights
+      <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between ">
+        <div className="">
+          <h2 className="font-display text-xl font-semibold tracking-widest uppercase text-ivory sm:text-5xl">
+            Highlights
           </h2>
-          <p className="mt-4 text-base leading-7 text-ivory/85">
-            Tap through the timeline to open the notes you need—perfect for a
-            quick check between moments.
-          </p>
-        </div>
-        <div className="rounded-3xl border border-gold/30 bg-gradient-to-br from-night/80 via-char/80 to-onyx/80 px-6 py-4 text-xs uppercase tracking-[0.3em] text-ivory/90 shadow-[inset_0_20px_50px_rgba(249,210,122,0.12)]">
-          Tap each section for the latest highlights throughout the day.
         </div>
       </div>
 
-      <div className="mt-14 grid gap-8 lg:grid-cols-[1.1fr,1.1fr,0.9fr]">
+      <div className="mt-2 flex flex-col gap-6">
         <ProgramCard
           title="Kingdom Hall program"
-          accent="from-ember/30 via-night/85 to-char/85"
-          items={kingdomHallProgram}
+          program={kingdomHallProgram}
         />
+          <PhotographyCard />
         <ProgramCard
-          title="Reception flow"
-          accent="from-night/85 via-char/80 to-ember/35"
-          items={receptionProgram}
+          title="Reception program"
+          program={receptionProgram}
         />
-        <PhotographyCard />
       </div>
     </section>
   );
 }
 
-type ProgramItem = {
+interface ProgramItem {
   time: string;
   title: string;
   description: string;
-};
+}
 
-function ProgramCard({
-  title,
-  accent,
-  items,
-}: {
+interface ProgramCardProps {
   title: string;
-  accent: string;
-  items: ProgramItem[];
-}) {
+  program: ProgramItem[];
+}
+
+export default function ProgramCard({ title, program }: ProgramCardProps) {
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6 }}
-      className={`flex h-full flex-col rounded-[2.5rem] border border-gold/30 bg-gradient-to-br ${accent} p-8 text-ivory shadow-[0_35px_110px_-60px_rgba(249,210,122,0.5)]`}
-    >
-      <h3 className="font-display text-2xl text-black">{title}</h3>
-      <ul className="mt-6 flex flex-col gap-4 text-sm leading-7 text-ivory/90">
-        {items.map((item) => (
-          <li key={`${item.time}-${item.title}`}>
-            <details className="group rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-4 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)] transition hover:border-gold/40 [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex w-full cursor-pointer flex-col gap-2 text-left sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="font-display text-xs font-semibold uppercase tracking-[0.3em] text-black">
-                    {item.time}
-                  </p>
-                  <p className="mt-2 font-display text-lg font-semibold text-ivory">
-                    {item.title}
-                  </p>
-                </div>
-                <span
-                  aria-hidden="true"
-                  className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-night/70 font-display text-base text-gold transition duration-300 group-open:rotate-45 sm:mt-0"
-                >
-                  +
-                </span>
-              </summary>
-              <p className="mt-3 text-[0.95rem] leading-6 text-ivory/85">
+    <div className="w-full rounded-xl border border-gold/30 bg-gradient-to-br from-night/60 via-char/60 to-onyx/60 py-4 px-2 backdrop-blur-sm shadow-[0_20px_70px_-30px_rgba(249,210,122,0.3)]">
+      <h3 className="font-display text-xl font-semibold text-ivory mb-6 pb-4 border-b border-gold/20">
+        {title}
+      </h3>
+
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: { staggerChildren: 0.08 },
+          },
+        }}
+        className="space-y-3"
+      >
+        {program.map((item, index) => (
+          <motion.div
+            key={index}
+            variants={{
+              hidden: { opacity: 0, x: -10 },
+              show: { opacity: 1, x: 0 },
+            }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="group rounded-xl border border-gold/20 bg-gradient-to-r from-night/40 via-onyx/30 to-char/40 p-4"
+          >
+            <div className="flex items-center gap-3">
+              <span className="inline-flex shrink-0 items-center justify-center rounded-md bg-gold/10 p-2 font-display text-xs font-semibold border border-gold/30">
+              </span>
+              <p className="font-display text-base font-medium text-ivory ">
+                {item.title}
+              </p>
+            </div>
+            {/* {item.description && (
+              <p className="mt-2 text-sm leading-relaxed text-ivory/70 pl-[4.5rem]">
                 {item.description}
               </p>
-            </details>
-          </li>
+            )} */}
+          </motion.div>
         ))}
-      </ul>
-    </motion.article>
+      </motion.div>
+    </div>
   );
 }
 
@@ -110,62 +102,74 @@ function PhotographyCard() {
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6 }}
-      className="flex h-full flex-col rounded-[2.5rem] border border-gold/30 bg-gradient-to-br from-night/85 via-char/82 to-ember/30 p-8 text-ivory shadow-[0_35px_110px_-60px_rgba(249,210,122,0.5)]"
+      transition={{ duration: 0.5 }}
+      className="w-full rounded-xl border border-gold/30 bg-gradient-to-br from-night/60 via-char/60 to-onyx/60 p-4 backdrop-blur-sm shadow-[0_20px_70px_-30px_rgba(249,210,122,0.3)]"
     >
-      <h3 className="font-display text-2xl text-black">
+      <h3 className="font-display text-xl font-semibold text-ivory mb-6 pb-4 border-b border-gold/20">
         Order of photography
       </h3>
-      <div className="mt-3 rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-5 text-sm leading-7 text-ivory/90 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]">
-        <p className="font-display text-lg text-ivory">{window}</p>
-        <p className="mt-1 text-[0.95rem] text-ivory/85">{location}</p>
-        <p className="mt-3 text-[0.95rem] text-ivory/85">{note}</p>
-      </div>
+
+      {/* <div className="rounded-xl border border-gold/20 bg-gradient-to-r from-night/40 via-onyx/30 to-char/40 p-5 shadow-[inset_0_12px_30px_rgba(249,210,122,0.08)]">
+        <p className="font-display text-lg font-medium text-ivory">{window}</p>
+        <p className="mt-2 text-sm text-ivory/75">{location}</p>
+        <p className="mt-3 text-sm leading-relaxed text-ivory/70">{note}</p>
+      </div> */}
+
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         aria-expanded={isOpen}
-        className="group mt-6 flex w-full items-center justify-between rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 px-5 py-4 text-left shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)] transition hover:border-gold/40"
+        className="group mt-5 flex w-full items-center justify-between rounded-xl border border-gold/20 bg-gradient-to-r from-night/40 via-onyx/30 to-char/40 px-2 py-4 text-left shadow-[inset_0_12px_30px_rgba(249,210,122,0.08)] transition-all duration-300 hover:border-gold/40 hover:shadow-[0_8px_30px_-12px_rgba(249,210,122,0.4)]"
       >
         <div>
-          <p className="font-display text-xs font-semibold uppercase tracking-[0.3em] text-black">
-            Photography order
+          <p className="font-display text-sm font-semibold uppercase tracking-wider">
+            Photography lineup
           </p>
-          <p className="mt-2 font-display text-lg font-semibold text-ivory">
-            {isOpen ? "Hide lineup" : "View lineup"}
+          <p className="mt-1.5 font-display text-base font-medium text-ivory">
+            {isOpen ? "Hide details" : "View details"}
           </p>
         </div>
         <span
           aria-hidden="true"
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-night/70 font-display text-base text-gold transition duration-300 group-hover:border-gold/45 group-hover:text-gilded"
+          className=" px-3 py-1 text-center shrink-0 items-center justify-center rounded-md border border-gold/30 bg-night/50 font-display text-2xl text-gold transition-all duration-300 group-hover:border-gold/50 group-hover:bg-night/70 group-hover:text-gilded"
         >
+          
           <motion.span
             animate={{ rotate: isOpen ? 45 : 0 }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="inline-block"
           >
             +
           </motion.span>
         </span>
       </button>
-      {isOpen && (
-        <ul className="mt-4 flex flex-col gap-3 text-sm leading-7 text-ivory/90">
+
+      <motion.div
+        initial={false}
+        animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="overflow-hidden"
+      >
+        <ul className="mt-4 flex flex-col gap-3">
           {order.map((group, index) => (
-            <li
+            <motion.li
               key={group}
-              className="flex items-start gap-3 rounded-2xl border border-gold/25 bg-gradient-to-br from-night/80 via-onyx/75 to-char/80 p-4 shadow-[inset_0_18px_45px_rgba(249,210,122,0.1)]"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05, duration: 0.3 }}
+              className="flex items-center gap-3 rounded-xl border border-gold/20 bg-gradient-to-r from-night/40 via-onyx/30 to-char/40 p-4 shadow-[inset_0_12px_30px_rgba(249,210,122,0.08)]"
             >
-              <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-night/70 font-display text-xs font-semibold text-black">
+              <span className=" inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-night/50 font-display text-md font-semibold">
                 {index + 1}
               </span>
-              <p className="text-[0.95rem] leading-6 text-ivory/90">{group}</p>
-            </li>
+              <p className="text-sm leading-relaxed text-ivory/85">{group}</p>
+            </motion.li>
           ))}
         </ul>
-      )}
+      </motion.div>
     </motion.article>
   );
 }
