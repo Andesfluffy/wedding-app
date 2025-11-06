@@ -47,7 +47,21 @@ export default async function Home({
                 href="/program"
                 className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
               >
-                View the Program
+               Program
+              </Link>
+
+              <Link
+                href="/story"
+                className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
+              >
+                gallery
+              </Link>
+
+              <Link
+                href="/gifts"
+                className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
+              >
+                Gifts
               </Link>
             </div>
           </section>

@@ -6,7 +6,7 @@ export function SiteFooter() {
       <div className="flex flex-col gap-2 rounded-xl border border-gold/35 bg-pearl/90 px-6 py-5 text-center text-xs font-semibold uppercase tracking-[0.2em] text-ink/75">
       <span>#LatestOyeyemis</span>
       <span>
-        "What God has yoked together , let no man put apart" - Mt 19:6 
+        "What God has yoked together, let no man put apart" - Mt 19:6 
       </span>     
        © {new Date().getFullYear()}
       </div>

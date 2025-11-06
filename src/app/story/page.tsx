@@ -43,7 +43,7 @@ export default function StoryPage() {
         {/* <StoryTimeline /> */}
         <WeddingPartySection />
         <GallerySection />
-        <RegistrySection />
+        {/* <RegistrySection /> */}
         {/* <FaqSection /> */}
       </main>
     </div>

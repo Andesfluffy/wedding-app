@@ -1,4 +1,4 @@
-import { IMG_FIVE, IMG_FOUR, IMG_ONE, IMG_SIX, IMG_THREE, IMG_TWO } from "@/images";
+import { IMG_EIGHT, IMG_FIVE, IMG_FOUR, IMG_ONE, IMG_SEVEN, IMG_SIX, IMG_THREE, IMG_TWO } from "@/images";
 
 export const weddingDetails = {
   families: {
@@ -15,7 +15,7 @@ export const weddingDetails = {
   venue: "Kingdom Hall of Jehovah's Witnesses",
   location:
     "4 Kingdom hall avenue, off Joseph Abume street, Isuti road, Igando, Lagos",
-  rsvpDeadline: "Kindly RSVP by November 9, 2025",
+  rsvpDeadline: "Kindly RSVP by November 13, 2025",
   intro:
     "Love has led us here — to a moment that feels both tender and eternal. We’re counting down to a day filled with laughter, joy, and the warmth of those who’ve walked life’s journey with us",
   description:
@@ -25,7 +25,8 @@ export const weddingDetails = {
 export const navigation = [
   { label: "Invitation", href: "/" },
   { label: "Program", href: "/program" },
-  { label: "The Crew, Gallery & Gifts", href: "/story" },
+  { label: "The Crew & Gallery", href: "/story" },
+  { label: "Gifts", href: "/gifts" },
 ];
 
 export const kingdomHallProgram = [
@@ -151,7 +152,8 @@ export const photographySchedule = {
     "Bride alone",
     "Groom alone",
     "Couple",
-    "Couple with Best Man & Chief Bridesmaid",
+    "Couple with best man & chief bridesmaid",
+    "Couple with page boy & little bride",
     "Couple with officiating minister",
     "Couple with bride's parents",
     "Couple with bride's family",
@@ -248,6 +250,24 @@ export const weddingParty = [
     description:
       "Joan's sister-friend who schedules fittings, calms nerves, and keeps every detail sparkling.",
   },
+   {
+    role: "Best Man",
+    name: "Adedamola Oyeyemi",
+    description:
+      "The Groom's brother ! Theo's day-one strategist ensuring timelines are tight, suits are crisp, and the groom stays relaxed.",
+  },
+   {
+    role: "Little Bride",
+    name: "Chukwuzaram Arinze",
+    description:
+      "The Groom's brother ! Theo's day-one strategist ensuring timelines are tight, suits are crisp, and the groom stays relaxed.",
+  },
+   {
+    role: "Page Boy",
+    name: "Jahdarasimi Fatunsin",
+    description:
+      "The Groom's brother ! Theo's day-one strategist ensuring timelines are tight, suits are crisp, and the groom stays relaxed.",
+  },
   {
     role: "Bridesmaid",
     name: "Wurami Bewaji",
@@ -265,12 +285,6 @@ export const weddingParty = [
     name: "Teniola Alufa",
     description:
       "College bestie, playlist curator, and the spark that keeps our dance rehearsals lively.",
-  },
-  {
-    role: "Best Man",
-    name: "Adedamola Oyeyemi",
-    description:
-      "The Groom's brother ! Theo's day-one strategist ensuring timelines are tight, suits are crisp, and the groom stays relaxed.",
   },
   {
     role: "Groomsman",
@@ -297,9 +311,9 @@ export const registryItems = [
     name: "Bank transfer",
     description:
       "Send love directly to our selected account. Kindly add your name so we can thank you warmly after the celebration.",
-    bank: "Opay",
-    accountName: "Theophilus Oyeyemi",
-    accountNumber: "8107144024",
+    bank: "Moniepoint",
+    accountName: "Tamara's Works",
+    accountNumber: "8022889063",
   },
 ];
 
@@ -327,6 +341,14 @@ export const galleryImages = [
   {
     src: IMG_SIX,
     alt: "Bold.",
+  },
+  {
+    src: IMG_SEVEN,
+    alt: "Classy.",
+  },
+  {
+    src: IMG_EIGHT,
+    alt: "Elegant.",
   },
 ];
 

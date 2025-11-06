@@ -15,7 +15,7 @@ export function RegistrySection() {
   return (
     <section
       id="registry"
-      className="relative mx-auto mt-12 max-w-6xl rounded-xl border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-4 py-12 shadow-[0_45px_130px_-60px_rgba(249,210,122,0.5)] backdrop-blur md:px-12"
+      className="relative mx-auto mt-24 mb-12 max-w-6xl rounded-xl border border-gold/35 bg-gradient-to-br from-night/92 via-onyx/88 to-char/90 px-4 py-12 shadow-[0_45px_130px_-60px_rgba(249,210,122,0.5)] backdrop-blur md:px-12"
     >
       <div className="">
         <p className="font-display text-2xl font-bold uppercase tracking-[0.3em] text-black">

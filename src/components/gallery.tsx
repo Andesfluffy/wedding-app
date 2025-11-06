@@ -28,8 +28,8 @@ export function GallerySection() {
             <Image
               src={image.src}
               alt={image.alt}
-              width={400}
-              height={400}
+              width={350}
+              height={350}
               loading="lazy"
               className="h-full w-full object-cover"
             />
