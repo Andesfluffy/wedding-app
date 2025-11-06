@@ -35,7 +35,6 @@ export default function RootLayout({
        <Navigation />
         {children}
       <SiteFooter />
-
       </body>
     </html>
   );

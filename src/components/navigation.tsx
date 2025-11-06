@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { navigation } from "@/data/content";
 import { cn } from "@/lib/utils";
@@ -54,6 +54,36 @@ export function Navigation() {
     return pathname === basePath;
   };
 
+  // Preserve signed guest params when navigating
+  const searchParams = useSearchParams();
+  const guest = searchParams.get("guest") || "";
+  const max = searchParams.get("max") || "";
+  const signature = searchParams.get("signature") || "";
+  const hasSignedParams = Boolean(guest && max && signature);
+
+  // Helper function to append signed params to any URL
+  const appendSignedParams = (href: string) => {
+    if (!hasSignedParams) return href;
+    
+    const signedQuery = `guest=${encodeURIComponent(guest)}&max=${encodeURIComponent(max)}&signature=${encodeURIComponent(signature)}`;
+    
+    // Check if href has anchor
+    if (href.includes('#')) {
+      const [path, anchor] = href.split('#');
+      return `${path}?${signedQuery}#${anchor}`;
+    }
+    
+    return `${href}?${signedQuery}`;
+  };
+
+  const homeHref = hasSignedParams
+    ? `/?guest=${encodeURIComponent(guest)}&max=${encodeURIComponent(max)}&signature=${encodeURIComponent(signature)}`
+    : "/";
+    
+  const rsvpHref = hasSignedParams
+    ? `/rsvp?guest=${encodeURIComponent(guest)}&max=${encodeURIComponent(max)}&signature=${encodeURIComponent(signature)}`
+    : "/rsvp";
+
   return (
     <header
       className={cn(
@@ -71,27 +101,30 @@ export function Navigation() {
         )}
       >
         <Link
-          href="/"
+          href={homeHref}
           className="font-display text-lg uppercase tracking-[0.2em] text-gold drop-shadow-[0_0_8px_rgba(246,196,92,0.4)]"
         >
           Joan & Theo
         </Link>
         <nav className="hidden gap-6 text-sm font-medium text-ink/70 md:flex">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "transition-colors hover:text-gold",
-                isActive(item.href) ? "text-gold" : ""
-              )}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navigation.map((item) => {
+            const navHref = item.href === "/" ? homeHref : appendSignedParams(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={navHref}
+                className={cn(
+                  "transition-colors hover:text-gold",
+                  isActive(item.href) ? "text-gold" : ""
+                )}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
         <Link
-          href="/#rsvp"
+          href={rsvpHref}
           className="hidden rounded-xl px-5 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-ink md:inline-flex"
         >
           RSVP
@@ -137,22 +170,25 @@ export function Navigation() {
               </button>
             </div>
             <nav className="mt-6 flex flex-col gap-4 text-base">
-              {navigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "rounded-xl border border-transparent px-3 py-2 text-ink/75 transition hover:border-gold/35 hover:bg-gold/10",
-                    isActive(item.href) ? "border-gold/35 bg-gold/10 text-gold" : ""
-                  )}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                const navHref = item.href === "/" ? homeHref : appendSignedParams(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={navHref}
+                    className={cn(
+                      "rounded-xl border border-transparent px-3 py-2 text-ink/75 transition hover:border-gold/35 hover:bg-gold/10",
+                      isActive(item.href) ? "border-gold/35 bg-gold/10 text-gold" : ""
+                    )}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </nav>
             <Link
-              href="/rsvp"
+              href={rsvpHref}
               className="mt-8 inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
               onClick={() => setMenuOpen(false)}
             >

@@ -7,9 +7,11 @@ import { weddingDetails } from "@/data/content";
 export function Hero({
   guestName,
   maxGuests,
+  signature,
 }: {
   guestName?: string;
   maxGuests?: number;
+  signature?: string;
 }) {
   return (
     <section
@@ -34,9 +36,9 @@ export function Hero({
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              className="rounded-2xl border border-gold/30 bg-gradient-to-r from-gold/10 to-merlot/10 px-6 py-3 text-center"
+              className="rounded-xl border border-gold/30 bg-gradient-to-r from-gold/10 to-merlot/10 px-6 py-3 text-center"
             >
-              <p className="font-display text-sm uppercase tracking-[0.3em] text-ink">
+              <p className="font-display font-semibold text-sm uppercase tracking-[0.3em] text-ink">
                 Dear {guestName},
               </p>
               {maxGuests && (
@@ -109,7 +111,7 @@ export function Hero({
               guestName
                 ? `?guest=${encodeURIComponent(guestName)}${
                     maxGuests ? `&max=${maxGuests}` : ""
-                  }`
+                  }${signature ? `&signature=${signature}` : ""}`
                 : ""
             }`}
             className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"

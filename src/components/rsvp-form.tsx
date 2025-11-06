@@ -22,11 +22,22 @@ const initialState: FormState = {
 };
 
 export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxGuests?: number }) {
-  const [form, setForm] = useState<FormState>(initialState);
+  const [form, setForm] = useState<FormState>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('rsvpFormData');
+      return saved ? JSON.parse(saved) : initialState;
+    }
+    return initialState;
+  });
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [feedback, setFeedback] = useState<string>("");
+
+  // Save form data to sessionStorage whenever it changes
+  useEffect(() => {
+    sessionStorage.setItem('rsvpFormData', JSON.stringify(form));
+  }, [form]);
 
   // Pre-fill guest name when provided via URL
   useEffect(() => {
@@ -108,6 +119,7 @@ export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxG
       setStatus("success");
       setFeedback("Thank you! We have received your RSVP.");
       setForm(initialState);
+      sessionStorage.removeItem('rsvpFormData');
     } catch (error) {
       console.error(error);
       setStatus("error");
@@ -124,23 +136,22 @@ export function RsvpSection({ guestName, maxGuests }: { guestName?: string; maxG
     >
       <div className="grid gap-16 lg:grid-cols-[1.1fr,0.9fr]">
         <div>
-          <p className="font-display text-xs uppercase tracking-[0.6em] text-black">
+          <p className="font-display text-lg font-semibold uppercase tracking-[0.3em] text-black">
             RSVP
           </p>
-          <h2 className="mt-4 font-display text-4xl tracking-tight text-ivory sm:text-5xl">
+          <h2 className="mt-4 font-display text-2xl tracking-tight text-ivory sm:text-5xl">
             We cannot wait to celebrate with you
           </h2>
           <p className="mt-4 text-base leading-7 text-ivory/70">
-            Kindly share your plans so we can set your place and personalise
-            treats. We will take care of you.
+            Kindly share your plans so we can prepare better to take care of you.
           </p>
           {status !== "idle" && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className={`mt-6 rounded-3xl border px-4 py-3 text-sm leading-6 ${
+              className={`mt-6 rounded-xl border px-4 py-3 text-sm leading-6 ${
                 status === "success"
-                  ? "border-gold/35 bg-night/70 text-gilded"
+                  ? "border-gold/35 bg-night/70"
                   : "border-bronze/30 bg-night/60 text-ivory/70"
               }`}
             >

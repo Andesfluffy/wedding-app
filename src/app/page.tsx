@@ -14,7 +14,6 @@ export default async function Home({
     new URLSearchParams(resolvedSearchParams)
   );
 
-  // Only use the guest name and max guests if the signature is valid
   const guestName = isValid ? guest : undefined;
   const maxGuests = isValid
     ? typeof max === "string"
@@ -24,11 +23,17 @@ export default async function Home({
       : undefined
     : undefined;
 
+  const signature = isValid ? resolvedSearchParams.signature : undefined;
+
+  const signedParams = isValid && guest && max && signature
+    ? `?guest=${encodeURIComponent(guest)}&max=${encodeURIComponent(max)}&signature=${encodeURIComponent(signature)}`
+    : "";
+
   return (
     <>
       <div className="relative overflow-hidden pb-24">
         <main className="mx-auto flex max-w-6xl flex-col gap-16 px-4 sm:px-6 md:px-10">
-          <Hero guestName={guestName} maxGuests={maxGuests} />
+          <Hero guestName={guestName} maxGuests={maxGuests} signature={signature} />
           <CountdownSection />
           <section className="relative isolate overflow-hidden rounded-xl border border-gold/35 bg-gradient-to-br from-pearl/95 via-cream/95 to-rosewater/90 px-6 py-12 text-center shadow-[0_35px_120px_-60px_rgba(212,169,61,0.55),0_0_90px_-55px_rgba(90,15,41,0.28)] sm:px-10">
             <div className="pointer-events-none absolute inset-0">
@@ -44,21 +49,21 @@ export default async function Home({
                 details.
               </p>
               <Link
-                href="/program"
+                href={`/program${signedParams}`}
                 className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
               >
                Program
               </Link>
 
               <Link
-                href="/story"
+                href={`/story${signedParams}`}
                 className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
               >
                 gallery
               </Link>
 
               <Link
-                href="/gifts"
+                href={`/gifts${signedParams}`}
                 className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
               >
                 Gifts

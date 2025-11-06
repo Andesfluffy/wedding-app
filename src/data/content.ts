@@ -2,8 +2,8 @@ import { IMG_EIGHT, IMG_FIVE, IMG_FOUR, IMG_ONE, IMG_SEVEN, IMG_SIX, IMG_THREE, 
 
 export const weddingDetails = {
   families: {
-    groom: "Bro Francis Oyeyemi and Sis Helen Oyeyemi",
-    bride: "Bro David Ogogo and Sis Joy Ogogo",
+    groom: "Bro and Sis Francis Oyeyemi",
+    bride: "Bro and Sis David Ogogo",
   },
   couple: {
     firstPartner: "Theo",
