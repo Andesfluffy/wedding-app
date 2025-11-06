@@ -1,10 +1,6 @@
-import { Navigation } from "@/components/navigation";
-import { SiteFooter } from "@/components/footer";
-import { StoryTimeline } from "@/components/story-timeline";
 import { WeddingPartySection } from "@/components/wedding-party";
 import { GallerySection } from "@/components/gallery";
 import { RegistrySection } from "@/components/registry";
-import { FaqSection } from "@/components/faqs";
 
 function StoryIntro() {
   return (
@@ -41,17 +37,15 @@ function StoryIntro() {
 
 export default function StoryPage() {
   return (
-    <div className="relative overflow-hidden pb-24">
-      <Navigation />
-      <main className="mx-auto flex max-w-6xl flex-col gap-16 px-4 sm:px-6 md:px-10">
-        <StoryIntro />
-        <StoryTimeline />
+    <div className="overflow-hidden pb-24">
+      <main className="mx-auto flex max-w-6xl flex-col gap-16 px-4">
+        {/* <StoryIntro /> */}
+        {/* <StoryTimeline /> */}
         <WeddingPartySection />
         <GallerySection />
         <RegistrySection />
-        <FaqSection />
+        {/* <FaqSection /> */}
       </main>
-      <SiteFooter />
     </div>
   );
 }

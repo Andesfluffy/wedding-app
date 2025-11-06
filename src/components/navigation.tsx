@@ -72,7 +72,7 @@ export function Navigation() {
       >
         <Link
           href="/"
-          className="font-display text-lg uppercase tracking-[0.4em] text-gold drop-shadow-[0_0_8px_rgba(246,196,92,0.4)]"
+          className="font-display text-lg uppercase tracking-[0.2em] text-gold drop-shadow-[0_0_8px_rgba(246,196,92,0.4)]"
         >
           Joan & Theo
         </Link>

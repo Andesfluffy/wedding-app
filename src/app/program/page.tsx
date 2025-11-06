@@ -1,5 +1,4 @@
 import { Navigation } from "@/components/navigation";
-import { SiteFooter } from "@/components/footer";
 import { ProgramSection } from "@/components/programs";
 
 const highlightCards = [
@@ -12,7 +11,7 @@ const highlightCards = [
     value: "New Love Hotel - 193, 195 Isuti road, Igando · 2:00 PM",
   },
   {
-    label: "Palette",
+    label: "Colors of the day",
     value: "Ash · Beige · Maroon",
   },
 ];
@@ -69,7 +68,6 @@ export default function ProgramPage() {
         <ProgramIntro />
         <ProgramSection />
       </main>
-      <SiteFooter />
     </div>
   );
 }

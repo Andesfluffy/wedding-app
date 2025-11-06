@@ -1,3 +1,5 @@
+import { IMG_FIVE, IMG_FOUR, IMG_ONE, IMG_SIX, IMG_THREE, IMG_TWO } from "@/images";
+
 export const weddingDetails = {
   families: {
     groom: "Bro Francis Oyeyemi and Sis Helen Oyeyemi",
@@ -23,7 +25,7 @@ export const weddingDetails = {
 export const navigation = [
   { label: "Invitation", href: "/" },
   { label: "Program", href: "/program" },
-  { label: "Story & Gallery", href: "/story" },
+  { label: "The Crew, Gallery & Gifts", href: "/story" },
 ];
 
 export const kingdomHallProgram = [
@@ -266,7 +268,7 @@ export const weddingParty = [
   },
   {
     role: "Best Man",
-    name: "Damola Oyeyemi",
+    name: "Adedamola Oyeyemi",
     description:
       "The Groom's brother ! Theo's day-one strategist ensuring timelines are tight, suits are crisp, and the groom stays relaxed.",
   },
@@ -292,9 +294,9 @@ export const weddingParty = [
 
 export const registryItems = [
   {
-    name: "Bank transfer (Naira)",
+    name: "Bank transfer",
     description:
-      "Send love directly to our joint wedding account. Kindly add your name so we can thank you warmly after the celebration.",
+      "Send love directly to our selected account. Kindly add your name so we can thank you warmly after the celebration.",
     bank: "Opay",
     accountName: "Theophilus Oyeyemi",
     accountNumber: "8107144024",
@@ -303,28 +305,28 @@ export const registryItems = [
 
 export const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=75",
-    alt: "Joan radiating joy in a beaded gele beneath Lagos light.",
+    src: IMG_ONE,
+    alt: "Looking stunning",
   },
   {
-    src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=75",
-    alt: "Theophilus and Joan sharing a laugh in vibrant traditional attire.",
+    src: IMG_TWO,
+    alt: "Beautiful people.",
   },
   {
-    src: "https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=1200&q=75",
-    alt: "Patterned Ankara fabrics layered in jewel tones.",
+    src: IMG_THREE,
+    alt: "Amazing",
   },
   {
-    src: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=75",
-    alt: "Tablescape with tropical florals and glowing candles ready for celebration.",
+    src: IMG_FOUR,
+    alt: "Poised.",
   },
   {
-    src: "https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=1200&q=75",
-    alt: "Talking drummers leading a jubilant procession.",
+    src: IMG_FIVE,
+    alt: "Gorgeous.",
   },
   {
-    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=75",
-    alt: "Sunset portraits along the Lagos waterfront capturing forever.",
+    src: IMG_SIX,
+    alt: "Bold.",
   },
 ];
 

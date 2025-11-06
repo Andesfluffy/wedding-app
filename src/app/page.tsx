@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import { Hero } from "@/components/hero";
-import { SiteFooter } from "@/components/footer";
 import { CountdownSection } from "@/components/countdown";
 import { parseSignedParams } from "@/lib/url-signer";
 
@@ -53,7 +52,6 @@ export default async function Home({
             </div>
           </section>
         </main>
-        <SiteFooter />
       </div>
     </>
   );
