@@ -39,9 +39,9 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!email || !emailPattern.test(email)) {
+    if (email && !emailPattern.test(email)) {
       return NextResponse.json(
-        { error: "A valid email address is required" },
+        { error: "If provided, email must be valid" },
         { status: 400 }
       );
     }
@@ -60,7 +60,11 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!Number.isInteger(guestsValue) || guestsValue < 0 || guestsValue > maxGuestsValue) {
+    if (
+      !Number.isInteger(guestsValue) ||
+      guestsValue < 0 ||
+      guestsValue > maxGuestsValue
+    ) {
       return NextResponse.json(
         { error: `Guest count must be between 0 and ${maxGuestsValue}` },
         { status: 400 }
@@ -93,7 +97,7 @@ export async function POST(request: Request) {
 
 type RsvpEntry = {
   fullName: string;
-  email: string;
+  email?: string;
   phone: string;
   attendance: "yes" | "no";
   guests: number;
@@ -136,10 +140,19 @@ async function sendEmailToGmail(entry: RsvpEntry) {
 
   try {
     await expectResponse(socket);
-    await sendCommand(socket, `EHLO ${process.env.RSVP_GMAIL_CLIENT_ID ?? "localhost"}`);
+    await sendCommand(
+      socket,
+      `EHLO ${process.env.RSVP_GMAIL_CLIENT_ID ?? "localhost"}`
+    );
     await sendCommand(socket, "AUTH LOGIN");
-    await sendCommand(socket, Buffer.from(gmailUser, "utf8").toString("base64"));
-    await sendCommand(socket, Buffer.from(gmailAppPassword, "utf8").toString("base64"));
+    await sendCommand(
+      socket,
+      Buffer.from(gmailUser, "utf8").toString("base64")
+    );
+    await sendCommand(
+      socket,
+      Buffer.from(gmailAppPassword, "utf8").toString("base64")
+    );
     await sendCommand(socket, `MAIL FROM:<${gmailUser}>`);
     await sendCommand(socket, `RCPT TO:<${recipient}>`);
     await sendCommand(socket, "DATA");
@@ -167,7 +180,7 @@ async function sendEmailToGmail(entry: RsvpEntry) {
 function formatEntry(entry: RsvpEntry) {
   return [
     `Name: ${entry.fullName}`,
-    `Email: ${entry.email}`,
+    `Email: ${entry.email || "(not provided)"}`,
     `Phone: ${entry.phone}`,
     `Attendance: ${entry.attendance === "yes" ? "Attending" : "Not attending"}`,
     `Guests (including primary guest): ${entry.guests}`,

@@ -93,9 +93,9 @@ export function RsvpSection({
       return;
     }
 
-    if (!trimmedForm.email || !emailPattern.test(trimmedForm.email)) {
+    if (trimmedForm.email && !emailPattern.test(trimmedForm.email)) {
       setStatus("error");
-      setFeedback("Please enter a valid email address so we can reach you.");
+      setFeedback("Please enter a valid email address.");
       return;
     }
 
@@ -249,8 +249,9 @@ export function RsvpSection({
                   htmlFor="email"
                   className="text-xs uppercase tracking-[0.3em] text-black"
                 >
-                  Email
+                  Email <span className="text-ivory/60">(optional)</span>
                 </label>
+
                 <input
                   id="email"
                   name="email"
@@ -259,7 +260,6 @@ export function RsvpSection({
                   onChange={(event) =>
                     setForm((prev) => ({ ...prev, email: event.target.value }))
                   }
-                  required
                   className="mt-2 w-full rounded-xl border border-gold/25 bg-night/70 px-4 py-3 text-sm shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
                 />
               </div>
