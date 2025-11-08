@@ -300,7 +300,7 @@ export function RsvpSection({
                     key={option.value}
                     className={`flex items-center justify-between rounded-2xl border px-4 py-3 text-sm shadow-[inset_0_15px_30px_rgba(249,210,122,0.08)] transition ${
                       form.attendance === option.value
-                        ? "border-gold/45 bg-night/85 text-gilded"
+                        ? "border-gold/45 bg-night/85 text-gold/80"
                         : "border-gold/25 bg-night/70 text-ivory"
                     }`}
                   >
