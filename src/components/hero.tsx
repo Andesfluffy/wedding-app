@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { weddingDetails } from "@/data/content";
+import { useMemo } from "react";
 
 export function Hero({
   guestName,
@@ -13,6 +15,23 @@ export function Hero({
   maxGuests?: number;
   signature?: string;
 }) {
+  const searchParams = useSearchParams();
+  const isRsvpCompleted = (searchParams.get("rsvp") || "") === "completed";
+
+  const rsvpLink = useMemo(() => {
+    const params = new URLSearchParams();
+    if (guestName) {
+      params.set("guest", guestName);
+      if (maxGuests) params.set("max", String(maxGuests));
+      if (signature) params.set("signature", signature);
+    }
+    if (isRsvpCompleted) {
+      params.set("rsvp", "completed");
+    }
+    const query = params.toString();
+    return query ? `/rsvp?${query}` : "/rsvp";
+  }, [guestName, maxGuests, signature, isRsvpCompleted]);
+
   return (
     <section
       id="top"
@@ -107,13 +126,7 @@ export function Hero({
 
         <div className="flex flex-col items-center gap-4 sm:flex-row my-6 w-full">
           <Link
-            href={`/rsvp${
-              guestName
-                ? `?guest=${encodeURIComponent(guestName)}${
-                    maxGuests ? `&max=${maxGuests}` : ""
-                  }${signature ? `&signature=${signature}` : ""}`
-                : ""
-            }`}
+            href={rsvpLink}
             className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
           >
             RSVP

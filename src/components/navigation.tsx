@@ -5,7 +5,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { navigation } from "@/data/content";
 import { cn } from "@/lib/utils";
-import { Hamburger, HamburgerIcon, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export function Navigation() {
   const pathname = usePathname();
@@ -54,18 +54,26 @@ export function Navigation() {
     return pathname === basePath;
   };
 
-  // Preserve signed guest params when navigating
+  // Preserve signed guest params and RSVP status when navigating
   const searchParams = useSearchParams();
   const guest = searchParams.get("guest") || "";
   const max = searchParams.get("max") || "";
   const signature = searchParams.get("signature") || "";
+  const rsvpCompleted = searchParams.get("rsvp") === "completed";
   const hasSignedParams = Boolean(guest && max && signature);
 
   // Helper function to append signed params to any URL
   const appendSignedParams = (href: string) => {
-    if (!hasSignedParams) return href;
+    if (!hasSignedParams && !rsvpCompleted) return href;
     
-    const signedQuery = `guest=${encodeURIComponent(guest)}&max=${encodeURIComponent(max)}&signature=${encodeURIComponent(signature)}`;
+    const params = new URLSearchParams();
+    if (guest) params.set("guest", guest);
+    if (max) params.set("max", max);
+    if (signature) params.set("signature", signature);
+    if (rsvpCompleted) params.set("rsvp", "completed");
+    
+    const signedQuery = params.toString();
+    if (!signedQuery) return href;
     
     // Check if href has anchor
     if (href.includes('#')) {
@@ -76,13 +84,8 @@ export function Navigation() {
     return `${href}?${signedQuery}`;
   };
 
-  const homeHref = hasSignedParams
-    ? `/?guest=${encodeURIComponent(guest)}&max=${encodeURIComponent(max)}&signature=${encodeURIComponent(signature)}`
-    : "/";
-    
-  const rsvpHref = hasSignedParams
-    ? `/rsvp?guest=${encodeURIComponent(guest)}&max=${encodeURIComponent(max)}&signature=${encodeURIComponent(signature)}`
-    : "/rsvp";
+  const homeHref = appendSignedParams("/");
+  const rsvpHref = appendSignedParams("/rsvp");
 
   return (
     <header

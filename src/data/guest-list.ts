@@ -80,7 +80,7 @@ export const guestList: GuestInvitation[] = [
   { id: "groom-68", name: "Aunty's Aina and Wande Family", maxGuests: 5 },
   { id: "groom-69", name: "Bisi Yaya and Family", maxGuests: 3 },
   { id: "groom-70", name: "Jumoke, Adiza, Oga", maxGuests: 3 },
-  { id: "groom-71", name: "Ugochukwu Family", maxGuests: 6 },
+  { id: "groom-71", name: "Ugochukwu Family", maxGuests: 5 },
   { id: "groom-72", name: "Bewaji Family", maxGuests: 6 },
   { id: "groom-73", name: "Iboku family", maxGuests: 3 },
   { id: "groom-74", name: "Fatimehin family", maxGuests: 2 },
@@ -102,6 +102,7 @@ export const guestList: GuestInvitation[] = [
   { id: "groom-90", name: "Taiwo Raji", maxGuests: 1 },
   { id: "groom-91", name: "Precious Iwuala", maxGuests: 1 },
   { id: "groom-92", name: "Zino Ove", maxGuests: 1 },
+  { id: "groom-93", name: "Edwards Ugochukwu", maxGuests: 1 },
 ];
 
 export function findGuestByName(name: string): GuestInvitation | undefined {
