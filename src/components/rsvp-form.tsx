@@ -29,35 +29,38 @@ export function RsvpSection({
   guestName?: string;
   maxGuests?: number;
 }) {
-  const [form, setForm] = useState<FormState>(() => {
-    if (typeof window !== "undefined") {
-      const saved = sessionStorage.getItem("rsvpFormData");
-      return saved ? JSON.parse(saved) : initialState;
-    }
-    return initialState;
-  });
+  const [form, setForm] = useState<FormState>(initialState);
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [feedback, setFeedback] = useState<string>("");
+  const [isClient, setIsClient] = useState(false);
 
-  // Check URL for RSVP completion flag on mount
+  // Set client flag and load all client-side data
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const params = new URLSearchParams(window.location.search);
-      if (params.get("rsvp") === "completed") {
-        setStatus("success");
-        setFeedback("Thank you! We have received your RSVP.");
+    setIsClient(true);
+
+    // Check for RSVP completion
+    const storageCompleted = sessionStorage.getItem("rsvpCompleted") === "true";
+
+    if (storageCompleted) {
+      setStatus("success");
+      setFeedback("Thank you! We appreciate your response.");
+    } else {
+      // Load saved form data if not completed
+      const saved = sessionStorage.getItem("rsvpFormData");
+      if (saved) {
+        setForm(JSON.parse(saved));
       }
     }
   }, []);
 
   // Save form data to sessionStorage whenever it changes
   useEffect(() => {
-    if (status !== "success") {
+    if (isClient && status !== "success") {
       sessionStorage.setItem("rsvpFormData", JSON.stringify(form));
     }
-  }, [form, status]);
+  }, [form, status, isClient]);
 
   // Pre-fill guest name when provided via URL
   useEffect(() => {
@@ -139,15 +142,9 @@ export function RsvpSection({
       }
 
       setStatus("success");
-      setFeedback("Thank you! We have received your RSVP.");
+      setFeedback("Thank you! We appreciate your response.");
       sessionStorage.removeItem("rsvpFormData");
-
-      // Update URL to include completion flag
-      if (typeof window !== "undefined") {
-        const url = new URL(window.location.href);
-        url.searchParams.set("rsvp", "completed");
-        window.history.replaceState({}, "", url.toString());
-      }
+      sessionStorage.setItem("rsvpCompleted", "true");
     } catch (error) {
       console.error(error);
       setStatus("error");
@@ -216,9 +213,6 @@ export function RsvpSection({
                 Response Sent!
               </h3>
               <p className="mt-3 text-sm leading-6 text-ivory/70">{feedback}</p>
-              <p className="mt-2 text-sm text-ivory/60">
-                We look forward to celebrating with you.
-              </p>
             </motion.div>
           </motion.div>
         ) : (
@@ -238,6 +232,7 @@ export function RsvpSection({
                   id="fullName"
                   name="fullName"
                   type="text"
+                  readOnly
                   value={form.fullName}
                   onChange={(event) =>
                     setForm((prev) => ({
@@ -327,49 +322,55 @@ export function RsvpSection({
                 ))}
               </div>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label
-                  htmlFor="guests"
-                  className="text-xs uppercase tracking-[0.3em] text-black"
-                >
-                  Number of guests (including you)
-                  {maxGuests && (
-                    <span className="ml-2 text-xs text-gold">
-                      (Max: {maxGuests})
-                    </span>
-                  )}
-                </label>
-                <input
-                  id="guests"
-                  name="guests"
-                  type="number"
-                  min={0}
-                  max={maxGuests || 10}
-                  inputMode="numeric"
-                  value={form.guests}
-                  onChange={(event) =>
-                    setForm((prev) => {
-                      const rawValue = event.target.value.replace(
-                        /[^0-9]/g,
-                        ""
-                      );
-                      if (!rawValue) {
-                        return { ...prev, guests: "" };
-                      }
-                      const nextValue = String(
-                        Math.min(Number.parseInt(rawValue, 10), maxGuests || 10)
-                      );
-                      return {
-                        ...prev,
-                        guests: nextValue,
-                      };
-                    })
-                  }
-                  className="mt-2 w-full rounded-xl border border-gold/25 bg-night/70 px-4 py-3 text-sm shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
-                />
+
+            {form.attendance === "yes" && (
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="guests"
+                    className="text-xs uppercase tracking-[0.3em] text-black"
+                  >
+                    Number of guests (including you)
+                    {maxGuests && (
+                      <span className="ml-2 text-xs text-gold">
+                        (Max: {maxGuests})
+                      </span>
+                    )}
+                  </label>
+                  <input
+                    id="guests"
+                    name="guests"
+                    type="number"
+                    min={0}
+                    max={maxGuests || 5}
+                    inputMode="numeric"
+                    value={form.guests}
+                    onChange={(event) =>
+                      setForm((prev) => {
+                        const rawValue = event.target.value.replace(
+                          /[^0-9]/g,
+                          ""
+                        );
+                        if (!rawValue) {
+                          return { ...prev, guests: "" };
+                        }
+                        const nextValue = String(
+                          Math.min(
+                            Number.parseInt(rawValue, 10),
+                            maxGuests || 10
+                          )
+                        );
+                        return {
+                          ...prev,
+                          guests: nextValue,
+                        };
+                      })
+                    }
+                    className="mt-2 w-full rounded-xl border border-gold/25 bg-night/70 px-4 py-3 text-sm shadow-[inset_0_12px_35px_rgba(249,210,122,0.08)] outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/25"
+                  />
+                </div>
               </div>
-            </div>
+            )}
 
             <button
               type="submit"
