@@ -62,8 +62,9 @@ export function Hero({
               </p>
               {maxGuests && (
                 <p className="mt-2 text-xs text-ink/70">
-                  Your invitation accomodates up to {maxGuests} guest
-                  {maxGuests > 1 ? "s" : ""}
+                  {maxGuests === 1
+                    ? "This invitation accommodates only you."
+                    : `This invitation accommodates up to ${maxGuests} guests.`}
                 </p>
               )}
             </motion.div>
