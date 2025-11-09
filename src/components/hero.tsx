@@ -124,14 +124,16 @@ export function Hero({
           </div>
         </motion.div>
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row my-6 w-full">
-          <Link
-            href={rsvpLink}
-            className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
-          >
-            RSVP
-          </Link>
-        </div>
+        {guestName && (
+          <div className="flex flex-col items-center gap-4 sm:flex-row my-6 w-full">
+            <Link
+              href={rsvpLink}
+              className="inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
+            >
+              RSVP
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

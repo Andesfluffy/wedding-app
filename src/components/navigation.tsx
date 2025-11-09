@@ -65,22 +65,22 @@ export function Navigation() {
   // Helper function to append signed params to any URL
   const appendSignedParams = (href: string) => {
     if (!hasSignedParams && !rsvpCompleted) return href;
-    
+
     const params = new URLSearchParams();
     if (guest) params.set("guest", guest);
     if (max) params.set("max", max);
     if (signature) params.set("signature", signature);
     if (rsvpCompleted) params.set("rsvp", "completed");
-    
+
     const signedQuery = params.toString();
     if (!signedQuery) return href;
-    
+
     // Check if href has anchor
-    if (href.includes('#')) {
-      const [path, anchor] = href.split('#');
+    if (href.includes("#")) {
+      const [path, anchor] = href.split("#");
       return `${path}?${signedQuery}#${anchor}`;
     }
-    
+
     return `${href}?${signedQuery}`;
   };
 
@@ -111,7 +111,8 @@ export function Navigation() {
         </Link>
         <nav className="hidden gap-6 text-sm font-medium text-ink/70 md:flex">
           {navigation.map((item) => {
-            const navHref = item.href === "/" ? homeHref : appendSignedParams(item.href);
+            const navHref =
+              item.href === "/" ? homeHref : appendSignedParams(item.href);
             return (
               <Link
                 key={item.href}
@@ -139,12 +140,12 @@ export function Navigation() {
           aria-expanded={isMenuOpen}
           aria-controls="wedding-nav-menu"
         >
-          <Menu/>
+          <Menu />
         </button>
       </div>
       {isMenuOpen && (
         <div
-          className="pointer-events-auto fixed inset-0 z-50 flex items-start justify-center bg-ink/15 px-6 pt-28 backdrop-blur-sm"
+          className="pointer-events-auto fixed inset-0 z-50 flex items-start justify-center bg-ink/15 px-6 pt-28 backdrop-blur-sm h-screen"
           onClick={(event) => {
             if (event.target === event.currentTarget) {
               setMenuOpen(false);
@@ -174,14 +175,17 @@ export function Navigation() {
             </div>
             <nav className="mt-6 flex flex-col gap-4 text-base">
               {navigation.map((item) => {
-                const navHref = item.href === "/" ? homeHref : appendSignedParams(item.href);
+                const navHref =
+                  item.href === "/" ? homeHref : appendSignedParams(item.href);
                 return (
                   <Link
                     key={item.href}
                     href={navHref}
                     className={cn(
                       "rounded-xl border border-transparent px-3 py-2 text-ink/75 transition hover:border-gold/35 hover:bg-gold/10",
-                      isActive(item.href) ? "border-gold/35 bg-gold/10 text-gold" : ""
+                      isActive(item.href)
+                        ? "border-gold/35 bg-gold/10 text-gold"
+                        : ""
                     )}
                     onClick={() => setMenuOpen(false)}
                   >
@@ -190,13 +194,15 @@ export function Navigation() {
                 );
               })}
             </nav>
-            <Link
-              href={rsvpHref}
-              className="mt-8 inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
-              onClick={() => setMenuOpen(false)}
-            >
-              RSVP
-            </Link>
+            {hasSignedParams && (
+              <Link
+                href={rsvpHref}
+                className="mt-8 inline-flex w-full  items-center justify-center rounded-lg px-8 py-3 text-sm font-semibold uppercase tracking-[0.28em] text-pearl border"
+                onClick={() => setMenuOpen(false)}
+              >
+                RSVP
+              </Link>
+            )}
           </div>
         </div>
       )}
