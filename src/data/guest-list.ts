@@ -78,7 +78,7 @@ export const guestList: GuestInvitation[] = [
   { id: "groom-62", name: "Sodiq Oko-osi and family", maxGuests: 2 },
   { id: "groom-63", name: "Kate Eruvwahwe", maxGuests: 1 },
   { id: "groom-64", name: "Essien family", maxGuests: 2 },
-  { id: "groom-65", name: "Elizabeth", maxGuests: 1 },
+  { id: "groom-65", name: "Elizabeth Nwachukwu", maxGuests: 1 },
   { id: "groom-66", name: "Akinremi family", maxGuests: 4 },
   { id: "groom-67", name: "Kemi Ologe", maxGuests: 1 },
   { id: "groom-68", name: "Jumoke Ogunnaike", maxGuests: 1 },
