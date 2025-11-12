@@ -78,7 +78,7 @@ export const guestList: GuestInvitation[] = [
   { id: "groom-62", name: "Sodiq Oko-osi and family", maxGuests: 2 },
   { id: "groom-63", name: "Kate Eruvwahwe", maxGuests: 1 },
   { id: "groom-64", name: "Essien family", maxGuests: 2 },
-  { id: "groom-65", name: "Seeke Oladun", maxGuests: 1 },
+  { id: "groom-65", name: "Seeke Oladun Falade", maxGuests: 1 },
   { id: "groom-66", name: "Akinremi family", maxGuests: 2 },
   { id: "groom-67", name: "Kemi Ologe", maxGuests: 1 },
   { id: "groom-68", name: "Jumoke Ogunnaike", maxGuests: 1 },
@@ -92,7 +92,7 @@ export const guestList: GuestInvitation[] = [
   { id: "groom-76", name: "Agali family", maxGuests: 2 },
   { id: "groom-77", name: "Omo Agali", maxGuests: 1 },
   { id: "groom-78", name: "Noah Ojo", maxGuests: 1 },
-  { id: "groom-79", name: "Williams family", maxGuests: 2 },
+  { id: "groom-79", name: "Bro and Sis Williams", maxGuests: 2 },
   { id: "groom-80", name: "Bro Victor Ado", maxGuests: 1 },
   { id: "groom-81", name: "Bro Otome Opuoro", maxGuests: 1 },
   { id: "groom-82", name: "Dami Folarin", maxGuests: 1 },
@@ -120,7 +120,7 @@ export const guestList: GuestInvitation[] = [
   { id: "groom-104", name: "Mrs Bunmi Kuku", maxGuests: 1 },
   { id: "groom-105", name: "Uncle Effiong Asuquo", maxGuests: 1 },
   { id: "groom-106", name: "Katey Bassey", maxGuests: 1 },
-  { id: "groom-107", name: "Oyewale family", maxGuests: 2 },
+  { id: "groom-107", name: "Bro and Sis Oyewale", maxGuests: 2 },
   { id: "groom-108", name: "Ayo Elebute", maxGuests: 1 },
 ];
 
