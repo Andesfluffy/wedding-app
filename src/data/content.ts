@@ -1,4 +1,13 @@
-import { IMG_EIGHT, IMG_FIVE, IMG_FOUR, IMG_ONE, IMG_SEVEN, IMG_SIX, IMG_THREE, IMG_TWO } from "@/images";
+import {
+  IMG_EIGHT,
+  IMG_FIVE,
+  IMG_FOUR,
+  IMG_ONE,
+  IMG_SEVEN,
+  IMG_SIX,
+  IMG_THREE,
+  IMG_TWO,
+} from "@/images";
 
 export const weddingDetails = {
   families: {
@@ -15,7 +24,7 @@ export const weddingDetails = {
   venue: "Kingdom Hall of Jehovah's Witnesses",
   location:
     "4 Kingdom hall avenue, off Joseph Abume street, Isuti road, Igando, Lagos",
-  rsvpDeadline: "Kindly RSVP by November 13, 2025",
+  rsvpDeadline: "Kindly RSVP by November 16, 2025",
   intro:
     "Love has led us here — to a moment that feels both tender and eternal. We’re counting down to a day filled with laughter, joy, and the warmth of those who’ve walked life’s journey with us",
   description:
@@ -123,13 +132,13 @@ export const receptionProgram = [
     description:
       "The MC leads light-hearted games, trivia, and interactive moments with guests.",
   },
-   {
+  {
     time: "5:30 PM",
     title: "Vote of thanks",
     description:
       "The groom shares a heartfelt thank-you before the chairman offers closing encouragement.",
   },
-   {
+  {
     time: "5:45 PM",
     title: "Closing prayer",
     description:
@@ -141,7 +150,6 @@ export const receptionProgram = [
     description:
       "Family, the bridal train, and close friends take the floor for joyful dancing and candid photos.",
   },
- 
 ];
 
 export const photographySchedule = {
@@ -250,19 +258,19 @@ export const weddingParty = [
     description:
       "Joan's sister-friend who schedules fittings, calms nerves, and keeps every detail sparkling.",
   },
-   {
+  {
     role: "Best Man",
     name: "Adedamola Oyeyemi",
     description:
       "The Groom's brother ! Theo's day-one strategist ensuring timelines are tight, suits are crisp, and the groom stays relaxed.",
   },
-   {
+  {
     role: "Little Bride",
     name: "Chukwuzaram Arinze",
     description:
       "The Groom's brother ! Theo's day-one strategist ensuring timelines are tight, suits are crisp, and the groom stays relaxed.",
   },
-   {
+  {
     role: "Page Boy",
     name: "Jahdarasimi Fatunsin",
     description:
