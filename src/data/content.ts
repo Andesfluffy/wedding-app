@@ -26,7 +26,7 @@ export const weddingDetails = {
     "4 Kingdom hall avenue, off Joseph Abume street, Isuti road, Igando, Lagos",
   rsvpDeadline: "Kindly RSVP by November 16, 2025",
   intro:
-    "Love has led us here — to a moment that feels both tender and eternal. We’re counting down to a day filled with laughter, joy, and the warmth of those who’ve walked life’s journey with us",
+    "Love has led us here — to a moment that feels both tender and eternal. We're counting down to a day filled with laughter, joy, and the warmth of those who've walked life's journey with us",
   description:
     "Join us as we make our vows before Jehovah, surrounded by family and friends who have become family by heart. Then stay as we celebrate the beauty of love, faith, and new beginnings — a day to remember, simple yet unforgettable",
 };
