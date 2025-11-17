@@ -24,7 +24,7 @@ export const weddingDetails = {
   venue: "Kingdom Hall of Jehovah's Witnesses",
   location:
     "4 Kingdom hall avenue, off Joseph Abume street, Isuti road, Igando, Lagos",
-  rsvpDeadline: "Kindly RSVP by November 16, 2025",
+  rsvpDeadline: "Kindly RSVP by November 19, 2025",
   intro:
     "Love has led us here — to a moment that feels both tender and eternal. We're counting down to a day filled with laughter, joy, and the warmth of those who've walked life's journey with us",
   description:
@@ -49,7 +49,7 @@ export const kingdomHallProgram = [
     time: "12:00 PM",
     title: "Opening song & prayer",
     description:
-      "The chairman opens the marriage ceremony, sharing a heartfelt welcome and the day’s focus.",
+      "The chairman opens the marriage ceremony, sharing a heartfelt welcome and the day's focus.",
   },
   {
     time: "12:05 PM",
@@ -80,7 +80,7 @@ export const receptionProgram = [
   },
   {
     time: "2:00 PM",
-    title: "Couple’s entrance",
+    title: "Couple's entrance",
     description:
       "The bridal party is introduced, then Theo & Joan dance in with radiant energy.",
   },
@@ -98,7 +98,7 @@ export const receptionProgram = [
   },
   {
     time: "2:15 PM",
-    title: "Chairman’s opening remarks",
+    title: "Chairman's opening remarks",
     description:
       "The MC spotlights both families before the chairman shares warm welcome remarks.",
   },
@@ -115,17 +115,18 @@ export const receptionProgram = [
       "A love song plays as the couple slice their cake and share a sweet moment.",
   },
   {
-    time: "3:45 PM",
-    title: "Couple’s dances",
-    description:
-      "Theo & Joan share their special dances, followed by a parents’ dance tribute.",
-  },
-  {
     time: "4:15 PM",
     title: "Fun & Games",
     description:
       "The MC leads light-hearted games, trivia, and interactive moments with guests.",
   },
+  {
+    time: "3:45 PM",
+    title: "Couple's dance",
+    description:
+      "Theo & Joan share their special dances, followed by a parents' dance tribute.",
+  },
+
   {
     time: "4:15 PM",
     title: "Chairman's closing remarks",
@@ -153,7 +154,7 @@ export const receptionProgram = [
 ];
 
 export const photographySchedule = {
-  window: "1:00 PM – 1:30 PM",
+  window: "1:00 PM - 1:30 PM",
   location: "Kingdom Hall grounds",
   note: "Kindly stay nearby so portraits flow smoothly before we depart for the reception pavilion.",
   order: [
