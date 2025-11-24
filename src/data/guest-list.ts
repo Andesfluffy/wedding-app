@@ -123,6 +123,7 @@ export const guestList: GuestInvitation[] = [
   { id: "groom-107", name: "Bro and Sis Oyewale", maxGuests: 2 },
   { id: "groom-108", name: "Ayo Elebute", maxGuests: 1 },
   { id: "groom-109", name: "Bro and Sis Arivwie", maxGuests: 2 },
+  { id: "groom-110", name: "Amarachi Maduka", maxGuests: 1 },
 ];
 
 export function findGuestByName(name: string): GuestInvitation | undefined {
