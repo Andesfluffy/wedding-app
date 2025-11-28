@@ -175,6 +175,7 @@ export const photographySchedule = {
     "Couple with Oworotimi Congregation",
     "Couple with bride's colleagues",
     "Couple with groom's colleagues",
+    "Couple with UCSS",
     "Couple with friends, family & well-wishers",
   ],
 };

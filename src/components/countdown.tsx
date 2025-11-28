@@ -41,16 +41,228 @@ function getTimeRemaining(target: Date): CountdownState {
 export function CountdownSection() {
   const targetDate = useMemo(() => new Date(countdownTarget), []);
   const [time, setTime] = useState<CountdownState>(initialState);
+  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
     const updateTime = () => {
-      setTime(getTimeRemaining(targetDate));
+      const remaining = getTimeRemaining(targetDate);
+      setTime(remaining);
+
+      const complete = Object.values(remaining).every((val) => val === "00");
+      if (complete && !isComplete) {
+        setIsComplete(true);
+      }
     };
 
     updateTime();
     const interval = window.setInterval(updateTime, 1000);
     return () => window.clearInterval(interval);
-  }, [targetDate]);
+  }, [targetDate, isComplete]);
+
+  if (isComplete) {
+    return (
+      <section
+        aria-labelledby="celebration-heading"
+        className="relative mx-auto max-w-5xl overflow-hidden rounded-xl border border-gold/35 bg-gradient-to-br from-night/90 via-onyx/85 to-char/90 px-6 py-20 text-center shadow-[0_40px_120px_-60px_rgba(249,210,122,0.55)] backdrop-blur md:px-16"
+      >
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="firework"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 30}s`,
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="relative z-10">
+          <h2
+            id="celebration-heading"
+            className="flex flex-col font-display font-bold tracking-tight text-gold animate-pulse-slow text-3xl"
+          >
+            <span>🎉🎉🎉</span>
+            <span className="text-3xl uppercase">Today is the Big Day!</span>
+            <span>🎉🎉🎉</span>
+          </h2>
+          <p className="mt-6 text-xl leading-8 text-ivory/90 max-w-2xl mx-auto">
+            We can't wait to celebrate with you!
+          </p>
+        </div>
+
+        <style jsx>{`
+          @keyframes firework {
+            0% {
+              transform: translate(0, 100vh) scale(0);
+              opacity: 1;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              transform: translate(var(--x), var(--y)) scale(1);
+              opacity: 0;
+            }
+          }
+
+          @keyframes pulse-slow {
+            0%,
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+            50% {
+              opacity: 0.9;
+              transform: scale(1.05);
+            }
+          }
+
+          .animate-pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+          }
+
+          .firework {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: radial-gradient(
+              circle,
+              rgba(249, 210, 122, 1) 0%,
+              rgba(249, 210, 122, 0.8) 50%,
+              transparent 100%
+            );
+            animation: firework 2s ease-out infinite;
+            --x: calc(var(--rand-x, 0) * 1px);
+            --y: calc(var(--rand-y, 0) * -1px);
+          }
+
+          .firework:nth-child(1) {
+            --rand-x: -100;
+            --rand-y: 300;
+            background: radial-gradient(
+              circle,
+              #ffd700 0%,
+              #ffd70080 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(2) {
+            --rand-x: 100;
+            --rand-y: 350;
+            background: radial-gradient(
+              circle,
+              #ff6b6b 0%,
+              #ff6b6b80 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(3) {
+            --rand-x: -150;
+            --rand-y: 280;
+            background: radial-gradient(
+              circle,
+              #4ecdc4 0%,
+              #4ecdc480 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(4) {
+            --rand-x: 150;
+            --rand-y: 320;
+            background: radial-gradient(
+              circle,
+              #95e1d3 0%,
+              #95e1d380 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(5) {
+            --rand-x: -80;
+            --rand-y: 380;
+            background: radial-gradient(
+              circle,
+              #f38181 0%,
+              #f3818180 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(6) {
+            --rand-x: 80;
+            --rand-y: 290;
+            background: radial-gradient(
+              circle,
+              #aa96da 0%,
+              #aa96da80 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(7) {
+            --rand-x: -120;
+            --rand-y: 340;
+            background: radial-gradient(
+              circle,
+              #fcbad3 0%,
+              #fcbad380 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(8) {
+            --rand-x: 120;
+            --rand-y: 310;
+            background: radial-gradient(
+              circle,
+              #ffffd2 0%,
+              #ffffd280 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(9) {
+            --rand-x: -90;
+            --rand-y: 360;
+            background: radial-gradient(
+              circle,
+              #ffd700 0%,
+              #ffd70080 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(10) {
+            --rand-x: 90;
+            --rand-y: 270;
+            background: radial-gradient(
+              circle,
+              #ff6b6b 0%,
+              #ff6b6b80 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(11) {
+            --rand-x: -140;
+            --rand-y: 330;
+            background: radial-gradient(
+              circle,
+              #4ecdc4 0%,
+              #4ecdc480 50%,
+              transparent 100%
+            );
+          }
+          .firework:nth-child(12) {
+            --rand-x: 140;
+            --rand-y: 300;
+            background: radial-gradient(
+              circle,
+              #95e1d3 0%,
+              #95e1d380 50%,
+              transparent 100%
+            );
+          }
+        `}</style>
+      </section>
+    );
+  }
 
   return (
     <section
